@@ -1,0 +1,10 @@
+{
+  "url": "http://test.com/test",
+  "requestBody": {
+    "test": "test"
+  },
+  "response": {
+    "testres":"1",
+    "b":"B"
+  }
+}
