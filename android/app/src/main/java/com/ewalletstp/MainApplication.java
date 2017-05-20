@@ -3,6 +3,11 @@ package com.ewalletstp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.apsl.versionnumber.RNVersionNumberPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.cboy.rn.splashscreen.SplashScreenReactPackage;
+import com.avishayil.rnrestart.ReactNativeRestartPackage;
+import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +27,12 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new RNVersionNumberPackage(),
+            new VectorIconsPackage(),
+            new SplashScreenReactPackage(),
+            new ReactNativeRestartPackage(),
+            new GoogleAnalyticsBridgePackage()
       );
     }
   };

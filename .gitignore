@@ -22,6 +22,7 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
+
 # Android/IntelliJ
 #
 build/
@@ -34,11 +35,11 @@ local.properties
 #
 node_modules/
 npm-debug.log
-yarn-error.log
 
 # BUCK
 buck-out/
 \.buckd/
+android/app/libs
 *.keystore
 
 # fastlane
@@ -51,3 +52,8 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+cache
+
+coverage
+local.js
+yarn-error.log
