@@ -13,6 +13,7 @@ export default  {
   fontWeightMedium: '500',
   fontWeightBold: '700',
   placeholderTextColor: '#9B9B9B',
+  inputBackground: '#ededed',
   snackButton: '#606060',
   snackbarBg: '#797979',
   buttonBg: '#0ea5e6',

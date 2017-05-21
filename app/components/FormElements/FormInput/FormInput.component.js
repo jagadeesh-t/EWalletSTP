@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {View, TextInput} from 'react-native';
 import noop from 'lodash/noop';
 import styles from './FormInput.styles';
@@ -13,7 +14,6 @@ class FormInput extends Component {
   componentWillReceiveProps (nextProps) {
     this._inputRef._lastNativeText = nextProps.input && nextProps.input.value;
   }
-
   // used _lastNativeText because android doesnt pass targetEvent in onBlur and onFocus
   _onBlurHandler = (inputProps) => () => {
     const {onBlur, onInputChange} = inputProps;
@@ -39,8 +39,8 @@ class FormInput extends Component {
     const err = !disabled && (meta && meta.touched && !meta.active && meta.error);
 
     const wrapperStyle = disabled
-    ? [styles.container[theme], styles.disabledInput]
-    : styles.container[theme];
+    ? [styles.container, styles.disabledInput]
+    : styles.container;
 
     const onChange = onChangeText;
 
@@ -53,7 +53,7 @@ class FormInput extends Component {
           {...extraProps}
           value={inputProps.value}
           ref={this._setRef}
-          style={[styles.input[theme], inputStyles]}
+          style={[styles.input, inputStyles]}
           onChangeText={this._onChangeTextHandler(inputProps)}
           underlineColorAndroid={'transparent'}
           onFocus={this._onFocusHandler(inputProps)}
