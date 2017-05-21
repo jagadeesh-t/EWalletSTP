@@ -1056,6 +1056,10 @@ bytes@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-2.4.0.tgz#7d97196f9d5baf7f6935e25985549edd2a6c2339"
 
+call-once-in-interval@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/call-once-in-interval/-/call-once-in-interval-1.0.1.tgz#5b79370767ea866a23950513e861b25f9ba79eea"
+
 caller-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
@@ -4042,7 +4046,7 @@ react-native-version-number@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/react-native-version-number/-/react-native-version-number-0.1.2.tgz#03605e52f30d15a94884fee17fd0559c01b337d0"
 
-react-native@0.44.0:
+react-native@^0.44.0:
   version "0.44.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.44.0.tgz#06427a30053f2d555c60fe0b9afcc6c778db09de"
   dependencies:

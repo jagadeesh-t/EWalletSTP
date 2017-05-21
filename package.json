@@ -15,10 +15,11 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "call-once-in-interval": "^1.0.1",
     "moment": "^2.18.1",
     "react": "16.0.0-alpha.6",
     "react-dom": "16.0.0-alpha.6",
-    "react-native": "0.44.0",
+    "react-native": "^0.44.0",
     "react-native-exception-handler": "^1.0.1",
     "react-native-google-analytics-bridge": "^5.0.1",
     "react-native-keyboard-aware-scroll-view": "^0.2.9",

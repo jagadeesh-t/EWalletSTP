@@ -3,5 +3,5 @@
  * https://github.com/facebook/react-native
  * @flow
  */
- import app from './app';
+ import app from './app/index';
  export default app;

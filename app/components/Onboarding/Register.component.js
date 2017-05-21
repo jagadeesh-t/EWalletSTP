@@ -8,7 +8,7 @@ class RegisterForm extends Component {
     return (
       <KeyboardAwareScrollView extraHeight={120}>
         <View>
-          <Text>{language.TEST}</Text>
+          <Text>{language.REGISTER__TEST}</Text>
         </View>
       </KeyboardAwareScrollView>
     );
