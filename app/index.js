@@ -37,4 +37,4 @@ const EwalletSTP = () => (
 );
 //
 export default EwalletSTP;
-AppRegistry.registerComponent('ewalletstp', wrapObjectInFunction(EwalletSTP));
+AppRegistry.registerComponent('EwalletSTP', wrapObjectInFunction(EwalletSTP));
