@@ -42,6 +42,10 @@
 		8ADFC27C4FED4D34AF47C98D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B505F8E617DE410AAB750285 /* MaterialIcons.ttf */; };
 		8C1ED10154324294AD6245F7 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1E9147E6A5B496DABB5A470 /* Zocial.ttf */; };
 		942FE0F24C7746AB844E5954 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FAAB2CF6474C49ACDBE416 /* libSplashScreen.a */; };
+		A686D3451ED169A400F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
+		A686D3461ED169A600F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
+		A686D3471ED169A600F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
+		A686D3481ED169A700F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
 		A69E839A1ED09AC6003E46E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69E83991ED09AC6003E46E5 /* CoreData.framework */; };
 		A69E839C1ED09AD3003E46E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69E839B1ED09AD3003E46E5 /* SystemConfiguration.framework */; };
 		A69E839E1ED09AE2003E46E5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A69E839D1ED09AE2003E46E5 /* libz.tbd */; };
@@ -331,6 +335,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		85E08644FC8C41A3B6861B96 /* libRNVersionNumber.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVersionNumber.a; sourceTree = "<group>"; };
 		8BCC4C7BC1C740A6939FA291 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		A686D3441ED1699E00F65C19 /* ewstp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ewstp.ttf; sourceTree = SOURCE_ROOT; };
 		A69E83991ED09AC6003E46E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A69E839B1ED09AD3003E46E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A69E839D1ED09AE2003E46E5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -525,6 +530,7 @@
 				B505F8E617DE410AAB750285 /* MaterialIcons.ttf */,
 				8BCC4C7BC1C740A6939FA291 /* Octicons.ttf */,
 				62E10A1399A8485F92EAC32B /* SimpleLineIcons.ttf */,
+				A686D3441ED1699E00F65C19 /* ewstp.ttf */,
 				F1E9147E6A5B496DABB5A470 /* Zocial.ttf */,
 			);
 			name = Resources;
@@ -1084,6 +1090,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A686D3461ED169A600F65C19 /* ewstp.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1093,6 +1100,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				A686D3451ED169A400F65C19 /* ewstp.ttf in Resources */,
 				D1549DABAD9346FE82610146 /* Entypo.ttf in Resources */,
 				E09A757B416F41909053016B /* EvilIcons.ttf in Resources */,
 				EAB23107968F4277A5DBF466 /* FontAwesome.ttf in Resources */,
@@ -1110,6 +1118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A686D3471ED169A600F65C19 /* ewstp.ttf in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1118,6 +1127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A686D3481ED169A700F65C19 /* ewstp.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@ import {wrapMethodInFunction} from '../../utils/transformer.util';
 import styles from './Register.component.style';
 // import {language} from '../../config/language';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import RNIcon from '../../assets/fonts/RNIcon';
+
 
 class RegisterView extends React.Component {
   static propTypes = {
@@ -21,6 +23,7 @@ class RegisterView extends React.Component {
     const {invalid, submitting, handleSubmit = noop} = this.props;
     return (
       <KeyboardAwareScrollView keyboardShouldPersistTaps='handled' contentContainerStyle={styles.containerContent} style={styles.container} extraHeight={120}>
+        <RNIcon name='exclamation'/>
         <Text style={styles.title}>{'language.REGISTER__NEW_USER'}</Text>
         <View style={styles.formContainer}>
           <Text style={styles.formHeader}>{'language.REGISTER__MOBILE_NO'}</Text>
