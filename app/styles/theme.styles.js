@@ -2,6 +2,8 @@ export default  {
   // Color Variables
   primary: '#0068ad',
   contrast: '#80c9ff',
+  textColor: '#000000',
+  textColorInverted: '#ffffff',
   fontSizeXS: 9,
   fontSizeSmall: 12,
   fontSizeNormal: 14,

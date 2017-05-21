@@ -39,7 +39,8 @@ export default {
     height: 47
   },
   primaryButtonText: {
-    color: theme.white
+    color: theme.textColorInverted,
+    fontSize: theme.fontSizeNormal
   },
   secondaryButtonText: {
     color: theme.primary
