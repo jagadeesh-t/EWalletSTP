@@ -9,8 +9,6 @@ import {AppRegistry} from 'react-native';
 import {wrapObjectInFunction} from './utils/transformer.util';
 import {Provider} from 'react-redux';
 import {initStore} from './state/store';
-import {setCurrent} from './config/language';
-import result from 'lodash/result';
 import App from './App.container';
 import {setJSExceptionHandler} from 'react-native-exception-handler';
 import errorHandler from './utils/errorHandler.util';
@@ -18,10 +16,7 @@ import errorHandler from './utils/errorHandler.util';
 setJSExceptionHandler(errorHandler);
 
 const store = initStore();
-store.subscribe(() => {
-  const currentLanguage = result(store.getState(), 'currentLanguage.label', 'English');
-  setCurrent(currentLanguage); // THIS MIGHT BE A BOTTLENEXT //TODO
-});
+
 // ===========================================
 // ===========================================
 // CONFIG FOR MAKING NETWORK REQUEST SHOW UP

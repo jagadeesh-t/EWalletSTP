@@ -3,20 +3,20 @@ import Portugese from './Portugese';
 import storage from '../../utils/storage.util';
 
 const current = {
-  lang: 'English'
+  langCode: 'en'
 };
 
-const listOfLanguages = {
-  English,
-  Portugese
+export const listOfLanguages = {
+  en: English,
+  pt: Portugese
 };
 
 module.exports = {
   get language () {
-    return listOfLanguages[current.lang];
+    return listOfLanguages[current.langCode];
   },
-  setCurrent (language) {
-    storage.set('LANGUAGE', language);
-    current.lang = language;
+  setCurrent (langCode) {
+    storage.set('LANGUAGE', langCode);
+    current.langCode = langCode;
   }
 };

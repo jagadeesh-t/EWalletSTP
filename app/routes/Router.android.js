@@ -2,16 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {addNavigationHelpers} from 'react-navigation';
 import {connect} from 'react-redux';
-import {BackAndroid} from 'react-native';
+import {BackHandler} from 'react-native';
 import Routes from './index.routes';
+import {getCurrentRouteName} from '../utils/transformer.util';
 
 class RouterWrapper extends React.Component {
   static propTypes = {
     nav: PropTypes.object,
     dispatch: PropTypes.func
   }
+  componentDidMount () {
+    // FROM: https://github.com/react-community/react-navigation/issues/117
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      const {dispatch, nav} = this.props;
+      const currentRoute = getCurrentRouteName(nav);
+      if (currentRoute === 'Landing') { // exit the app from landing page
+        return false;
+      }
+      dispatch({type: 'Navigation/BACK'});
+      return true;
+    });
+  }
   componentWillUnmount () {
-    BackAndroid.removeEventListener('backPress');
+    BackHandler.removeEventListener('hardwareBackPress');
   }
   render () {
     const {dispatch, nav} = this.props;

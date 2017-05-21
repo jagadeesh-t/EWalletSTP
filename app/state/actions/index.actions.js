@@ -15,7 +15,7 @@ export const SET_LANGUAGE = 'SET_LANGUAGE';
 // =================
 
 // LANGUAGE action creators
-export const setLanguage = createAction(SET_LANGUAGE);
+export const setLanguage = createAction(SET_LANGUAGE); // payload u send is langCode
 
 // CLEAN REDUX STATE action creators
 export const cleanAppState = createAction(CLEAN_APP_STATE);
