@@ -18,25 +18,25 @@ class RegisterView extends React.Component {
   }
 
   render () {
-    const {payeeNameDisabled = false, invalid, submitting, handleSubmit = noop} = this.props;
+    const {invalid, submitting, handleSubmit = noop} = this.props;
     return (
       <KeyboardAwareScrollView keyboardShouldPersistTaps='handled' contentContainerStyle={styles.containerContent} style={styles.container} extraHeight={120}>
         <Text style={styles.title}>{'language.REGISTER__NEW_USER'}</Text>
         <View style={styles.formContainer}>
           <Text style={styles.formHeader}>{'language.REGISTER__MOBILE_NO'}</Text>
-          <Field name='mobileNo' component={FormInput} keyboardType='numeric' placeholder={'language.REGISTER__ACCOUNT_NUMBER_PLACEHOLDER'} />
+          <Field name='mobileNo' component={FormInput} placeholder={'language.REGISTER__ACCOUNT_NUMBER_PLACEHOLDER'} />
 
           <Text style={styles.formHeader}>{'language.REGISTER__PASSWORD'}</Text>
-          <Field name='password' format={this.formatBank} disabled={true} component={FormInput} keyboardType='numeric' placeholder={'language.REGISTER__BANK_NAME_PLACEHOLDER'} />
+          <Field name='password' component={FormInput} placeholder={'language.REGISTER__BANK_NAME_PLACEHOLDER'} />
 
           <Text style={styles.formHeaderSubtext}>{'language.REGISTER__NAME'}</Text>
-          <Field name='name' disabled={payeeNameDisabled} component={FormInput} placeholder={'language.REGISTER__NAME_PLACEHOLDER'} />
+          <Field name='name' component={FormInput} placeholder={'language.REGISTER__NAME_PLACEHOLDER'} />
 
           <Text style={styles.formHeaderSubtext}>{'language.REGISTER__EMAIL'}</Text>
-          <Field name='email' disabled={payeeNameDisabled} component={FormInput} placeholder={'language.REGISTER__NAME_PLACEHOLDER'} />
+          <Field name='email' component={FormInput} placeholder={'language.REGISTER__NAME_PLACEHOLDER'} />
 
           <Text style={styles.formHeaderSubtext}>{'language.REGISTER__COUNTRY'}</Text>
-          <Field name='country' disabled={payeeNameDisabled} component={FormInput} placeholder={'language.REGISTER__NAME_PLACEHOLDER'} />
+          <Field name='country' component={FormInput} placeholder={'language.REGISTER__NAME_PLACEHOLDER'} />
 
         </View>
         <FormButton disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={'language.SERVICE__NEXT_BUTTON'}/>
