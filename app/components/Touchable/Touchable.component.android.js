@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {TouchableNativeFeedback, View, Platform} from 'react-native';
-import theme from '../styles/core.styles';
+import theme from '../../styles/theme.styles';
 import callOnce from 'call-once-in-interval';
 import noop from 'lodash/noop';
 
