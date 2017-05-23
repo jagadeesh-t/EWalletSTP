@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import HomeView from '../../components/Onboarding/Home.component';
+import HomeView from '../../components/Home/Home.component';
 import {connect} from 'react-redux';
+import noop from 'lodash/noop';
 
 const mapDispatchToProps = () => ({});
 
@@ -9,7 +10,7 @@ const mapStateToProps = () => ({});
 class HomeScreen extends Component {
   render () {
     return (
-      <HomeView />);
+      <HomeView onLinkClick={noop}/>);
   }
 }
 

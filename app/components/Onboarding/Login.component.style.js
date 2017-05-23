@@ -1,8 +1,6 @@
 import theme from '../../styles/theme.styles';
 export default {
-  pageContainer: {
-    paddingHorizontal: 30
-  },
+  pageContainer: theme.pageContainer,
   title: {
     fontWeight: theme.fontWeightLight,
     fontSize: theme.fontSizeXL,

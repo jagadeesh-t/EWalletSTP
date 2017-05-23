@@ -13,3 +13,12 @@ export const getCurrentRouteName  = (navigationState) => {
   }
   return route.routeName;
 };
+
+export const formatFieldAmount = (value) => {
+  const replaceRegex = /(\d)(?=(\d{3})+(?!\d))/g;
+  return (!value && parseInt(value) !== 0) ? '' :
+        Number(value).toFixed(0).replace(replaceRegex, '$1,');
+};
+
+export const currencyFormatter = (unformatted) => (
+  !unformatted && parseInt(unformatted) !== 0) ? '--' :  formatFieldAmount(unformatted);
