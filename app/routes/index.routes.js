@@ -3,9 +3,9 @@ import OnboardingRoutes from './onboarding.routes';
 import MainRoutes from './main.routes';
 
 export default StackNavigator({
-  Onboarding: {
-    screen: OnboardingRoutes
-  },
+  // Onboarding: {
+  //   screen: OnboardingRoutes
+  // },
   Main: {
     screen: MainRoutes
   }

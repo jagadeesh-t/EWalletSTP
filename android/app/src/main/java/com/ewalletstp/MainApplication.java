@@ -3,6 +3,7 @@ package com.ewalletstp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.horcrux.svg.SvgPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.apsl.versionnumber.RNVersionNumberPackage;
 import com.cboy.rn.splashscreen.SplashScreenReactPackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new SvgPackage(),
             new VectorIconsPackage(),
             new RNVersionNumberPackage(),
             new SplashScreenReactPackage(),

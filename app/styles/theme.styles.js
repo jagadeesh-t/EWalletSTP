@@ -3,6 +3,7 @@ export default  {
   primary: '#0068ad',
   secondary: '#ffb02a',
   ternary: '#18866b',
+  lightgrey: '#e7e7e7',
   contrast: '#80c9ff',
   textColor: '#000000',
   textColorHighlight: '#838485',
