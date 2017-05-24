@@ -9,7 +9,7 @@ const mapStateToProps = () => ({});
 class ReceiveScreen extends Component {
   render () {
     return (
-      <ReceiveView/>);
+      <ReceiveView qrValue='dummy' />);
   }
 }
 

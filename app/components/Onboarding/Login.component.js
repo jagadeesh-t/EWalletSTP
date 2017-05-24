@@ -13,7 +13,6 @@ import Touchable from '../Touchable/Touchable.component';
 
 class LoginView extends React.Component {
   static propTypes = {
-    payeeNameDisabled: PropTypes.bool,
     handleSubmit: PropTypes.func,
     invalid: PropTypes.bool,
     submitting: PropTypes.bool

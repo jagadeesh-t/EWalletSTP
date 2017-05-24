@@ -13,7 +13,6 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 class RegisterView extends React.Component {
   static propTypes = {
-    payeeNameDisabled: PropTypes.bool,
     handleSubmit: PropTypes.func,
     invalid: PropTypes.bool,
     submitting: PropTypes.bool
