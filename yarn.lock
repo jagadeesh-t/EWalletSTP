@@ -3983,6 +3983,10 @@ react-mixin@^2.0.2:
     object-assign "^2.0.0"
     smart-mixin "^1.2.0"
 
+react-native-camera@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-0.9.0.tgz#5d89b6e5769d94d59f9b7248096b3fb930fc4bfb"
+
 react-native-debugger-open@^0.3.11:
   version "0.3.11"
   resolved "https://registry.yarnpkg.com/react-native-debugger-open/-/react-native-debugger-open-0.3.11.tgz#375e793f5ce7cdb0be85eb8b5362fd8cdcc6785a"

@@ -28,7 +28,10 @@ class SendMoneyView extends React.Component {
         </View>
         <View style={styles.mainAreaContainer}>
           <View style={styles.qrReaderContainer} >
-            <Text>QR</Text>
+            <Touchable style={styles.qrButton}>
+              <RNIcon style={styles.scanQRIcon} name='qr-scan-btn'/>
+              <Text style={styles.scan}>SCAN QR CODE</Text>
+            </Touchable>
           </View>
           <View style={styles.formContainer}>
             <Text style={styles.subTitle}>Or Enter the following details</Text>
@@ -41,7 +44,7 @@ class SendMoneyView extends React.Component {
           </View>
         </View>
         <View style={styles.buttonContainer} >
-          <FormButton disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={'Next'}/>
+          <FormButton style={styles.button} disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={'Next'}/>
         </View>
 
       </KeyboardAwareScrollView>

@@ -4,7 +4,7 @@ export default  {
   secondary: '#ffb02a',
   ternary: '#18866b',
   lightgrey: '#e7e7e7',
-  contrast: '#80c9ff',
+  contrast: '#ffffff',
   textColor: '#000000',
   textColorHighlight: '#838485',
   textColorInverted: '#ffffff',
@@ -29,6 +29,7 @@ export default  {
   buttonDisabledBg: '##6b929d',
   pageContainer: {
     padding: 20,
+    paddingTop: 5,
     backgroundColor: '#f5f5f5'
   }
 };
