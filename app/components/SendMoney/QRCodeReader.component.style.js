@@ -4,7 +4,8 @@ export default {
     flex: 1
   },
   camera: {
-    flex: 1
+    flex: 1,
+    justifyContent: 'center'
   },
   finder: {
     alignSelf: 'center'

@@ -11,19 +11,20 @@ class HomeView extends React.Component {
     onLinkClick: PropTypes.func
   }
   links = [
-    [{icon: 'plus', id: 'addMoney', title: 'Add Money '}, {icon: 'money', id: 'user', title: 'Pay Money'}],
-    [{icon: 'line-chart', id: 'tHistory', title: 'Transaction History'}, {icon: 'qrcode', id: 'receive', title: 'Receive Payment'}],
+    [{icon: 'plus', id: 'addMoney', title: 'Add Money '}, {icon: 'money', id: 'SendMoney', title: 'Pay Money'}],
+    [{icon: 'line-chart', id: 'tHistory', title: 'Transaction History'}, {icon: 'qrcode', id: 'Receive', title: 'Receive Payment'}],
   ]
   tabs = [
     {icon: 'user', id: 'profile', title: 'Profile'},
     {icon: 'wrench', id: 'settings', title: 'Settings'}
   ]
   render () {
+    const {onLinkClick} = this.props;
     return (
       <KeyboardAwareScrollView  keyboardShouldPersistTaps='handled' style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120} >
         <Banner title='Balance' amount={200000} />
-        <LinkPaneContainer onClick={this.props.onLinkClick} links={this.links} />
-        <TabsHolder onClick={this.props.onLinkClick} tabs={this.tabs} />
+        <LinkPaneContainer onClick={onLinkClick} links={this.links} />
+        <TabsHolder onClick={onLinkClick} tabs={this.tabs} />
       </KeyboardAwareScrollView >
     );
   }

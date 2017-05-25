@@ -68,7 +68,7 @@
       }
     },
     "transformIgnorePatterns": [
-      "/node_modules/(?!react-native|@shoutem|react-clone-referenced-element|react-navigation)"
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
     ]
   }
 }

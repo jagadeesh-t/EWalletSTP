@@ -9,6 +9,10 @@ class LinkPaneContainer extends React.Component {
     links: PropTypes.array,
     onClick: PropTypes.func
   }
+
+  onPaneClick = (eachLinkPane) => () => {
+    this.props.onClick(eachLinkPane);
+  }
   render () {
     return (
       <View style={styles.container}>
@@ -16,7 +20,7 @@ class LinkPaneContainer extends React.Component {
           <View key={j} style={styles.group}>
             {
               eachGroup.map(
-                (eachLinPane, i) => <LinkPane icon={eachLinPane.icon} onClick={this.props.onClick} key={i} id={eachLinPane.id} title={eachLinPane.title} />
+                (eachLinkPane, i) => <LinkPane icon={eachLinkPane.icon} onClick={this.onPaneClick(eachLinkPane)} key={i} id={eachLinkPane.id} title={eachLinkPane.title} />
               )
             }
           </View>)}

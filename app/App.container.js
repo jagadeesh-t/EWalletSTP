@@ -1,6 +1,6 @@
 import React from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import ConnectedRoutes from './routes/index.routes';
+import {ConnectedRoutes} from './routes/Router';
 import {connect} from 'react-redux';
 
 const mapStateToProps = () => ({});
