@@ -2,24 +2,11 @@ import theme from '../../styles/theme.styles';
 export default {
   pageContainer: [theme.pageContainer],
   contentContainer: {
-    flexGrow: 1
+    flexGrow: 1,
+    paddingBottom: 30
   },
   titleContainer: {
-    flex: 1
-  },
-  mainAreaContainer: {
-    flex: 4,
-  },
-  buttonContainer: {
-    flex: 1,
-    paddingBottom: 20
-  },
-  qrReaderContainer: {
-    flex: 1
-  },
-  formContainer: {
-    flex: 2,
-    paddingTop: 10
+    paddingBottom: 10
   },
   title: {
     fontWeight: theme.fontWeightLight,
@@ -27,37 +14,57 @@ export default {
     paddingBottom: 10,
     color: theme.primary
   },
-  subTitle: {
+  subtext: {
     fontSize: theme.fontSizeNormal,
-    paddingBottom: 20,
+    paddingBottom: 10,
     color: theme.textColor
   },
-  formHeader: {
-    flexDirection: 'row'
+  payGraphic: {
+    height: 110,
+    paddingBottom: 10
   },
-  formHeaderText: {
-    fontWeight: theme.fontWeightBold,
-    fontSize: theme.fontSizeNormal,
-    color: theme.textColor,
-    paddingLeft: 10
+  image: {
+    flex: 1,
+    height: null,
+    width: null
   },
-  scan: {
-    padding: 5,
-    color: theme.secondary,
-    borderBottomWidth: 1,
-    textAlign: 'center',
-    fontWeight: theme.fontWeightBold,
-    fontSize: theme.fontSizeNormal,
-  },
-  scanQRIcon: {
-    textAlign: 'center',
-    fontSize: 100,
+  card: {
+    backgroundColor: theme.contrast,
+    shadowOffset: {width: 0, height: 1.5},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    paddingHorizontal: 15,
     padding: 10,
-    textShadowOffset: {width: 2, height: 1},
-    color: theme.textColor,
-    transform: [{rotate: '10deg'}]
+    borderBottomWidth: 1,
+    borderBottomColor: '#CCC',
+    marginBottom: 20
   },
-  qrButton: {
-    alignSelf: 'center'
+  subtitle: {
+    fontWeight: theme.fontWeightBold,
+    fontSize: theme.fontSizeMedium,
+    paddingVertical: 10
+  },
+  fieldRow: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  fieldKey: {
+    paddingVertical: 10,
+    fontWeight: theme.fontWeightLight,
+    fontSize: theme.fontSizeMedium
+  },
+  fieldValue: {
+    paddingVertical: 10,
+    fontWeight: theme.fontWeightLight,
+    fontSize: theme.fontSizeMedium
+  },
+  amount: {
+    fontSize: theme.fontSizeLarge,
+    paddingVertical: 10
+  },
+  buttonContainer: {
+    flex: 1,
+    justifyContent: 'flex-end'
   }
 };

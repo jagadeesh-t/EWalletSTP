@@ -9,7 +9,10 @@ const formConfig = {
   form: 'sendMoney',
   destroyOnUnmount: true,
   initialValues: {},
-  onSubmit: () => {},
+  onSubmit: (values, dispatch) => {
+    const routeName = 'SendConfirmation';
+    return dispatch(NavigationActions.navigate({routeName}));
+  },
   validate: () => ({})
 };
 
