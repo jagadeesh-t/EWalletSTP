@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {View, Text} from 'react-native';
-import RNIcon from '../../assets/fonts/RNIcon';
+import {View} from 'react-native';
 import {FormButton} from '../FormElements';
-import noop from 'lodash/noop';
 import styles from './SendMoney.component.style';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
@@ -15,12 +13,11 @@ class SendMoneyView extends React.Component {
   }
 
   render () {
-    const {onConfirm = noop} = this.props;
     return (
       <KeyboardAwareScrollView style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
 
         <View style={styles.buttonContainer} >
-          <FormButton style={styles.button} disabled={invalid || submitting} onPress={onConfirm} text={'Confirm'}/>
+          <FormButton style={styles.button} text={'Confirm'}/>
         </View>
 
       </KeyboardAwareScrollView>

@@ -41,6 +41,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "axios-mock-adapter": "^1.8.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-preset-react-native": "^1.9.2",
@@ -55,6 +56,9 @@
     "react-native-debugger-open": "^0.3.11",
     "react-test-renderer": "^15.5.4"
   },
+  "pre-push": [
+    "lint"
+  ],
   "jest": {
     "preset": "react-native",
     "cacheDirectory": "./cache",
