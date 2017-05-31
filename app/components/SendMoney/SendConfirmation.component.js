@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {View, Text, Image, ScrollView} from 'react-native';
 import {FormButton} from '../FormElements';
 import styles from './SendConfirmation.component.style';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {currencyFormatter} from '../../utils/transformer.util';
 import ImagePayGraphic from '../../assets/images/mobile-pay.png';
 

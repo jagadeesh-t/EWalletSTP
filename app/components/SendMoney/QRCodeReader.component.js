@@ -9,6 +9,7 @@ import ImgViewFinder from '../../assets/images/viewfinder.png';
 import styles from './QRCodeReader.component.style';
 import RNIcon from '../../assets/fonts/RNIcon';
 import Touchable from '../Touchable/Touchable.component';
+import {language} from '../../config/language';
 
 export default class QrCodeScanner extends Component {
   static propTypes = {
@@ -18,7 +19,7 @@ export default class QrCodeScanner extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      flashToggle: true
+      flashToggle: false
     };
   }
   onFlash = () => {
@@ -39,11 +40,11 @@ export default class QrCodeScanner extends Component {
         <View style={styles.bottomBar}>
           <Touchable onPress={this.props.onClose} style={styles.barItem}>
             <RNIcon style={styles.barItemText} name='close, remove, times' />
-            <Text style={styles.barItemText}>Close</Text>
+            <Text style={styles.barItemText}>{language.QRSCANNER__CLOSE}</Text>
           </Touchable>
           <Touchable onPress={this.onFlash} style={styles.barItem}>
             <RNIcon style={styles.barItemText} name='bolt, flash' />
-            <Text style={styles.barItemText} >Flash {this.state.flashToggle ? ' ON' : ' OFF'}</Text>
+            <Text style={styles.barItemText} >{language.QRSCANNER__FLASH} {this.state.flashToggle ? ' ON' : ' OFF'}</Text>
           </Touchable>
         </View>
       </View>

@@ -1,18 +1,37 @@
 import React from 'react';
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import styles from './SendResult.component.style';
 import {FormButton} from '../FormElements';
-import ImagePayGraphic from '../../assets/images/mobile-pay.png';
+import result from 'lodash/result';
 import PropTypes from 'prop-types';
 import noop from 'lodash/noop';
+import RNIcon from '../../assets/fonts/RNIcon';
 
 class SendResultView extends React.Component {
   static propTypes = {
-    onDone: PropTypes.func.isRequired
+    onDone: PropTypes.func.isRequired,
+    status: PropTypes.oneOf(['success', 'failure', 'progress'])
   }
-
+  assetMap = {
+    success: {
+      icon: 'check',
+      text: 'Successful',
+      color: 'green'
+    },
+    failure: {
+      icon: 'close, remove, times',
+      text: 'Failed',
+      color: 'red'
+    },
+    progress: {
+      icon: 'spinner',
+      text: 'Processing',
+      color: 'grey'
+    }
+  }
   render () {
-    const {onDone = noop} = this.props;
+    const {onDone = noop, status = 'progress'} = this.props;
+    const statusEntity = result(this.assetMap, `[${status}]`, 'progress');
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
@@ -21,9 +40,9 @@ class SendResultView extends React.Component {
         </View>
         <View style={styles.card} >
           <ScrollView>
-            <View style={styles.payGraphic}>
-              <Image style={styles.image} resizeMode='contain' source={ImagePayGraphic}/>
-              <Text style={styles.status}>Success</Text>
+            <View style={styles.statusArea}>
+              <RNIcon style={[styles.statusIcon, {color: statusEntity.color}]} name={statusEntity.icon} />
+              <Text style={styles.status}>{statusEntity.text}</Text>
             </View>
 
             <Text style={styles.subtitle}>Transaction details</Text>

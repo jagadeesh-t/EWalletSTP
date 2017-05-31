@@ -9,6 +9,7 @@ import {wrapMethodInFunction} from '../../utils/transformer.util';
 import styles from './SendMoney.component.style';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Touchable from '../Touchable/Touchable.component';
+import {language} from '../../config/language';
 
 class SendMoneyView extends React.Component {
   static propTypes = {
@@ -23,28 +24,28 @@ class SendMoneyView extends React.Component {
     return (
       <KeyboardAwareScrollView style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{'Send Money'}</Text>
-          <Text style={styles.subTitle}>{'Please scan the QR code'}</Text>
+          <Text style={styles.title}>{language.SEND_MONEY__INDEX_TITLE}</Text>
+          <Text style={styles.subTitle}>{language.SEND_MONEY__INDEX_SUBTITLE}</Text>
         </View>
         <View style={styles.mainAreaContainer}>
           <View style={styles.qrReaderContainer} >
             <Touchable onPress={onQrClick} style={styles.qrButton}>
               <RNIcon style={styles.scanQRIcon} name='qr-scan-btn'/>
-              <Text style={styles.scan}>SCAN QR CODE</Text>
+              <Text style={styles.scan}>{language.SEND_MONEY__SCAN_QR_CODE}</Text>
             </Touchable>
           </View>
           <View style={styles.formContainer}>
-            <Text style={styles.subTitle}>Or Enter the following details</Text>
+            <Text style={styles.subTitle}>{language.SEND_MONEY__OR_ENTER_DETAILS}</Text>
 
-            <View style={styles.formHeader}><RNIcon name='mobile, mobile-phone' size={15} /><Text style={styles.formHeaderText}>{'Mobile Number'} </Text></View>
-            <Field name='mobileNo' component={FormInput} placeholder={'Enter destination mobile number'} />
+            <View style={styles.formHeader}><RNIcon name='mobile, mobile-phone' size={15} /><Text style={styles.formHeaderText}>{language.SEND_MONEY__MOBILE_NUMBER} </Text></View>
+            <Field name='mobileNo' component={FormInput} placeholder={language.SEND_MONEY__MOBILE_PLACEHOLDER} />
 
-            <View style={styles.formHeader}><RNIcon name='money' size={15} /><Text style={styles.formHeaderText}>{'Amount'} </Text></View>
-            <Field name='amount' component={FormInput} placeholder={'Enter the amount to pay'} />
+            <View style={styles.formHeader}><RNIcon name='money' size={15} /><Text style={styles.formHeaderText}>{language.SEND_MONEY__AMOUNT} </Text></View>
+            <Field name='amount' component={FormInput} placeholder={language.SEND_MONEY__AMOUNT_PLACEHOLDER} />
           </View>
         </View>
         <View style={styles.buttonContainer} >
-          <FormButton style={styles.button} disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={'Next'}/>
+          <FormButton style={styles.button} disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={language.COMMON__NEXT}/>
         </View>
 
       </KeyboardAwareScrollView>

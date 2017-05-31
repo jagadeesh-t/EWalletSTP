@@ -19,19 +19,17 @@ export default {
     paddingBottom: 10,
     color: theme.textColor
   },
-  payGraphic: {
-    height: 150,
-    paddingBottom: 10
-  },
   status: {
     alignSelf: 'center',
     paddingTop: 10,
     fontSize: theme.fontSizeLarge
   },
-  image: {
-    flex: 1,
-    height: null,
-    width: null
+  statusIcon: {
+    fontSize: 100,
+    alignSelf: 'center'
+  },
+  statusArea: {
+    padding: 10
   },
   card: {
     backgroundColor: theme.contrast,
