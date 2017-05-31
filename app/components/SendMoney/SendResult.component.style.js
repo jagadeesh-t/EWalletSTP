@@ -1,7 +1,8 @@
 import theme from '../../styles/theme.styles';
 export default {
   pageContainer: [theme.pageContainer, {
-    flexGrow: 1
+    flexGrow: 1,
+    paddingTop: 30
   }],
   titleContainer: {
     paddingBottom: 10,
@@ -19,7 +20,7 @@ export default {
     color: theme.textColor
   },
   payGraphic: {
-    height: 110,
+    height: 150,
     paddingBottom: 10
   },
   status: {

@@ -3,9 +3,12 @@ import SendConfirmationView from '../../components/SendMoney/SendConfirmation.co
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import {transfer} from '../../state/actions/index.thunks';
 
-const mapDispatchToProps = () => ({
-  onConfirm: () => {}
+const mapDispatchToProps = (dispatch) => ({
+  onConfirm: () => {
+    dispatch(transfer());
+  }
 });
 
 const mapStateToProps = () => ({});
@@ -22,7 +25,7 @@ class SendConfirmationScreen extends Component {
   render () {
     const {onConfirm} = this.props;
     return (
-      <SendConfirmationView amount={2000} payeeDetails={this.payeeDetails}
+      <SendConfirmationView amount={'2000'} payeeDetails={this.payeeDetails}
          currentDate={this.currentDate} onConfirm={onConfirm} />);
   }
 }

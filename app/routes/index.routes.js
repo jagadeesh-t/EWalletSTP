@@ -3,6 +3,7 @@ import {StackNavigator} from 'react-navigation';
 import HomePage from '../pages/Home/Home.page';
 import ReceivePage from '../pages/Receive/Receive.page';
 import SendMoneyPage from '../pages/SendMoney/SendMoney.page';
+import SendResultPage from '../pages/SendMoney/SendResult.page';
 import QRCodeReaderPage from '../pages/SendMoney/QRCodeReader.page';
 import SendConfirmationPage from '../pages/SendMoney/SendConfirmation.page';
 import RegisterPage from '../pages/Onboarding/Register.page';
@@ -40,4 +41,16 @@ const MainRoutes = StackNavigator({
   }
 });
 
-export default MainRoutes;
+const Routes = StackNavigator({
+  MainRoutes: {
+    screen: MainRoutes
+  },
+  SendResult: {
+    screen: SendResultPage,
+  }
+}, {
+  headerMode: 'none',
+  mode: 'modal'
+});
+
+export default Routes;

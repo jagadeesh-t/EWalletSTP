@@ -53,7 +53,7 @@ export default {
     textAlign: 'center',
     fontSize: 100,
     padding: 10,
-    textShadowOffset: {width: 2, height: 1},
+    textShadowOffset: {width: 1, height: 1},
     color: theme.textColor,
     transform: [{rotate: '10deg'}]
   },
