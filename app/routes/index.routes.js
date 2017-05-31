@@ -8,6 +8,7 @@ import QRCodeReaderPage from '../pages/SendMoney/QRCodeReader.page';
 import SendConfirmationPage from '../pages/SendMoney/SendConfirmation.page';
 import RegisterPage from '../pages/Onboarding/Register.page';
 import LoginPage from '../pages/Onboarding/Login.page';
+import TransactionHistoryPage from '../pages/TransactionHistroy/TransactionHistory.page';
 
 const MainRoutes = StackNavigator({
   Login: {
@@ -30,6 +31,9 @@ const MainRoutes = StackNavigator({
   },
   Receive: {
     screen: ReceivePage
+  },
+  TransactionHistory: {
+    screen: TransactionHistoryPage
   }
 }, {
   headerMode: 'screen',

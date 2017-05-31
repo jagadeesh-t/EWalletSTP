@@ -3,6 +3,7 @@ import SendResultView from '../../components/SendMoney/SendResult.component';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import {NavigationActions} from 'react-navigation';
+import PropTypes from 'prop-types';
 
 const mapDispatchToProps = (dispatch) => ({
   onConfirm: () => {
@@ -20,7 +21,7 @@ const mapStateToProps = () => ({});
 
 class SendResultScreen extends Component {
   static propTypes = {
-
+    onConfirm: PropTypes.func
   }
   currentDate = moment();
   render () {

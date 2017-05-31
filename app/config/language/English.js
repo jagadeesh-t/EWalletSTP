@@ -18,5 +18,10 @@ export default {
   SEND_MONEY__MOBILE_NUMBER: 'Mobile Number',
   SEND_MONEY__MOBILE_PLACEHOLDER: 'Enter destination mobile number',
   SEND_MONEY__AMOUNT: 'Amount',
-  SEND_MONEY__AMOUNT_PLACEHOLDER: 'Enter the amount to pay'
+  SEND_MONEY__AMOUNT_PLACEHOLDER: 'Enter the amount to pay',
+  TRANSACTION_HISTORY__TITLE: 'Transaction History',
+  TRANSACTION_HISTORY__SUBTITLE: 'List of all your transactions',
+  TRANSACTION_HISTORY__ALL: 'All',
+  TRANSACTION_HISTORY__DEBITS: 'Debits',
+  TRANSACTION_HISTORY__CREDITS: 'Credits'
 };

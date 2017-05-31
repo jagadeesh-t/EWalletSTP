@@ -12,8 +12,8 @@ class HomeView extends React.Component {
     onLinkClick: PropTypes.func
   }
   links = [
-    [{icon: 'plus', id: 'addMoney', title: language.HOME__ADD_MONEY}, {icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}],
-    [{icon: 'line-chart', id: 'tHistory', title: language.HOME__TRANSACTION_HISTORY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
+    [{icon: 'plus', id: 'AddMoney', title: language.HOME__ADD_MONEY}, {icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}],
+    [{icon: 'line-chart', id: 'TransactionHistory', title: language.HOME__TRANSACTION_HISTORY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
   ]
   tabs = [
     {icon: 'user', id: 'profile', title: language.HOME__PROFILE},
