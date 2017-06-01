@@ -7,7 +7,7 @@ import {Field} from 'redux-form';
 import noop from 'lodash/noop';
 import {wrapMethodInFunction} from '../../utils/transformer.util';
 import styles from './Login.component.style';
-import logoImage from '../../assets/images/walletLogo.png';
+import logoImage from '../../assets/images/walletLogo600x500.png';
 // import {language} from '../../config/language';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Touchable from '../Touchable/Touchable.component';

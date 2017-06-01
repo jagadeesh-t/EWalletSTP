@@ -5,7 +5,7 @@ export default {
     alignItems: 'center'
   },
   icon: {
-    color: theme.textColor
+    color: theme.primary
   },
   iconSize: 30,
   title: {

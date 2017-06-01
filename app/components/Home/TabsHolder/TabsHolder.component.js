@@ -19,7 +19,7 @@ class TabsHolder extends React.Component {
         {
           this.props.tabs.map((eachTab, i) =>
             <Tab key={i} icon={eachTab.icon} onClick={this.onClick(eachTab)} id={eachTab.id} title={eachTab.title} />)
-      }
+        }
       </View >
     );
   }

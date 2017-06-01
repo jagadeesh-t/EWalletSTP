@@ -2,24 +2,43 @@ import theme from '../../../styles/theme.styles';
 
 export default {
   container: {
-    flex: 2,
-    paddingVertical: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: theme.primary
+    height: null,
+    width: null,
+    backgroundColor: theme.transparent,
+    flex: 3
   },
-  title: {
+  titleContainer: {
+    paddingTop: 15,
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  logout: {
     alignSelf: 'center',
-    color: theme.secondary,
-    fontSize: theme.fontSizeNormal,
-    fontWeight: theme.fontWeightBold,
-    paddingBottom: 10
+    color: theme.lightgrey
+  },
+  logoutSize: 25,
+  title: {
+    color: theme.textColorInverted,
+    fontSize: theme.fontSizeXL,
+    fontWeight: theme.fontWeightLight,
+    alignSelf: 'flex-start'
+  },
+  name: {
+    color: theme.secondaryLight
+  },
+  balance: {
+    paddingTop: 20,
+    fontSize: theme.fontSizeSmall,
+    paddingHorizontal: 20,
+    color: theme.lightgrey,
   },
   amount: {
-    alignSelf: 'center',
-    color: theme.white,
+    color: theme.textColorInverted,
+    paddingTop: 10,
+    paddingHorizontal: 20,
     fontSize: theme.fontSizeXXL,
-    fontWeight: theme.fontWeightUltraLight
+    fontWeight: theme.fontWeightLight,
   },
   currency: {
     fontSize: theme.fontSizeNormal,

@@ -1,9 +1,10 @@
 export default  {
   // Color Variables
-  primary: '#0068ad',
-  secondary: '#ffb02a',
-  ternary: '#18866b',
+  primary: '#1d64a6',
+  secondary: '#f1a004',
+  ternary: '#088b8b',
   ternaryLight: '#20b892',
+  secondaryLight: '#fabb42',
   warning: '#ff6152',
   lightgrey: '#e7e7e7',
   contrast: '#ffffff',
@@ -11,6 +12,7 @@ export default  {
   textColorHighlight: '#838485',
   textColorInverted: '#ffffff',
   white: '#ffffff',
+  transparent: '#fff0',
   fontSizeXS: 9,
   fontSizeSmall: 12,
   fontSizeNormal: 14,
