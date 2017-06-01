@@ -1,14 +1,39 @@
 import theme from '../../styles/theme.styles';
 export default {
-  pageContainer: theme.pageContainer,
+  pageContainer: [theme.pageContainer, {
+    flexDirection: 'column'
+  }],
   contentContainer: {
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    flexGrow: 1
+  },
+  titleContainer: {
+    flex: 1
+  },
+  logoContainer: {
+    height: 120,
+    paddingBottom: 10
+  },
+  formContainer: {
+    paddingBottom: 20,
+    flex: 3,
+    justifyContent: 'center'
+  },
+  buttonContainer: {
+    flex: 1,
+    paddingVertical: 0,
+    justifyContent: 'flex-end'
+  },
+  logo: {
+    flex: 1,
+    height: null,
+    width: null
   },
   title: {
     fontWeight: theme.fontWeightLight,
     fontSize: theme.fontSizeXL,
     paddingBottom: 10,
-    color: theme.primary
+    color: theme.ternary
   },
   subTitle: {
     fontSize: theme.fontSizeNormal,
@@ -16,12 +41,7 @@ export default {
     color: theme.textColor
   },
   logoSize: 80,
-  logo: {
-    alignSelf: 'center'
-  },
-  formContainer: {
-    paddingBottom: 20
-  },
+
   formHeader: {
     flexDirection: 'row'
   },
@@ -34,13 +54,10 @@ export default {
   registerText: {
     textAlign: 'right',
     fontSize: 13,
-    color: theme.ternary,
-    fontWeight: theme.fontWeightBold
+    color: theme.warning,
+    fontWeight: theme.fontWeightMedium
   },
   linkTextContainer: {
     paddingVertical: 20
-  },
-  buttonContainer: {
-    paddingVertical: 10
   }
 };

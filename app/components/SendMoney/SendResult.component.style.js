@@ -2,7 +2,7 @@ import theme from '../../styles/theme.styles';
 export default {
   pageContainer: [theme.pageContainer, {
     flexGrow: 1,
-    paddingTop: 30
+    paddingTop: 20
   }],
   titleContainer: {
     paddingBottom: 10,
@@ -11,12 +11,10 @@ export default {
   title: {
     fontWeight: theme.fontWeightLight,
     fontSize: theme.fontSizeXL,
-    paddingBottom: 10,
     color: theme.ternary
   },
   subtext: {
     fontSize: theme.fontSizeNormal,
-    paddingBottom: 10,
     color: theme.textColor
   },
   status: {

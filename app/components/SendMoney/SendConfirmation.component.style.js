@@ -10,12 +10,10 @@ export default {
   title: {
     fontWeight: theme.fontWeightLight,
     fontSize: theme.fontSizeXL,
-    paddingBottom: 10,
     color: theme.ternary
   },
   subtext: {
     fontSize: theme.fontSizeNormal,
-    paddingBottom: 10,
     color: theme.textColor
   },
   payGraphic: {
