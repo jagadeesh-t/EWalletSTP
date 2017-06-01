@@ -3,6 +3,7 @@ export default  {
   primary: '#0068ad',
   secondary: '#ffb02a',
   ternary: '#18866b',
+  ternaryLight: '#20b892',
   warning: '#ff6152',
   lightgrey: '#e7e7e7',
   contrast: '#ffffff',

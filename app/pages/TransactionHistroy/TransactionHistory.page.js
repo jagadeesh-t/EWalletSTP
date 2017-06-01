@@ -15,7 +15,15 @@ class TransactionHistoryScreen extends Component {
   }
   render () {
     return (
-      <TransactionHistoryView transactionList={[]} />);
+      <TransactionHistoryView transactionList={[
+        {description: 'Transfer to X', amount: '20000',
+          type: 'credit', date: '20-01-2017 08:00am'},
+        {description: 'Transfer to X', amount: '20000',
+          type: 'debit', date: '20-01-2017 08:00am'},
+        {description: 'Transfer to X', amount: '20000',
+          type: 'debit', date: '20-01-2017 08:00am'},
+        {description: 'Transfer to X', amount: '20000',
+          type: 'credit', date: '20-01-2017 08:00am'}]} />);
   }
 }
 

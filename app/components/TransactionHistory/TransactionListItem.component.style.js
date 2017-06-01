@@ -7,7 +7,8 @@ export default {
     padding: 10,
     backgroundColor: '#FEFEFE',
     borderBottomWidth: 1,
-    borderBottomColor: '#DDD'
+    borderBottomColor: '#DDD',
+    alignItems: 'center'
   },
   iconContainer: {
     flex: 1,
@@ -22,6 +23,9 @@ export default {
   },
   debitIcon: {
     color: theme.warning
+  },
+  bothIcon: {
+    fontSize: theme.fontSizeSmall
   },
   descriptionContainer: {
     flex: 6

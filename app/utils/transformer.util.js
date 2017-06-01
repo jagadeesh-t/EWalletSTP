@@ -20,5 +20,7 @@ export const formatFieldAmount = (value) => {
         Number(value).toFixed(0).replace(replaceRegex, '$1,');
 };
 
-export const currencyFormatter = (unformatted) => (
-  !unformatted && parseInt(unformatted) !== 0) ? '--' :  formatFieldAmount(unformatted);
+export const currencyFormatter = (unformatted) => {
+  const formatted = formatFieldAmount(unformatted);
+  return formatted === 'NaN' ? unformatted : formatted;
+};

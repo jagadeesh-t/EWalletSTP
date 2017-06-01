@@ -25,7 +25,7 @@ export default {
     fontWeight: theme.fontWeightLight,
     fontSize: theme.fontSizeXL,
     paddingBottom: 10,
-    color: theme.primary
+    color: theme.ternary
   },
   subTitle: {
     fontSize: theme.fontSizeNormal,

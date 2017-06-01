@@ -14,7 +14,7 @@ export default {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.buttonBg,
+    backgroundColor: theme.primary,
     borderRadius: 30,
     paddingHorizontal: 15,
     height: 47
