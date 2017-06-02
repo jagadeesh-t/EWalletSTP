@@ -4,16 +4,25 @@ import LoginView from '../../components/Onboarding/Login.component';
 import {connect} from 'react-redux';
 import {login} from '../../state/actions/index.thunks';
 import PropTypes from 'prop-types';
+import * as validations from '../../utils/validator.util';
 
 const formConfig = {
   form: 'login',
   destroyOnUnmount: true,
-  initialValues: {},
-  onSubmit: (values, dispatch) => {
-    console.log(values);
-    return dispatch(login());
+  initialValues: {
+    mobileNo: '',
+    password: ''
   },
-  validate: () => ({})
+  onSubmit: (values, dispatch) => {
+    const {mobileNo, password} = values;
+    return dispatch(login(mobileNo, password));
+  },
+  validate: (values) => {
+    const errors = {};
+    validations.required(values, ['mobileNo', 'password'], errors);
+    validations.validateUsername(values, ['mobileNo'], errors);
+    return errors;
+  }
 };
 
 const mapDispatchToProps = () => ({});

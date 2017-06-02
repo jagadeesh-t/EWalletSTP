@@ -12,10 +12,13 @@ import {initStore} from './state/store';
 import App from './App.container';
 import {setJSExceptionHandler} from 'react-native-exception-handler';
 import errorHandler from './utils/errorHandler.util';
+import {initializeHTTPInterceptors} from './utils/http.util';
 
 setJSExceptionHandler(errorHandler);
 
 const store = initStore();
+initializeHTTPInterceptors(store);
+
 
 // ===========================================
 // ===========================================

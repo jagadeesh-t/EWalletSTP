@@ -6,10 +6,12 @@ import Banner from './Banner/Banner.component';
 import LinkPaneContainer from './LinkPaneContainer/LinkPaneContainer.component';
 import TabsHolder from './TabsHolder/TabsHolder.component';
 import {language} from '../../config/language';
+import result from 'lodash/result';
 
 class HomeView extends React.Component {
   static propTypes = {
-    onLinkClick: PropTypes.func
+    onLinkClick: PropTypes.func,
+    user: PropTypes.object
   }
   links = [
     [{icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
@@ -21,10 +23,13 @@ class HomeView extends React.Component {
     {icon: 'handshake-o', id: 'CustomerCare', title: language.HOME__CUSTOMER_CARE}
   ]
   render () {
-    const {onLinkClick} = this.props;
+    const {onLinkClick, user} = this.props;
+    const name = result(user, 'userprofile.name', '--');
+    const balance = result(user, 'balanceAccount.balance', '--');
+    const phone = result(user, 'phone', '--');
     return (
       <KeyboardAwareScrollView  keyboardShouldPersistTaps='handled' style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120} >
-        <Banner name={'Atul'} amount={'200000'} />
+        <Banner name={name} amount={String(balance)} phone={phone}/>
         <LinkPaneContainer onClick={onLinkClick} links={this.links} />
         <TabsHolder onClick={onLinkClick} tabs={this.tabs} />
       </KeyboardAwareScrollView >

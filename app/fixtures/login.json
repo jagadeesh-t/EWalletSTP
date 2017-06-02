@@ -1,10 +1,32 @@
 {
-  "url": "http://test.com/test",
+  "url": "https://wallet-stp.com/login",
   "requestBody": {
-    "test": "test"
+    "phone": "998732723",
+    "password": "123456"
   },
   "response": {
-    "testres":"1",
-    "b":"B"
+    "message": "Logged In Successfully",
+    "user": {
+      "balanceAccount": {
+        "balance": 0,
+        "id": 6,
+        "createdAt": "2016-12-21T17:26:14.000Z",
+        "updatedAt": "2016-12-21T17:26:14.000Z",
+        "account": 6
+      },
+      "userprofile": {
+        "name": "Test",
+        "email": "xyz@gmail.com",
+        "id": 6,
+        "createdAt": "2016-12-21T17:26:14.000Z",
+        "updatedAt": "2017-04-28T16:36:01.000Z",
+        "account": 6
+      },
+      "phone": "998732723",
+      "status": "active",
+      "id": 6,
+      "createdAt": "2016-12-21T17:26:14.000Z",
+      "updatedAt": "2016-12-21T17:26:14.000Z"
+    }
   }
 }

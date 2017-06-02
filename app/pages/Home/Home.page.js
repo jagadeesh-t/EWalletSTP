@@ -3,6 +3,7 @@ import HomeView from '../../components/Home/Home.component';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {NavigationActions} from 'react-navigation';
+import result from 'lodash/result';
 
 const mapDispatchToProps = (dispatch) => ({
   navigateTo: (link = {}) => {
@@ -11,16 +12,19 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => ({
+  user: result(state, 'user', {})
+});
 
 class HomeScreen extends Component {
   static propTypes = {
-    navigateTo: PropTypes.func
+    navigateTo: PropTypes.func,
+    user: PropTypes.object
   }
   render () {
-    const {navigateTo} = this.props;
+    const {navigateTo, user} = this.props;
     return (
-      <HomeView onLinkClick={navigateTo}/>);
+      <HomeView user={user} onLinkClick={navigateTo}/>);
   }
 }
 

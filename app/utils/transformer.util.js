@@ -1,3 +1,4 @@
+import result from 'lodash/result';
 // GENERAL utility methods
 export const wrapObjectInFunction = (obj) => () => obj;
 
@@ -24,3 +25,5 @@ export const currencyFormatter = (unformatted) => {
   const formatted = formatFieldAmount(unformatted);
   return formatted === 'NaN' ? unformatted : formatted;
 };
+
+export const getErrorMessage = (response) => result(response, 'data.message', null);

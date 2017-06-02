@@ -1,17 +1,17 @@
 import theme from '../../../styles/theme.styles';
 
 export default {
-  container: {
+  imageContainer: {
     height: null,
     width: null,
+    padding: 20,
     backgroundColor: theme.transparent,
-    flex: 3
+    justifyContent: 'space-between'
   },
   titleContainer: {
-    paddingTop: 15,
-    paddingHorizontal: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    paddingBottom: 20
   },
   logout: {
     alignSelf: 'center',
@@ -28,17 +28,20 @@ export default {
     color: theme.secondaryLight
   },
   balance: {
-    paddingTop: 20,
     fontSize: theme.fontSizeSmall,
-    paddingHorizontal: 20,
     color: theme.lightgrey,
+    paddingBottom: 5
   },
   amount: {
     color: theme.textColorInverted,
-    paddingTop: 10,
-    paddingHorizontal: 20,
     fontSize: theme.fontSizeXXL,
     fontWeight: theme.fontWeightLight,
+    paddingBottom: 20
+  },
+  phone: {
+    color: theme.textColorInverted,
+    fontSize: theme.fontSizeMedium,
+    fontWeight: theme.fontWeightBold,
   },
   currency: {
     fontSize: theme.fontSizeNormal,
