@@ -12,6 +12,7 @@ export default {
   HOME__SETTINGS: 'Settings',
   HOME__BALANCE: 'YOUR BALANCE',
   HOME__TITLE: 'Hi, ',
+  HOME__PHONE: 'ACCOUNT',
   SEND_MONEY__INDEX_TITLE: 'Send Money',
   SEND_MONEY__INDEX_SUBTITLE: 'Please scan the QR code',
   SEND_MONEY__SCAN_QR_CODE: 'SCAN QR CODE',
@@ -24,5 +25,7 @@ export default {
   TRANSACTION_HISTORY__SUBTITLE: 'List of all your transactions',
   TRANSACTION_HISTORY__ALL: 'All',
   TRANSACTION_HISTORY__DEBITS: 'Debits',
-  TRANSACTION_HISTORY__CREDITS: 'Credits'
+  TRANSACTION_HISTORY__CREDITS: 'Credits',
+  VALIDATION__REQUIRED_FIELD: 'Required',
+  VALIDATION__INCORRECT_USERNAME: 'Mobile Number is invalid'
 };

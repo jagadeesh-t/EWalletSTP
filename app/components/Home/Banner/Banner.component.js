@@ -12,19 +12,28 @@ class Banner extends React.Component {
   static propTypes = {
     amount: PropTypes.string,
     name: PropTypes.string,
+    phone: PropTypes.string,
     style: PropTypes.object
   }
 
   render () {
-    const {name} = this.props;
+    const {name, phone, amount, style} = this.props;
     return (
-      <Image style={[styles.container, this.props.style]} resizeMode='stretch' source={bannerBg}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{language.HOME__TITLE} <Text style={styles.name}>{name}</Text></Text>
-          <Touchable><RNIcon style={styles.logout} size={styles.logoutSize} name='power-off' /></Touchable>
+      <Image style={styles.imageContainer} resizeMode='stretch' source={bannerBg}>
+        <View style={[style]}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>{language.HOME__TITLE} <Text style={styles.name}>{name}</Text></Text>
+            <Touchable><RNIcon style={styles.logout} size={styles.logoutSize} name='power-off' /></Touchable>
+          </View>
+          <View>
+            <Text style={styles.balance}>{language.HOME__BALANCE}</Text>
+            <Text style={styles.amount}>STD {currencyFormatter(amount)}</Text>
+          </View>
+          <View>
+            <Text style={styles.balance}>{language.HOME__PHONE}</Text>
+            <Text style={styles.phone}>{phone}</Text>
+          </View>
         </View>
-        <Text style={styles.balance}>{language.HOME__BALANCE}</Text>
-        <Text style={styles.amount}>STD {currencyFormatter(this.props.amount)}</Text>
       </Image>
     );
   }

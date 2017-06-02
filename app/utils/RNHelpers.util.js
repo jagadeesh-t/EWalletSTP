@@ -1,7 +1,7 @@
 import Toast from 'react-native-simple-toast';
 import {Alert} from 'react-native';
 import RNSnackBar from 'react-native-snackbar-dialog';
-import theme from '../styles/core.styles';
+import {theme} from '../styles/theme.styles';
 import {wrapMethodInFunction} from './transformer.util';
 import {language} from '../config/language';
 

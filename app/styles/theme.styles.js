@@ -30,7 +30,7 @@ export default  {
   snackButton: '#606060',
   snackbarBg: '#797979',
   buttonBg: '#0ea5e6',
-  buttonDisabledBg: '##6b929d',
+  buttonDisabledBg: '#6b929d',
   pageContainer: {
     padding: 20,
     paddingTop: 5,

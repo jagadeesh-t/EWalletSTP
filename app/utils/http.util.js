@@ -1,6 +1,6 @@
-import {SERVER_URL, endpoints, mockResponses} from '../config/api.config';
-import env from '../config/env.config';
+import {SERVER_URL, endpoints} from '../config/api.config';
 import axios from 'axios';
+import {getStatusValidatorInterceptor, mockInterceptor} from './interceptors.util';
 
 const baseConfig = {
   baseURL: SERVER_URL,
@@ -8,9 +8,7 @@ const baseConfig = {
   params: {},
   timeout: 60000, // 60 seconds
   withCredentials: true,
-  validateStatus: function (status) {
-    return status >= 200 && status < 300;
-  },
+  validateStatus: () => true,
   cancelToken: null,
   // onDownloadProgress: () => {}, // Left this as a reference incase we need it
 };
@@ -19,6 +17,7 @@ const baseConfig = {
 // const CancelToken = axios.CancelToken;
 // const source = CancelToken.source();
 // http.get('/test', {cancelToken: source.token});
+// for http.post('/test',body, {cancelToken: source.token});
 // source.cancel('Operation canceled by the user.');
 
 export const get = (endpoint, options = {}) => {
@@ -44,26 +43,10 @@ export const post = (endpoint, data = {}, options = {}) => {
   return axios(config);
 };
 
-// Interceptor that sets mock response
-axios.interceptors.request.use((config) => {
-  if (env.MOCKAPI) {
-    console.log('SETTING MOCK for endpoint', config.endpoint);
-    config.adapter = mockAdapter;
-  }
-  return config;
-}, Promise.reject);
-
-const mockAdapter = (config) => new Promise((resolve) => {
-  const mockData = mockResponses[config.endpoint] || {};
-  const response = {
-    data: mockData.response,
-    status: 200,
-    statusText: 'OK - Mocked request',
-    headers: {mock: true},
-    config: config,
-  };
-  setTimeout(() => resolve(response), 500);
-});
-
-
-export const noNetworkAdaptor = () => Promise.reject({response: {data: {notConnected: true}}});
+// Registering interceptors
+export const initializeHTTPInterceptors = (store) => {
+  // REQUEST INTERCEPTORS
+  axios.interceptors.request.use(mockInterceptor, Promise.reject);
+  // RESPONSE INTERCEPTORS
+  axios.interceptors.response.use(getStatusValidatorInterceptor(store), Promise.reject);
+};
