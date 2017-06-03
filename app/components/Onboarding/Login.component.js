@@ -15,12 +15,13 @@ import Touchable from '../Touchable/Touchable.component';
 class LoginView extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func,
+    goToRegister: PropTypes.func,
     invalid: PropTypes.bool,
     submitting: PropTypes.bool
   }
 
   render () {
-    const {invalid, submitting, handleSubmit = noop} = this.props;
+    const {invalid, submitting, handleSubmit = noop, goToRegister} = this.props;
     return (
       <KeyboardAwareScrollView style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
         <View style={styles.titleContainer}>
@@ -39,7 +40,7 @@ class LoginView extends React.Component {
         </View>
         <View style={styles.buttonContainer} >
           <FormButton disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={'Next'}/>
-          <Touchable style={styles.linkTextContainer}>
+          <Touchable style={styles.linkTextContainer} onPress={goToRegister}>
             <Text style={styles.registerText}>New to eWallet ? Register</Text>
           </Touchable>
         </View>

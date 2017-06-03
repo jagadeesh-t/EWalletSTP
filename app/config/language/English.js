@@ -4,6 +4,17 @@ export default {
   COMMON__NEXT: 'Next',
   QRSCANNER__FLASH: 'Flash',
   QRSCANNER__CLOSE: 'Close',
+  REGISTER__TITLE: 'New User Registration',
+  REGISTER__MOBILENO: 'Mobile No',
+  REGISTER__MOBILE_PLACEHOLDER: 'Enter your mobile number',
+  REGISTER__PASSWORD: 'Password',
+  REGISTER__PASSWORD_PLACEHOLDER: 'Enter your desired password',
+  REGISTER__NAME: 'Name',
+  REGISTER__EMAIL: 'Email',
+  REGISTER__COUNTRY: 'Country',
+  REGISTER__NAME_PLACEHOLDER: 'Enter you name',
+  REGISTER__EMAIL_PLACEHOLDER: 'Enter your email (Optional)',
+  REGISTER__COUNTRY_PLACEHOLDER: 'Choose your country',
   HOME__CUSTOMER_CARE: 'Customer Care',
   HOME__PAY_MONEY: 'Pay Money',
   HOME__TRANSACTION_HISTORY: 'Transaction History',
@@ -27,5 +38,7 @@ export default {
   TRANSACTION_HISTORY__DEBITS: 'Debits',
   TRANSACTION_HISTORY__CREDITS: 'Credits',
   VALIDATION__REQUIRED_FIELD: 'Required',
-  VALIDATION__INCORRECT_USERNAME: 'Mobile Number is invalid'
+  VALIDATION__INCORRECT_USERNAME: 'Mobile Number is invalid',
+  VALIDATION__INCORRECT_PASSWORD: 'Minimum 8 characters at least 1 Alphabet, 1 Number and 1 Special Character',
+  VALIDATION__INCORRECT_EMAIL: 'Not a valid email address'
 };

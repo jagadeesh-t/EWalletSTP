@@ -7,7 +7,7 @@ export default {
   title: {
     fontWeight: theme.fontWeightLight,
     fontSize: theme.fontSizeXL,
-    color: theme.primary,
+    color: theme.ternary,
     paddingBottom: 20
   },
   headerIcon: {

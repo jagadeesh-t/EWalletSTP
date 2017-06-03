@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {login} from '../../state/actions/index.thunks';
 import PropTypes from 'prop-types';
 import * as validations from '../../utils/validator.util';
+import {NavigationActions} from 'react-navigation';
 
 const formConfig = {
   form: 'login',
@@ -20,12 +21,15 @@ const formConfig = {
   validate: (values) => {
     const errors = {};
     validations.required(values, ['mobileNo', 'password'], errors);
-    validations.validateUsername(values, ['mobileNo'], errors);
+    validations.validateMobileNo(values, ['mobileNo'], errors);
+    validations.validatePassword(values, ['password'], errors);
     return errors;
   }
 };
 
-const mapDispatchToProps = () => ({});
+const mapDispatchToProps = (dispatch) => ({
+  goToRegister: () => dispatch(NavigationActions.navigate({routeName: 'Register'}))
+});
 
 const mapStateToProps = () => ({});
 
@@ -33,12 +37,13 @@ const LoginForm = reduxForm(formConfig)(LoginView);
 
 class LoginScreen extends Component {
   static propTypes = {
-    doLogin: PropTypes.func
+    doLogin: PropTypes.func,
+    goToRegister: PropTypes.func
   }
   render () {
-    const {doLogin} = this.props;
+    const {doLogin, goToRegister} = this.props;
     return (
-      <LoginForm onLogin={doLogin}/>);
+      <LoginForm goToRegister={goToRegister} onLogin={doLogin}/>);
   }
 }
 
