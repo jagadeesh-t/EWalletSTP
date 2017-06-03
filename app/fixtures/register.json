@@ -1,0 +1,35 @@
+{
+  "url": "https://wallet-stp.com/signup",
+  "requestBody": {
+    "name": "test 2",
+    "phone": 1235,
+    "password": "qwerty",
+    "email": "mail@test.com",
+    "country_code": "+239"
+  },
+  "response": {
+    "fromTransactions": [],
+    "toTransactions": [],
+    "balanceAccount": {
+      "balance": 0,
+      "id": 3,
+      "createdAt": "2017-06-03T10:26:01.000Z",
+      "updatedAt": "2017-06-03T10:26:01.000Z",
+      "account": 3
+    },
+    "userprofile": {
+      "name": "test 3",
+      "email": null,
+      "distributor": false,
+      "id": 3,
+      "createdAt": "2017-06-03T10:26:01.000Z",
+      "updatedAt": "2017-06-03T10:26:01.000Z",
+      "account": 3
+    },
+    "phone": "12345",
+    "status": "active",
+    "id": 3,
+    "createdAt": "2017-06-03T10:26:00.000Z",
+    "updatedAt": "2017-06-03T10:26:01.000Z"
+  }
+}

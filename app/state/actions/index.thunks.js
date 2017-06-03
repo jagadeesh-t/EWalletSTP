@@ -9,8 +9,8 @@ import result from 'lodash/result';
 export const login = (username, password) => (dispatch) => {
   const payload = middleware.login(username, password);
   return api.login(payload).then((res) => {
-    dispatch(NavigationActions.navigate({routeName: 'Home'}));
     dispatch(actions.populateUser(result(res, 'data.user', {})));
+    dispatch(NavigationActions.navigate({routeName: 'Home'}));
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
   });
@@ -18,4 +18,14 @@ export const login = (username, password) => (dispatch) => {
 
 export const transfer = () => (dispatch) => {
   dispatch(NavigationActions.navigate({routeName: 'SendResult'}));
+};
+
+export const register = (phone, password, name, email, countryCode) => (dispatch) => {
+  const payload = middleware.register(phone, password, name, email, countryCode);
+  return api.register(payload).then((res) => {
+    dispatch(actions.populateUser(result(res, 'data', {})));
+    dispatch(NavigationActions.navigate({routeName: 'Home'}));
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+  });
 };
