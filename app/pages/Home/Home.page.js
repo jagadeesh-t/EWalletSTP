@@ -4,14 +4,15 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {NavigationActions} from 'react-navigation';
 import result from 'lodash/result';
-import {logout} from '../../state/actions/index.thunks';
+import {logout, getUser} from '../../state/actions/index.thunks';
 
 const mapDispatchToProps = (dispatch) => ({
   navigateTo: (link = {}) => {
     const routeName = link.id;
     dispatch(NavigationActions.navigate({routeName}));
   },
-  onLogoutClick: () => dispatch(logout())
+  onLogoutClick: () => dispatch(logout()),
+  refreshUserData: () => dispatch(getUser())
 });
 
 const mapStateToProps = (state) => ({
@@ -22,12 +23,13 @@ class HomeScreen extends Component {
   static propTypes = {
     navigateTo: PropTypes.func,
     user: PropTypes.object,
-    onLogoutClick: PropTypes.func
+    onLogoutClick: PropTypes.func,
+    refreshUserData: PropTypes.func
   }
   render () {
-    const {navigateTo, user, onLogoutClick} = this.props;
+    const {navigateTo, user, onLogoutClick, refreshUserData} = this.props;
     return (
-      <HomeView user={user} onLogoutClick={onLogoutClick} onLinkClick={navigateTo}/>);
+      <HomeView user={user} onLogoutClick={onLogoutClick} onLinkClick={navigateTo} refreshUserData={refreshUserData}/>);
   }
 }
 

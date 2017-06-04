@@ -1,0 +1,27 @@
+{
+  "url": "http://localhost:1337/user",
+  "method": "get",
+  "response": {
+    "balanceAccount": {
+      "balance": 16800,
+      "id": 1,
+      "createdAt": "2017-06-04T03:18:29.000Z",
+      "updatedAt": "2017-06-04T03:18:29.000Z",
+      "account": 1
+    },
+    "userprofile": {
+      "name": "test user",
+      "email": "mail@test.com",
+      "distributor": false,
+      "id": 1,
+      "createdAt": "2017-06-04T03:18:29.000Z",
+      "updatedAt": "2017-06-04T03:18:29.000Z",
+      "account": 1
+    },
+    "phone": "123456",
+    "status": "active",
+    "id": 1,
+    "createdAt": "2017-06-04T03:18:29.000Z",
+    "updatedAt": "2017-06-04T03:18:29.000Z"
+  }
+}

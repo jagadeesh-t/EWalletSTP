@@ -9,3 +9,5 @@ export const register = (registerPayload) =>
     {additional: ['FTXID']});
 
 export const logout = () => Http.get('LOGOUT');
+
+export const user = () => Http.get('USER');

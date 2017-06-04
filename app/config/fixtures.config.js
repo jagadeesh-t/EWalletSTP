@@ -3,5 +3,6 @@ module.exports = {
   LOGOUT: require('../fixtures/logout.json'),
   REGISTER: require('../fixtures/register.json'),
   TRANSACT: require('../fixtures/transact.json'),
-  TRANSACTIONHISTORY: require('../fixtures/transaction-history.json')
+  TRANSACTIONHISTORY: require('../fixtures/transaction-history.json'),
+  USER: require('../fixtures/user.json')
 };

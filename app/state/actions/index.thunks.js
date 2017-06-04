@@ -12,9 +12,7 @@ export const login = (username, password) => (dispatch) => {
     dispatch(actions.populateUser(result(res, 'data.user', {})));
     dispatch(NavigationActions.reset({
       index: 0,
-      actions: [
-        NavigationActions.navigate({routeName: 'Home'})
-      ]
+      actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
@@ -29,9 +27,7 @@ export const logout = () => (dispatch) => {
   });
   return dispatch(NavigationActions.reset({
     index: 0,
-    actions: [
-      NavigationActions.navigate({routeName: 'Login'})
-    ]
+    actions: [NavigationActions.navigate({routeName: 'Login'})]
   }));
 };
 
@@ -45,11 +41,19 @@ export const register = (phone, password, name, email, countryCode) => (dispatch
     dispatch(actions.populateUser(result(res, 'data', {})));
     dispatch(NavigationActions.reset({
       index: 0,
-      actions: [
-        NavigationActions.navigate({routeName: 'Home'})
-      ]
+      actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
+  });
+};
+
+export const getUser = () => (dispatch) => {
+  const defaultUserData = {};
+  return api.user().
+  then((res) => dispatch(actions.populateUser(result(res, 'data', defaultUserData)))).
+  catch((err) => {
+    Toast.show(getErrorMessage(err));
+    return Promise.resolve();
   });
 };
