@@ -1,5 +1,6 @@
 {
   "url": "https://wallet-stp.com/transact",
+  "method": "post",
   "requestBody": {
     "to_phone": 1235,
     "amount": 500,

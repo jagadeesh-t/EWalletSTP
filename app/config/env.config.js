@@ -1,7 +1,7 @@
 const defaults = {
   ENV: 'dev',
-  MOCKAPI: true,
-  URL: 'https://wallet-stp.com',
+  MOCKAPI: false,
+  URL: 'http://localhost:1337',
   GA_TRACKER_ID: 'UA-XXXXX',
   GA_TRACKER_INTERVAL: 2,
   fixtures: require('./fixtures.config')

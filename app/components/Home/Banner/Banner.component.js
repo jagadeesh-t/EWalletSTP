@@ -13,17 +13,18 @@ class Banner extends React.Component {
     amount: PropTypes.string,
     name: PropTypes.string,
     phone: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
+    onLogoutClick: PropTypes.func
   }
 
   render () {
-    const {name, phone, amount, style} = this.props;
+    const {name, phone, amount, style, onLogoutClick} = this.props;
     return (
       <Image style={styles.imageContainer} resizeMode='stretch' source={bannerBg}>
         <View style={[style]}>
           <View style={styles.titleContainer}>
             <Text style={styles.title}>{language.HOME__TITLE} <Text style={styles.name}>{name}</Text></Text>
-            <Touchable><RNIcon style={styles.logout} size={styles.logoutSize} name='power-off' /></Touchable>
+            <Touchable onPress={onLogoutClick}><RNIcon style={styles.logout} size={styles.logoutSize} name='power-off' /></Touchable>
           </View>
           <View>
             <Text style={styles.balance}>{language.HOME__BALANCE}</Text>

@@ -10,7 +10,12 @@ export const login = (username, password) => (dispatch) => {
   const payload = middleware.login(username, password);
   return api.login(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data.user', {})));
-    dispatch(NavigationActions.navigate({routeName: 'Home'}));
+    dispatch(NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({routeName: 'Home'})
+      ]
+    }));
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
   });
@@ -22,7 +27,12 @@ export const logout = () => (dispatch) => {
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
   });
-  dispatch(NavigationActions.navigate({routeName: 'Home'}));
+  return dispatch(NavigationActions.reset({
+    index: 0,
+    actions: [
+      NavigationActions.navigate({routeName: 'Login'})
+    ]
+  }));
 };
 
 export const transfer = () => (dispatch) => {
@@ -33,7 +43,12 @@ export const register = (phone, password, name, email, countryCode) => (dispatch
   const payload = middleware.register(phone, password, name, email, countryCode);
   return api.register(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data', {})));
-    dispatch(NavigationActions.navigate({routeName: 'Home'}));
+    dispatch(NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({routeName: 'Home'})
+      ]
+    }));
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
   });

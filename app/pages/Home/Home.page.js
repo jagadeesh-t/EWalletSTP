@@ -4,12 +4,14 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {NavigationActions} from 'react-navigation';
 import result from 'lodash/result';
+import {logout} from '../../state/actions/index.thunks';
 
 const mapDispatchToProps = (dispatch) => ({
   navigateTo: (link = {}) => {
     const routeName = link.id;
     dispatch(NavigationActions.navigate({routeName}));
-  }
+  },
+  onLogoutClick: () => dispatch(logout())
 });
 
 const mapStateToProps = (state) => ({
@@ -19,12 +21,13 @@ const mapStateToProps = (state) => ({
 class HomeScreen extends Component {
   static propTypes = {
     navigateTo: PropTypes.func,
-    user: PropTypes.object
+    user: PropTypes.object,
+    onLogoutClick: PropTypes.func
   }
   render () {
-    const {navigateTo, user} = this.props;
+    const {navigateTo, user, onLogoutClick} = this.props;
     return (
-      <HomeView user={user} onLinkClick={navigateTo}/>);
+      <HomeView user={user} onLogoutClick={onLogoutClick} onLinkClick={navigateTo}/>);
   }
 }
 

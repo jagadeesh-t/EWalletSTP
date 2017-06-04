@@ -11,7 +11,8 @@ import result from 'lodash/result';
 class HomeView extends React.Component {
   static propTypes = {
     onLinkClick: PropTypes.func,
-    user: PropTypes.object
+    user: PropTypes.object,
+    onLogoutClick: PropTypes.func
   }
   links = [
     [{icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
@@ -23,13 +24,13 @@ class HomeView extends React.Component {
     {icon: 'handshake-o', id: 'CustomerCare', title: language.HOME__CUSTOMER_CARE}
   ]
   render () {
-    const {onLinkClick, user} = this.props;
+    const {onLinkClick, user, onLogoutClick} = this.props;
     const name = result(user, 'userprofile.name', '--');
     const balance = result(user, 'balanceAccount.balance', '--');
     const phone = result(user, 'phone', '--');
     return (
       <KeyboardAwareScrollView  keyboardShouldPersistTaps='handled' style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120} >
-        <Banner name={name} amount={String(balance)} phone={phone}/>
+        <Banner name={name} amount={String(balance)} phone={phone} onLogoutClick={onLogoutClick}/>
         <LinkPaneContainer onClick={onLinkClick} links={this.links} />
         <TabsHolder onClick={onLinkClick} tabs={this.tabs} />
       </KeyboardAwareScrollView >
