@@ -5,7 +5,6 @@ import android.app.Application;
 import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
-import com.horcrux.svg.SvgPackage;
 import com.apsl.versionnumber.RNVersionNumberPackage;
 import com.cboy.rn.splashscreen.SplashScreenReactPackage;
 import com.avishayil.rnrestart.ReactNativeRestartPackage;
@@ -32,7 +31,6 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new VectorIconsPackage(),
             new RCTCameraPackage(),
-            new SvgPackage(),
             new RNVersionNumberPackage(),
             new SplashScreenReactPackage(),
             new ReactNativeRestartPackage(),

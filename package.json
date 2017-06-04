@@ -25,12 +25,10 @@
     "react-native-exception-handler": "^1.0.1",
     "react-native-google-analytics-bridge": "^5.0.1",
     "react-native-keyboard-aware-scroll-view": "^0.2.9",
-    "react-native-qrcode-svg": "^4.0.2",
     "react-native-restart": "^0.0.2",
     "react-native-simple-toast": "^0.0.6",
     "react-native-snackbar-dialog": "^1.3.0",
     "react-native-splash-screen": "^2.0.0",
-    "react-native-svg": "https://github.com/willdawsonme/react-native-svg.git#yoga-api-change",
     "react-native-vector-icons": "^4.1.1",
     "react-native-version-number": "^0.1.2",
     "react-navigation": "^1.0.0-beta.9",
@@ -39,7 +37,8 @@
     "redux-actions": "^2.0.3",
     "redux-form": "^6.7.0",
     "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "yaqrcode": "^0.2.1"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.8.1",

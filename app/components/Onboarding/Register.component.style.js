@@ -4,12 +4,6 @@ export default {
   contentContainer: {
     paddingBottom: 40
   },
-  title: {
-    fontWeight: theme.fontWeightLight,
-    fontSize: theme.fontSizeXL,
-    color: theme.ternary,
-    paddingBottom: 20
-  },
   headerIcon: {
     color: theme.textColor
   },

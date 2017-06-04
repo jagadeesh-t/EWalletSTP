@@ -24,7 +24,6 @@ class SendMoneyView extends React.Component {
     return (
       <KeyboardAwareScrollView style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{language.SEND_MONEY__INDEX_TITLE}</Text>
           <Text style={styles.subTitle}>{language.SEND_MONEY__INDEX_SUBTITLE}</Text>
         </View>
         <View style={styles.mainAreaContainer}>

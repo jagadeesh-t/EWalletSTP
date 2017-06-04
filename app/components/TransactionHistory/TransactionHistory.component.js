@@ -31,7 +31,6 @@ class TransactionHistoryView extends React.Component {
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{language.TRANSACTION_HISTORY__TITLE}</Text>
           <Text style={styles.subtext}>{language.TRANSACTION_HISTORY__SUBTITLE}</Text>
         </View>
         <View style={styles.filterBar}>

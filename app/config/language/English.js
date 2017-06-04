@@ -32,7 +32,6 @@ export default {
   SEND_MONEY__MOBILE_PLACEHOLDER: 'Enter destination mobile number',
   SEND_MONEY__AMOUNT: 'Amount',
   SEND_MONEY__AMOUNT_PLACEHOLDER: 'Enter the amount to pay',
-  TRANSACTION_HISTORY__TITLE: 'Transaction History',
   TRANSACTION_HISTORY__SUBTITLE: 'List of all your transactions',
   TRANSACTION_HISTORY__ALL: 'All',
   TRANSACTION_HISTORY__DEBITS: 'Debits',
@@ -40,5 +39,13 @@ export default {
   VALIDATION__REQUIRED_FIELD: 'Required',
   VALIDATION__INCORRECT_USERNAME: 'Mobile Number is invalid',
   VALIDATION__INCORRECT_PASSWORD: 'Minimum 8 characters at least 1 Alphabet, 1 Number and 1 Special Character',
-  VALIDATION__INCORRECT_EMAIL: 'Not a valid email address'
+  VALIDATION__INCORRECT_EMAIL: 'Not a valid email address',
+  TITLE__TRANSACTION_HISTORY: 'Transaction History',
+  TITLE__RECEIVE: 'Receive Money',
+  TITLE__SEND_CONFIRMATION: 'Transfer Confirmation',
+  TITLE__SEND_MONEY: 'Transfer Money',
+  TITLE__QRCODE_READER: 'Scan Code',
+  TITLE__HOME: 'Home',
+  TITLE__REGISTER: 'Register',
+  TITLE__LOGIN: 'Welcome !'
 };

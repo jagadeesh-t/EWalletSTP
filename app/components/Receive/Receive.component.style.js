@@ -2,27 +2,40 @@ import theme from '../../styles/theme.styles';
 export default {
   pageContainer: {
     flex: 1,
-    paddingTop: 20,
     backgroundColor: theme.pageContainer.backgroundColor
   },
   qrContainer: {
-    backgroundColor: theme.white,
-    padding: 20,
-    alignSelf: 'center',
-    borderWidth: 5,
-    borderColor: theme.lightgrey
+    flex: 2.5,
+    backgroundColor: theme.secondary
   },
-  qrBox: {
-    alignSelf: 'center'
+  infoContainer: {
+    backgroundColor: theme.secondary,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 15
   },
   demoContainer: {
+    flex: 3
+  },
+  qrWrapper: {
     flex: 1,
+    paddingVertical: 20,
+    paddingBottom: 0
+  },
+  qrImage: {
+    flexGrow: 1,
+    width: null,
+    height: null,
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.6,
+    shadowRadius: 5
   },
   demoText: {
     alignSelf: 'center',
-    padding: 20,
-    fontSize: theme.fontSizeLarge,
-    fontWeight: theme.fontWeightMedium,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    fontSize: theme.fontSizeMedium,
+    fontWeight: theme.fontWeightNormal,
     color: theme.ternary,
     textAlign: 'center'
   },
@@ -30,5 +43,20 @@ export default {
     flex: 1,
     width: null,
     height: null
+  },
+  infoGroup: {
+    flexDirection: 'row',
+    paddingTop: 2
+  },
+  infoKey: {
+    fontSize: theme.fontSizeNormal,
+    fontWeight: theme.fontWeightBold,
+    color: theme.white
+  },
+  infoValue: {
+    fontSize: theme.fontSizeNormal,
+    fontWeight: theme.fontWeightBold,
+    paddingHorizontal: 5,
+    color: theme.textColor
   }
 };

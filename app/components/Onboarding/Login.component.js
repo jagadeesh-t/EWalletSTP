@@ -25,7 +25,6 @@ class LoginView extends React.Component {
     return (
       <KeyboardAwareScrollView style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{'Welcome !'}</Text>
           <Text style={styles.subTitle}>{'Please Log in.'}</Text>
         </View>
         <View style={styles.logoContainer}>

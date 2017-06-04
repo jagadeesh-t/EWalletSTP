@@ -22,7 +22,6 @@ class RegisterView extends React.Component {
     const {invalid, submitting, handleSubmit = noop} = this.props;
     return (
       <KeyboardAwareScrollView keyboardShouldPersistTaps='handled' style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
-        <Text style={styles.title}>{language.REGISTER__TITLE}</Text>
         <View style={styles.formContainer}>
 
           <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='mobile, mobile-phone' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__MOBILENO} </Text></View>
