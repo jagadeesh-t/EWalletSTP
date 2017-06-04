@@ -1,6 +1,6 @@
 const defaults = {
   ENV: 'dev',
-  MOCKAPI: false,
+  MOCKAPI: true,
   URL: 'https://wallet-stp.com',
   GA_TRACKER_ID: 'UA-XXXXX',
   GA_TRACKER_INTERVAL: 2,

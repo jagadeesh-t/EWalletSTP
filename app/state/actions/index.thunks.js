@@ -16,6 +16,15 @@ export const login = (username, password) => (dispatch) => {
   });
 };
 
+export const logout = () => (dispatch) => {
+  api.logout().then(() => {
+    Toast.show('Logged out successfuly !');
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+  });
+  dispatch(NavigationActions.navigate({routeName: 'Home'}));
+};
+
 export const transfer = () => (dispatch) => {
   dispatch(NavigationActions.navigate({routeName: 'SendResult'}));
 };

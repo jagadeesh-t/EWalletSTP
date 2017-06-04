@@ -7,3 +7,7 @@ Http.post('LOGIN', loginPayload,
 export const register = (registerPayload) =>
   Http.post('REGISTER', registerPayload,
     {additional: ['FTXID']});
+
+export const logout = () =>
+  Http.post('REGISTER', {},
+    {additional: ['FTXID']});
