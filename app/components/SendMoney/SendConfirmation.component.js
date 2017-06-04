@@ -19,7 +19,6 @@ class SendConfirmationView extends React.Component {
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{'Transfer Confirmation'}</Text>
           <Text style={styles.subtext}>{'Please confirm the details'}</Text>
         </View>
         <View style={styles.card} >

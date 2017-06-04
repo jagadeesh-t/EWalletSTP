@@ -1,4 +1,5 @@
 import result from 'lodash/result';
+import {MainRoutes} from '../routes/index.routes';
 // GENERAL utility methods
 export const wrapObjectInFunction = (obj) => () => obj;
 
@@ -27,3 +28,9 @@ export const currencyFormatter = (unformatted) => {
 };
 
 export const getErrorMessage = (response) => result(response, 'data.message', null);
+
+export const getCurrentRouteTitle = (nav) => {
+  const currentRouteName = result(nav, 'navigation.state.routeName');
+  const routeConfig = MainRoutes[currentRouteName];
+  return result(routeConfig, 'screenTitle', currentRouteName);
+};

@@ -9,12 +9,6 @@ export default {
     paddingHorizontal: 20,
     paddingBottom: 10
   },
-  title: {
-    fontWeight: theme.fontWeightLight,
-    fontSize: theme.fontSizeXL,
-    paddingBottom: 10,
-    color: theme.primary
-  },
   subtext: {
     fontSize: theme.fontSizeNormal,
     paddingBottom: 10,

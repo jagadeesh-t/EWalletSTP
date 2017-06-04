@@ -29,12 +29,6 @@ export default {
     height: null,
     width: null
   },
-  title: {
-    fontWeight: theme.fontWeightLight,
-    fontSize: theme.fontSizeXL,
-    paddingBottom: 10,
-    color: theme.ternary
-  },
   subTitle: {
     fontSize: theme.fontSizeNormal,
     paddingBottom: 30,

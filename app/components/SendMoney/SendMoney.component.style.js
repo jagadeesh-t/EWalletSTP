@@ -21,12 +21,6 @@ export default {
     flex: 2,
     paddingTop: 10
   },
-  title: {
-    fontWeight: theme.fontWeightLight,
-    fontSize: theme.fontSizeXL,
-    paddingBottom: 10,
-    color: theme.ternary
-  },
   subTitle: {
     fontSize: theme.fontSizeNormal,
     paddingBottom: 20,

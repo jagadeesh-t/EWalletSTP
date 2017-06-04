@@ -6,5 +6,6 @@ export default {
   },
   contentContainer: {
     flex: 1
-  }
+  },
+  refreshColor: theme.primary
 };

@@ -1,10 +1,6 @@
 {
-  "url": "https://wallet-stp.com/login",
-  "method": "post",
-  "requestBody": {
-    "phone": 1234,
-    "password": "qwerty"
-  },
+  "url": "https://wallet-stp.com/logout",
+  "method": "get",
   "response": {
     "message": "Logged In Successfully",
     "user": {

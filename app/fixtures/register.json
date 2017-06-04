@@ -1,5 +1,6 @@
 {
   "url": "https://wallet-stp.com/signup",
+  "method": "post",
   "requestBody": {
     "name": "test 2",
     "phone": 1235,
