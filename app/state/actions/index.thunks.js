@@ -7,7 +7,7 @@ import {getErrorMessage} from '../../utils/transformer.util';
 import result from 'lodash/result';
 
 export const login = (username, password) => (dispatch) => {
-  const payload = middleware.login(username, password);
+  const payload = middleware.prepareLogin(username, password);
   return api.login(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data.user', {})));
     dispatch(NavigationActions.reset({
@@ -36,7 +36,7 @@ export const transfer = () => (dispatch) => {
 };
 
 export const register = (phone, password, name, email, countryCode) => (dispatch) => {
-  const payload = middleware.register(phone, password, name, email, countryCode);
+  const payload = middleware.prepareRegister(phone, password, name, email, countryCode);
   return api.register(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data', {})));
     dispatch(NavigationActions.reset({
@@ -52,6 +52,19 @@ export const getUser = () => (dispatch) => {
   const defaultUserData = {};
   return api.user().
   then((res) => dispatch(actions.populateUser(result(res, 'data', defaultUserData)))).
+  catch((err) => {
+    Toast.show(getErrorMessage(err));
+    return Promise.resolve();
+  });
+};
+
+export const getTransactions = () => (dispatch, getState) => {
+  const currentUser = result(getState(), 'user', {});
+  return api.getTransactions().
+  then((res) => {
+    const transactionList = middleware.transformTransactionHistory(res.data, currentUser);
+    dispatch(actions.updateTransactions(transactionList));
+  }).
   catch((err) => {
     Toast.show(getErrorMessage(err));
     return Promise.resolve();

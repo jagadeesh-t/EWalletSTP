@@ -1,18 +1,24 @@
 import theme from '../../styles/theme.styles';
 export default {
   pageContainer: [theme.pageContainer, {
-    flexGrow: 1,
+    flex: 1,
     paddingHorizontal: 0,
     paddingBottom: 0
   }],
   titleContainer: {
     paddingHorizontal: 20,
-    paddingBottom: 10
+    padding: 5,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  balance: {
+    fontWeight: theme.fontWeightBold
   },
   subtext: {
     fontSize: theme.fontSizeNormal,
-    paddingBottom: 10,
-    color: theme.textColor
+    color: theme.textColor,
+    fontWeight: theme.fontWeightLight
   },
   filterBar: {
     backgroundColor: theme.ternary,
@@ -50,5 +56,9 @@ export default {
   },
   paginateStatus: {
     paddingHorizontal: 5
+  },
+  refresh: {
+    fontSize: 15,
+    color: theme.warning
   }
 };

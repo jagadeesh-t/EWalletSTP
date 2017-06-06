@@ -5,6 +5,10 @@ import {createAction} from 'redux-actions';
 // ==================
 // USER ACTIONS
 export const POPULATE_USER = 'POPULATE_USER';
+
+// TRANSACTION HISTORY actions
+export const UPDATE_TRANSACTIONS = 'UPDATE_TRANSACTIONS';
+
 // CLEAN REDUX STATE
 export const CLEAN_APP_STATE = 'CLEAN_APP_STATE';
 
@@ -16,6 +20,11 @@ export const SET_LANGUAGE = 'SET_LANGUAGE';
 // =================
 // USER action creators
 export const populateUser = createAction(POPULATE_USER);
+
+// TRANSACTION HISTORY action creators
+
+export const updateTransactions = createAction(UPDATE_TRANSACTIONS);
+
 // LANGUAGE action creators
 export const setLanguage = createAction(SET_LANGUAGE); // payload u send is langCode
 

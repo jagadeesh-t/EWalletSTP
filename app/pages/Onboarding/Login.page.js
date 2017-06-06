@@ -11,8 +11,8 @@ const formConfig = {
   form: 'login',
   destroyOnUnmount: true,
   initialValues: {
-    mobileNo: '',
-    password: ''
+    mobileNo: '12345678',
+    password: 'qwerty1!'
   },
   onSubmit: (values, dispatch) => {
     const {mobileNo, password} = values;
@@ -37,13 +37,12 @@ const LoginForm = reduxForm(formConfig)(LoginView);
 
 class LoginScreen extends Component {
   static propTypes = {
-    doLogin: PropTypes.func,
     goToRegister: PropTypes.func
   }
   render () {
-    const {doLogin, goToRegister} = this.props;
+    const {goToRegister} = this.props;
     return (
-      <LoginForm goToRegister={goToRegister} onLogin={doLogin}/>);
+      <LoginForm goToRegister={goToRegister} />);
   }
 }
 

@@ -11,3 +11,5 @@ export const register = (registerPayload) =>
 export const logout = () => Http.get('LOGOUT');
 
 export const user = () => Http.get('USER');
+
+export const getTransactions = () => Http.get('TRANSACTIONHISTORY');
