@@ -31,8 +31,47 @@ export const logout = () => (dispatch) => {
   }));
 };
 
-export const transfer = () => (dispatch) => {
+export const transfer = (transferInfo) => (dispatch) => {
+  const transferModalDetails = {
+    amount: transferInfo.amount,
+    fee: transferInfo.fee,
+    status: 'PROGRESS',
+    transactionId: null,
+    payeeName: transferInfo.payeeName,
+    payeePhone: transferInfo.payeePhone
+  };
+  console.log(transferModalDetails);
+  dispatch(actions.setTransferResult(transferModalDetails));
   dispatch(NavigationActions.navigate({routeName: 'SendResult'}));
+  const payload = middleware.prepareTransfer(transferInfo.payeePhone, transferInfo.amount);
+  return api.transfer(payload).
+  then((res) => {
+    console.log(res);
+    const transferResponse = middleware.transformTransferResponse(res.data);
+    dispatch(actions.setTransferResult({
+      ...transferModalDetails,
+      ...transferResponse,
+      ...{status: 'SUCCESS'}}));
+  }).catch((err) => {
+    console.log(err);
+    const errTransferResponse = middleware.transformErrorTransferResponse(err);
+    Toast.show(getErrorMessage(err));
+    dispatch(actions.setTransferResult({
+      ...transferModalDetails,
+      ...errTransferResponse,
+      ...{status: 'FAILED'}}));
+  });
+};
+
+
+export const confirmTransfer = (mobileNo, amount) => (dispatch) => {
+  const payload = middleware.prepareConfirmTransfer(mobileNo, amount);
+  return api.confirmTransfer(payload).then((res) => {
+    const transactionDetails = middleware.transformConfirmTransfer(result(res, 'data', {}));
+    dispatch(NavigationActions.navigate({routeName: 'SendConfirmation', params: {transactionDetails}}));
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+  });
 };
 
 export const register = (phone, password, name, email, countryCode) => (dispatch) => {

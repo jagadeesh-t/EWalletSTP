@@ -61,3 +61,14 @@ export const formatTransactionHistoryListItem = (transactionHistoryItem) => {
     date: moment(transactionHistoryItem.date).format('Do MMM, h:mm a') // June 6th 2017, 8:14:05 am
   };
 };
+
+export const removeFalsy = (object) => {
+  const duplicate = {...object};
+  const keys = Object.keys(duplicate);
+  keys.forEach((eachKey) => {
+    if (!duplicate[eachKey] && !([false, 0].includes(duplicate[eachKey]))) {
+      delete duplicate[eachKey];
+    }
+  });
+  return duplicate;
+};

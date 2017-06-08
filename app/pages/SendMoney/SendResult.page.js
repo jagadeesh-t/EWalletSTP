@@ -4,9 +4,10 @@ import {connect} from 'react-redux';
 import moment from 'moment';
 import {NavigationActions} from 'react-navigation';
 import PropTypes from 'prop-types';
+import result from 'lodash/result';
 
 const mapDispatchToProps = (dispatch) => ({
-  onConfirm: () => {
+  onDone: () => {
     dispatch(NavigationActions.back());
     dispatch(NavigationActions.reset({
       index: 0,
@@ -17,16 +18,20 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => ({
+  transactionResult: result(state, 'transactionResult', {})
+});
 
 class SendResultScreen extends Component {
   static propTypes = {
-    onConfirm: PropTypes.func
+    onDone: PropTypes.func,
+    transactionResult: PropTypes.object
   }
   currentDate = moment();
   render () {
+    const {transactionResult} = this.props;
     return (
-      <SendResultView details={[]} txid={'test'} onDone={this.props.onConfirm}/>);
+      <SendResultView transactionResult={transactionResult} onDone={this.props.onDone}/>);
   }
 }
 

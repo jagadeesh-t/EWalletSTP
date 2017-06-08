@@ -4,5 +4,6 @@ module.exports = {
   REGISTER: require('../fixtures/register.json'),
   TRANSACT: require('../fixtures/transact.json'),
   TRANSACTIONHISTORY: require('../fixtures/transaction-history.json'),
-  USER: require('../fixtures/user.json')
+  USER: require('../fixtures/user.json'),
+  CONFIRMTRANSFER: require('../fixtures/confirmTransfer.json')
 };

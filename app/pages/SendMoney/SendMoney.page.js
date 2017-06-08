@@ -4,16 +4,27 @@ import SendMoneyView from '../../components/SendMoney/SendMoney.component';
 import {connect} from 'react-redux';
 import {NavigationActions} from 'react-navigation';
 import PropTypes from 'prop-types';
+import * as validations from '../../utils/validator.util';
+import {confirmTransfer} from '../../state/actions/index.thunks';
 
 const formConfig = {
   form: 'sendMoney',
   destroyOnUnmount: true,
-  initialValues: {},
-  onSubmit: (values, dispatch) => {
-    const routeName = 'SendConfirmation';
-    return dispatch(NavigationActions.navigate({routeName}));
+  initialValues: {
+    mobileNo: '',
+    amount: ''
   },
-  validate: () => ({})
+  onSubmit: (values, dispatch) => {
+    const {mobileNo, amount} = values;
+    return dispatch(confirmTransfer(mobileNo, amount));
+  },
+  validate: (values) => {
+    const errors = {};
+    validations.required(values, ['mobileNo', 'amount'], errors);
+    validations.validateMobileNo(values, ['mobileNo'], errors);
+    validations.validateNumber(values, ['amount'], errors);
+    return errors;
+  }
 };
 
 const mapDispatchToProps = (dispatch) => ({

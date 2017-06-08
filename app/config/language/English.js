@@ -40,6 +40,7 @@ export default {
   VALIDATION__INCORRECT_USERNAME: 'Mobile Number is invalid',
   VALIDATION__INCORRECT_PASSWORD: 'Minimum 8 characters at least 1 Alphabet, 1 Number and 1 Special Character',
   VALIDATION__INCORRECT_EMAIL: 'Not a valid email address',
+  VALIDATION__INCORRECT_NUMBER: 'Not a valid amount',
   TITLE__TRANSACTION_HISTORY: 'Transaction History',
   TITLE__RECEIVE: 'Receive Money',
   TITLE__SEND_CONFIRMATION: 'Transfer Confirmation',

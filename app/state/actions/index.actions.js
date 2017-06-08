@@ -9,6 +9,9 @@ export const POPULATE_USER = 'POPULATE_USER';
 // TRANSACTION HISTORY actions
 export const UPDATE_TRANSACTIONS = 'UPDATE_TRANSACTIONS';
 
+// TRANSFER actions
+export const TRANSFER_RESULT = 'TRANSFER_RESULT';
+
 // CLEAN REDUX STATE
 export const CLEAN_APP_STATE = 'CLEAN_APP_STATE';
 
@@ -22,8 +25,10 @@ export const SET_LANGUAGE = 'SET_LANGUAGE';
 export const populateUser = createAction(POPULATE_USER);
 
 // TRANSACTION HISTORY action creators
-
 export const updateTransactions = createAction(UPDATE_TRANSACTIONS);
+
+// TRANSFER action creators
+export const setTransferResult = createAction(TRANSFER_RESULT);
 
 // LANGUAGE action creators
 export const setLanguage = createAction(SET_LANGUAGE); // payload u send is langCode

@@ -2,31 +2,31 @@ import React, {Component} from 'react';
 import SendConfirmationView from '../../components/SendMoney/SendConfirmation.component';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import {transfer} from '../../state/actions/index.thunks';
+import result from 'lodash/result';
 
 const mapDispatchToProps = (dispatch) => ({
-  onConfirm: () => {
-    dispatch(transfer());
-  }
+  doTransfer: (transferDetails) => dispatch(transfer(transferDetails))
 });
 
 const mapStateToProps = () => ({});
 
 class SendConfirmationScreen extends Component {
   static propTypes = {
-    onConfirm: PropTypes.func
+    doTransfer: PropTypes.func
   }
-  payeeDetails ={
-    name: 'Test name',
-    identifier: '+91934399343'
+  onConfirm = () => {
+    const transactionDetails = result(this.props, 'navigation.state.params.transactionDetails', {});
+    const {payeeName, payeePhone, amount, totalAmount, fee} = transactionDetails;
+    this.props.doTransfer({payeeName, payeePhone, amount, totalAmount, fee});
   }
-  currentDate = moment();
   render () {
-    const {onConfirm} = this.props;
+    const transactionDetails = result(this.props, 'navigation.state.params.transactionDetails', {});
+    const {payeeName, payeePhone, amount, totalAmount, fee} = transactionDetails;
     return (
-      <SendConfirmationView amount={'2000'} payeeDetails={this.payeeDetails}
-         currentDate={this.currentDate} onConfirm={onConfirm} />);
+      <SendConfirmationView totalAmount={totalAmount} fee={fee}
+         amount={amount} onConfirm={this.onConfirm}
+         payeeName={payeeName} payeePhone={payeePhone}/>);
   }
 }
 
