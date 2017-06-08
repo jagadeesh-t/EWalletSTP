@@ -1,5 +1,8 @@
 import result from 'lodash/result';
+import filter from 'lodash/filter';
 import {MainRoutes} from '../routes/index.routes';
+import * as constants from '../config/constants.config';
+import moment from 'moment';
 // GENERAL utility methods
 export const wrapObjectInFunction = (obj) => () => obj;
 
@@ -33,4 +36,39 @@ export const getCurrentRouteTitle = (nav) => {
   const currentRouteName = result(nav, 'navigation.state.routeName');
   const routeConfig = MainRoutes[currentRouteName];
   return result(routeConfig, 'screenTitle', currentRouteName);
+};
+
+export const filterTransactionHistory = (transactionList = [], transactionHistoryType = null) => {
+  // transactionHistoryType gets added in middleware utils
+  if (!transactionHistoryType) {
+    return transactionList;
+  }
+  return filter(transactionList, {transactionHistoryType});
+};
+
+export const formatTransactionHistoryListItem = (transactionHistoryItem) => {
+  const getTransactionItemType = (transactionItem) => {
+    switch (transactionItem.transactionHistoryType) {
+    case constants.TH_CREDIT: return 'CREDIT';
+    case constants.TH_DEBIT: return 'DEBIT';
+    default: return 'ALL';
+    }
+  };
+  return {
+    metadata: transactionHistoryItem.metadata,
+    amount: currencyFormatter(transactionHistoryItem.amount),
+    type: getTransactionItemType(transactionHistoryItem),
+    date: moment(transactionHistoryItem.date).format('Do MMM, h:mm a') // June 6th 2017, 8:14:05 am
+  };
+};
+
+export const removeFalsy = (object) => {
+  const duplicate = {...object};
+  const keys = Object.keys(duplicate);
+  keys.forEach((eachKey) => {
+    if (!duplicate[eachKey] && !([false, 0].includes(duplicate[eachKey]))) {
+      delete duplicate[eachKey];
+    }
+  });
+  return duplicate;
 };

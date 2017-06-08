@@ -10,12 +10,14 @@ class SendConfirmationView extends React.Component {
   static propTypes = {
     onConfirm: PropTypes.func,
     amount: PropTypes.string,
-    payeeDetails: PropTypes.object,
-    currentDate: PropTypes.object
+    totalAmount: PropTypes.string,
+    fee: PropTypes.string,
+    payeeName: PropTypes.string,
+    payeePhone: PropTypes.string
   }
 
   render () {
-    const {onConfirm, payeeDetails, amount} = this.props;
+    const {totalAmount, fee, amount, onConfirm, payeeName, payeePhone} = this.props;
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
@@ -30,11 +32,11 @@ class SendConfirmationView extends React.Component {
             <Text style={styles.subtitle}>Payee Details</Text>
             <View style={styles.fieldRow}>
               <Text style={styles.fieldKey}>Name</Text>
-              <Text style={styles.fieldValue}>{payeeDetails.name}</Text>
+              <Text style={styles.fieldValue}>{payeeName}</Text>
             </View>
             <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Identifier</Text>
-              <Text style={styles.fieldValue}>{payeeDetails.identifier}</Text>
+              <Text style={styles.fieldKey}>Phone</Text>
+              <Text style={styles.fieldValue}>{payeePhone}</Text>
             </View>
             <Text style={styles.subtitle}>Transaction Details</Text>
             <View style={styles.fieldRow}>
@@ -43,12 +45,12 @@ class SendConfirmationView extends React.Component {
             </View>
 
             <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Charges</Text>
-              <Text style={styles.fieldValue}>STD {currencyFormatter(amount)}</Text>
+              <Text style={styles.fieldKey}>Transaction Fee</Text>
+              <Text style={styles.fieldValue}>{fee}%</Text>
             </View>
             <View style={styles.fieldRow}>
               <Text style={styles.fieldKey}>Total Amount</Text>
-              <Text style={styles.fieldValue}>STD {currencyFormatter(amount)}</Text>
+              <Text style={styles.fieldValue}>STD {currencyFormatter(totalAmount)}</Text>
             </View>
           </ScrollView>
         </View>

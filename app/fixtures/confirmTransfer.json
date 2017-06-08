@@ -1,0 +1,32 @@
+{
+  "url": "https://wallet-stp.com/transactionInfo",
+  "method": "post",
+  "requestBody": {
+    "phone": 12345678,
+    "password": "qwerty"
+  },
+  "response": {
+    "finalAmount": 450,
+    "transactionFee":"5",
+    "amount": 200,
+    "destinationAcc": {
+      "balanceAccount": 2,
+      "userprofile": {
+        "name": "test 2",
+        "email": null,
+        "distributor": false,
+        "id": 2,
+        "createdAt": "2017-05-30T18:11:17.000Z",
+        "updatedAt": "2017-05-30T18:11:17.000Z",
+        "account": 2
+      },
+      "bank": null,
+      "phone": "1235",
+      "country_code": null,
+      "status": "active",
+      "id": 2,
+      "createdAt": "2017-05-30T18:11:17.000Z",
+      "updatedAt": "2017-05-30T18:11:17.000Z"
+    }
+  }
+}

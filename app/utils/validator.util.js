@@ -48,3 +48,15 @@ export const validateEmail = (values, fields, errors) => {
   }));
   return errors;
 };
+
+export const validateNumber = (values, fields, errors) => {
+  each(fields, ((field) => {
+    // https:// emailregex.com/
+    const numberR = (/(^[0-9]*$)/);
+    const result = numberR.test(values[field]);
+    if (!result) {
+      errors[field] = language.VALIDATION__INCORRECT_NUMBER;
+    }
+  }));
+  return errors;
+};

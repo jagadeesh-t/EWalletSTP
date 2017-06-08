@@ -7,7 +7,8 @@ export const endpoints = {
   REGISTER: '/signup',
   TRANSACT: '/transact',
   TRANSACTIONHISTORY: '/transactions',
-  USER: '/user'
+  USER: '/user',
+  CONFIRMTRANSFER: '/confirm-transfer'
 };
 
 export const mockResponses = env.fixtures || {};

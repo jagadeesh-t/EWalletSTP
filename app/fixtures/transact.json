@@ -10,11 +10,26 @@
     "from_account": 1,
     "to_account": 2,
     "transaction_type": "WALLET",
-    "finalAmount": null,
+    "finalAmount": 550,
+    "fee": 4,
     "amount": 500,
     "metadata": "{\"from_name\": \"test 1\" ,  \"to_name\": \"test 2\"}",
     "createdAt": "2017-06-03T10:29:57.208Z",
     "updatedAt": "2017-06-03T10:29:57.208Z",
     "id": 10
+  },
+  "error": {
+    "message": "reason",
+    "transactionInfo":{
+      "from_account": 1,
+      "to_account": 2,
+      "transaction_type": "WALLET",
+      "finalAmount": null,
+      "amount": 500,
+      "metadata": "{\"from_name\": \"test 1\" ,  \"to_name\": \"test 2\"}",
+      "createdAt": "2017-06-03T10:29:57.208Z",
+      "updatedAt": "2017-06-03T10:29:57.208Z",
+      "id": 10
+    }
   }
 }
