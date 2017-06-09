@@ -23,3 +23,10 @@ Http.post('TRANSACT', payload, {additional: ['FTXID']});
 
 export const creditRequest = (payload) =>
 Http.post('CREDITREQUEST', payload, {additional: ['FTXID']});
+
+
+export const sendVerificationMessage = (payload) =>
+Http.post('SENDVERIFICATIONMESSAGE', payload, {additional: ['FTXID']});
+
+export const verifyPhone = (payload) => 
+Http.post('VERIFYPHONE', payload, {additional: ['FIXID']});

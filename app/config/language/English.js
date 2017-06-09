@@ -52,7 +52,9 @@ export default {
   TITLE__REGISTER: 'Register',
   TITLE__LOGIN: 'Welcome !',
   CREDIT_REQUEST__INDEX_TITLE: 'Request Credit',
-  CREDIT_REQUEST__ENTER_TRANSACTION_DETAILS: 'Enter the Transaction ID',
   CREDIT_REQUEST__TRANSACTION_ID: 'Enter Transaction ID',
-  CREDIT_REQUEST__REQUEST_PROCESSED: 'Your Request Will be Processed and Balance will be Updated'
+  CREDIT_REQUEST__REQUEST_PROCESSED: 'Your Request Will be Processed and Balance will be Updated',
+  VERIFICATION__INDEX_TITLE: 'Verification',
+  VERIFICATION__OTP_ENTER: 'Enter OTP For Verification',
+  VERIFICATION__OTP_DETAILS: 'A Text Message will be Sent To Your Number With a 4 Digit Code, Please Enter the Code in the Above Area'
 };

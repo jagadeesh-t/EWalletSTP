@@ -112,6 +112,43 @@ export const getTransactions = () => (dispatch, getState) => {
   });
 };
 
+export const sendVerificationMessage = (phone, countryCode) => (dispatch) => {
+  const payload =  middleware.prepareVerificationRequest(phone, countryCode);
+  return api.sendVerificationMessage(payload).then(() => {
+   
+    dispatch(NavigationActions.navigate({routeName: 'Verification'}));
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+    Toast.show('Error Processing the Request');
+  });
+
+};
+
+export const verifyAndRegister = (code) => (dispatch, getState) => {
+  const regDetails = result(getState(), 'registrationDetails', {});
+  const phone = regDetails.mobileNo;
+
+  
+  const countryCode = regDetails.country;
+  const payload =  middleware.prepareVerification(phone, countryCode, code);
+  
+  return api.verifyPhone(payload).then(() => {
+    const registerPayload = middleware.prepareRegister(regDetails.mobileNo, regDetails.password, regDetails.name, regDetails.email, regDetails.country);
+    return api.register(registerPayload).then((res) => {
+      dispatch(actions.populateUser(result(res, 'data', {})));
+      dispatch(NavigationActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({routeName: 'Home'})]
+      }));
+    });
+
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+    Toast.show('Error Processing the Request');
+  });
+
+};
+
 
 export const createCreditRequest = (transactionId) => (dispatch, getState) => {
   const userProfile = result(getState(), 'user.userprofile', {});

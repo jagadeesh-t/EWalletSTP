@@ -9,7 +9,9 @@ export const endpoints = {
   TRANSACTIONHISTORY: '/transactions',
   USER: '/user',
   CONFIRMTRANSFER: '/confirm-transfer',
-  CREDITREQUEST: '/createCreditRequest'
+  CREDITREQUEST: '/createCreditRequest',
+  SENDVERIFICATIONMESSAGE: '/sendVerificationMessage',
+  VERIFYPHONE: '/verifyMessage'
 };
 
 export const mockResponses = env.fixtures || {};

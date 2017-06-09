@@ -5,6 +5,7 @@ import language from './language.reducer';
 import user from './user.reducer';
 import transactions from './transactions.reducer';
 import transactionResult from './transactionResult.reducer';
+import registrationDetails from './registration.reducer';
 
 const nav = (state, action) => (
   Navigator.router.getStateForAction(action, state)
@@ -16,7 +17,8 @@ const appReducers = combineReducers({
   user,
   currentLanguage: language,
   transactions,
-  transactionResult
+  transactionResult,
+  registrationDetails
   // add more reducers here
 });
 

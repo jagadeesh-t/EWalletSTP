@@ -3,21 +3,18 @@ import {reduxForm} from 'redux-form';
 import RegisterView from '../../components/Onboarding/Register.component';
 import {connect} from 'react-redux';
 import * as validations from '../../utils/validator.util';
-import {register} from '../../state/actions/index.thunks';
+import {sendVerificationMessage} from '../../state/actions/index.thunks';
+import {setRegisterDetails} from '../../state/actions/index.actions';
 
 const formConfig = {
   form: 'register',
   destroyOnUnmount: true,
-  initialValues: {
-    mobileNo: '',
-    password: '',
-    name: '',
-    email: '',
-    country: ''
-  },
+  
   onSubmit: (values, dispatch) => {
     const {mobileNo, password, name, email, country} = values;
-    return dispatch(register(mobileNo, password, name, email, country));
+    dispatch(sendVerificationMessage(mobileNo, country));
+    return dispatch(setRegisterDetails({mobileNo, password, name, email, country}));
+    
   },
   validate: (values) => {
     const errors = {};
