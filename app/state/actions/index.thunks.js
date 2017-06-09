@@ -113,9 +113,9 @@ export const getTransactions = () => (dispatch, getState) => {
 };
 
 
-export const createCreditRequest = (transactionId, creditStatus) => (dispatch, getState) => {
+export const createCreditRequest = (transactionId) => (dispatch, getState) => {
   const userProfile = result(getState(), 'user.userprofile', {});
-  const payload = middleware.prepareCreditRequest(userProfile.id, transactionId, creditStatus);
+  const payload = middleware.prepareCreditRequest(userProfile.id, transactionId);
   return api.creditRequest(payload).then(() => {
     Toast.show(language.REQUEST__PROCESSED);
     dispatch(NavigationActions.reset({

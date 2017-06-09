@@ -85,9 +85,3 @@ export const transformErrorTransferResponse = (err) => {
   };
 };
 
-
-export const prepareCreditRequest = (userProfile, transactionId, creditStatus) => ({
-  'userProfile': userProfile,
-  'transactionId': transactionId,
-  'creditStatus': creditStatus
-});

@@ -51,7 +51,7 @@ export default {
   TITLE__HOME: 'Home',
   TITLE__REGISTER: 'Register',
   TITLE__LOGIN: 'Welcome !',
-  CREDIT__REQUEST: 'Request Credit',
+  CREDIT_REQUEST__: 'Request Credit',
   ENTER__TRANSACTION__DETAILS: 'Enter the Transaction ID',
   TRANSACTION__ID: 'Enter Transaction ID',
   ENTER__TRANSACTION__ID: 'Enter Transaction ID',

@@ -12,10 +12,7 @@ const formConfig = {
   
   onSubmit: (values, dispatch) => {
     const {transactionId} = values;
-    console.log('logging transactionId here ');
-    console.log(values);
-    const creditStatus = 'PENDING';
-    return dispatch(createCreditRequest(transactionId, creditStatus));
+    return dispatch(createCreditRequest(transactionId));
   },
 };
 
