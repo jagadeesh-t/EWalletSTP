@@ -27,14 +27,14 @@ class CreditRequestview extends React.Component {
       <KeyboardAwareScrollView style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
         <Image style={styles.imageContainer} resizeMode='stretch' source={bannerBg}>
           <View style={styles.titleContainer}>
-            <Text style={styles.subTitle}>{language.CREDIT__REQUEST}</Text>
+            <Text style={styles.subTitle}>{language.CREDIT_REQUEST__INDEX__TITLE}</Text>
           </View>
         </Image>
         <View style={styles.mainAreaContainer}>
           <View style={styles.formContainer}>
-            <Text style={styles.subTitle}>{language.ENTER_TRANSACTION_DETAILS}</Text>
-            <View style={styles.formHeader}><RNIcon name='address-card, vcard' size={15} /><Text style={styles.formHeaderText}>{language.TRANSACTION__ID} </Text></View>
-            <Field name='transactionId' component={FormInput} placeholder={language.ENTER__TRANSACTION__ID} />
+            <Text style={styles.subTitle}>{language.CREDIT_REQUEST__ENTER__TRANSACTION__DETAILS}</Text>
+            <View style={styles.formHeader}><RNIcon name='address-card, vcard' size={15} /><Text style={styles.formHeaderText}>{language.CREDIT_REQUEST__TRANSACTION__ID} </Text></View>
+            <Field name='transactionId' component={FormInput} placeholder={language.CREDIT_REQUEST__TRANSACTION__ID} />
           </View>
         </View>
         <View style={styles.buttonContainer} >
