@@ -12,15 +12,22 @@ import {getTitleBar} from '../components/TitleBar/TitleBar.component';
 import {getCurrentRouteTitle} from '../utils/transformer.util';
 import {language} from '../config/language';
 import CreditRequest from  '../pages/Distributor/CreditRequestPage';
+import VerificationPage from '../pages/Onboarding/Verification.page';
 
 export const MainRoutes = {
+
+
   Login: {
     screenTitle: language.TITLE__LOGIN,
     screen: LoginPage
   },
+  Verification: {
+    screenTitle: language.VERIFICATION__INDEX_TITLE,
+    screen: VerificationPage
+  },
 
   CreditRequest: {
-    screenTitle: language.CREDIT__REQUEST,
+    screenTitle: language.CREDIT_REQUEST__INDEX_TITLE,
     screen: CreditRequest
   },
 
