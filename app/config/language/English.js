@@ -51,8 +51,8 @@ export default {
   TITLE__HOME: 'Home',
   TITLE__REGISTER: 'Register',
   TITLE__LOGIN: 'Welcome !',
-  CREDIT_REQUEST__INDEX__TITLE: 'Request Credit',
-  CREDIT_REQUEST__ENTER__TRANSACTION__DETAILS: 'Enter the Transaction ID',
-  CREDIT_REQUEST__TRANSACTION__ID: 'Enter Transaction ID',
-  CREDIT_REQUEST__REQUEST__PROCESSED: 'Your Request Will be Processed and Balance will be Updated'
+  CREDIT_REQUEST__INDEX_TITLE: 'Request Credit',
+  CREDIT_REQUEST__ENTER_TRANSACTION_DETAILS: 'Enter the Transaction ID',
+  CREDIT_REQUEST__TRANSACTION_ID: 'Enter Transaction ID',
+  CREDIT_REQUEST__REQUEST_PROCESSED: 'Your Request Will be Processed and Balance will be Updated'
 };
