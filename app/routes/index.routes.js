@@ -11,12 +11,20 @@ import TransactionHistoryPage from '../pages/TransactionHistroy/TransactionHisto
 import {getTitleBar} from '../components/TitleBar/TitleBar.component';
 import {getCurrentRouteTitle} from '../utils/transformer.util';
 import {language} from '../config/language';
+import CreditRequest from  '../pages/Distributor/CreditRequestPage';
 
 export const MainRoutes = {
   Login: {
     screenTitle: language.TITLE__LOGIN,
     screen: LoginPage
   },
+
+  CreditRequest: {
+    screenTitle: language.CREDIT__REQUEST,
+    screen: CreditRequest
+  },
+
+  
   Register: {
     screenTitle: language.TITLE__REGISTER,
     screen: RegisterPage

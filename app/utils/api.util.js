@@ -19,3 +19,7 @@ export const confirmTransfer = (payload) =>
 
 export const transfer = (payload) =>
 Http.post('TRANSACT', payload, {additional: ['FTXID']});
+
+
+export const creditRequest = (payload) =>
+Http.post('CREDITREQUEST', payload, {additional: ['FTXID']});

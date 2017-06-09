@@ -22,7 +22,7 @@ const formConfig = {
     const errors = {};
     validations.required(values, ['mobileNo', 'password'], errors);
     validations.validateMobileNo(values, ['mobileNo'], errors);
-    validations.validatePassword(values, ['password'], errors);
+   // validations.validatePassword(values, ['password'], errors);
     return errors;
   }
 };

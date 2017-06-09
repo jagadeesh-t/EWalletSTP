@@ -84,3 +84,10 @@ export const transformErrorTransferResponse = (err) => {
   // payeePhone: transferResponse.payeePhone
   };
 };
+
+
+export const prepareCreditRequest = (userProfile, transactionId, creditStatus) => ({
+  'userProfile': userProfile,
+  'transactionId': transactionId,
+  'creditStatus': creditStatus
+});
