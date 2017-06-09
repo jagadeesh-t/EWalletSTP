@@ -13,7 +13,7 @@ const formConfig = {
   onSubmit: (values, dispatch) => {
     const {mobileNo, password, name, email, country} = values;
     dispatch(sendVerificationMessage(mobileNo, country));
-    return dispatch(setRegisterDetails({mobileNo, password, name, email, country} ));
+    return dispatch(setRegisterDetails({mobileNo, password, name, email, country}));
     
   },
   validate: (values) => {

@@ -45,8 +45,8 @@ export default {
     fontSize: theme.fontSizeNormal,
   },
   inputStyle: {
-    alignSelf:'center',
-    width:100
+    alignSelf: 'center',
+    width: 100
   },
   
   qrButton: {
@@ -59,8 +59,8 @@ export default {
     backgroundColor: theme.transparent,
     justifyContent: 'space-between'
   },
-  textcontainer:{
-    paddingTop:20,
-    fontStyle:'italic'
+  textcontainer: {
+    paddingTop: 20,
+    fontStyle: 'italic'
   }
 };

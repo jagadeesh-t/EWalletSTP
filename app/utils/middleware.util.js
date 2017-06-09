@@ -86,17 +86,17 @@ export const transformErrorTransferResponse = (err) => {
 };
 
 export const prepareCreditRequest = (userProfile, transactionId, creditStatus) => ({
- 'userProfile': userProfile,
- 'transactionId': transactionId,
-'creditStatus': creditStatus
+  'userProfile': userProfile,
+  'transactionId': transactionId,
+  'creditStatus': creditStatus
 });
 
-export const prepareVerificationRequest = (phone,countryCode) => ({
+export const prepareVerificationRequest = (phone, countryCode) => ({
   'phone_number': phone,
   'country_code': countryCode
 });
 
-export const prepareVerification = (phone,countryCode,code) => ({
+export const prepareVerification = (phone, countryCode, code) => ({
   'phone': phone,
   'countryCode': countryCode,
   'code': code

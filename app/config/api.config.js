@@ -10,8 +10,8 @@ export const endpoints = {
   USER: '/user',
   CONFIRMTRANSFER: '/confirm-transfer',
   CREDITREQUEST: '/createCreditRequest',
-  SENDVERIFICATIONMESSAGE : '/sendVerificationMessage',
-  VERIFYPHONE : '/verifyMessage'
+  SENDVERIFICATIONMESSAGE: '/sendVerificationMessage',
+  VERIFYPHONE: '/verifyMessage'
 };
 
 export const mockResponses = env.fixtures || {};
