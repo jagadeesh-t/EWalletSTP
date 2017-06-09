@@ -2,8 +2,10 @@ export default {
   LANGUAGE__LABEL: 'English',
   SNACKBAR__CLOSE: 'CLOSE',
   COMMON__NEXT: 'Next',
+  COMMON__ERROR: 'Error Processing the Request',
   QRSCANNER__FLASH: 'Flash',
   QRSCANNER__CLOSE: 'Close',
+  SUBMIT_TEXT: 'Submit',
   REGISTER__TITLE: 'New User Registration',
   REGISTER__MOBILENO: 'Mobile No',
   REGISTER__MOBILE_PLACEHOLDER: 'Enter your mobile number',
@@ -48,5 +50,9 @@ export default {
   TITLE__QRCODE_READER: 'Scan Code',
   TITLE__HOME: 'Home',
   TITLE__REGISTER: 'Register',
-  TITLE__LOGIN: 'Welcome !'
+  TITLE__LOGIN: 'Welcome !',
+  CREDIT_REQUEST__INDEX_TITLE: 'Request Credit',
+  CREDIT_REQUEST__ENTER_TRANSACTION_DETAILS: 'Enter the Transaction ID',
+  CREDIT_REQUEST__TRANSACTION_ID: 'Enter Transaction ID',
+  CREDIT_REQUEST__REQUEST_PROCESSED: 'Your Request Will be Processed and Balance will be Updated'
 };

@@ -5,6 +5,8 @@ import * as api from '../../utils/api.util';
 import * as actions from '../actions/index.actions';
 import {getErrorMessage} from '../../utils/transformer.util';
 import result from 'lodash/result';
+import {language} from '../../config/language';
+
 
 export const login = (username, password) => (dispatch) => {
   const payload = middleware.prepareLogin(username, password);
@@ -109,3 +111,20 @@ export const getTransactions = () => (dispatch, getState) => {
     return Promise.resolve();
   });
 };
+
+
+export const createCreditRequest = (transactionId) => (dispatch, getState) => {
+  const userProfile = result(getState(), 'user.userprofile', {});
+  const payload = middleware.prepareCreditRequest(userProfile.id, transactionId);
+  return api.creditRequest(payload).then(() => {
+    Toast.show(language.CREDIT_REQUEST__REQUEST_PROCESSED);
+    dispatch(NavigationActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({routeName: 'Home'})]
+    }));
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+    Toast.show('Error Processing the Request');
+  });
+};
+
