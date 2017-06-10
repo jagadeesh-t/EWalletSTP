@@ -30,7 +30,7 @@ export const currencyFormatter = (unformatted) => {
   return formatted === 'NaN' ? unformatted : formatted;
 };
 
-export const getErrorMessage = (response) => result(response, 'data.message', null);
+export const getErrorMessage = (response, ifNotPresentMessage) => result(response, 'data.message', ifNotPresentMessage);
 
 export const getCurrentRouteTitle = (nav) => {
   const currentRouteName = result(nav, 'navigation.state.routeName');
