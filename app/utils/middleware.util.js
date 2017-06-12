@@ -47,15 +47,17 @@ export const transformTransactionHistory = (transactionList, currentUser) => {
 };
 
 export const transformConfirmTransfer = (transactionInfo) => {
-  const {amount = '--', finalAmount = '--', transactionFee = '--', destinationAcc = {}} = transactionInfo;
-  const payeeName = result(destinationAcc, 'userprofile.name', '--');
-  const payeePhone = result(destinationAcc, 'phone', '--');
+  console.log("logging transactionInfo");
+  console.log(transactionInfo);
+  const {amount = '--', totalAmount = '--', fee = '--', toAccount = {}} = transactionInfo;
+  const payeeName = result(toAccount, 'userProfile.name', '--');
+  const payeePhone = result(toAccount, 'phone', '--');
   return {
     'payeeName': String(payeeName),
     'payeePhone': String(payeePhone),
     'amount': String(amount),
-    'totalAmount': String(finalAmount),
-    'fee': String(transactionFee)
+    'totalAmount': String(totalAmount),
+    'fee': String(fee)
   };
 };
 
