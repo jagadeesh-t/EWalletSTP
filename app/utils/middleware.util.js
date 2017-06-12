@@ -47,7 +47,7 @@ export const transformTransactionHistory = (transactionList, currentUser) => {
 };
 
 export const transformConfirmTransfer = (transactionInfo) => {
-  console.log("logging transactionInfo");
+  console.log('logging transactionInfo');
   console.log(transactionInfo);
   const {amount = '--', totalAmount = '--', fee = '--', toAccount = {}} = transactionInfo;
   const payeeName = result(toAccount, 'userProfile.name', '--');
