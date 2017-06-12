@@ -16,6 +16,7 @@ export const login = (username, password) => (dispatch) => {
       index: 0,
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
+
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
   });
@@ -42,20 +43,17 @@ export const transfer = (transferInfo) => (dispatch) => {
     payeeName: transferInfo.payeeName,
     payeePhone: transferInfo.payeePhone
   };
-  console.log(transferModalDetails);
   dispatch(actions.setTransferResult(transferModalDetails));
   dispatch(NavigationActions.navigate({routeName: 'SendResult'}));
   const payload = middleware.prepareTransfer(transferInfo.payeePhone, transferInfo.amount);
   return api.transfer(payload).
   then((res) => {
-    console.log(res);
     const transferResponse = middleware.transformTransferResponse(res.data);
     dispatch(actions.setTransferResult({
       ...transferModalDetails,
       ...transferResponse,
       ...{status: 'SUCCESS'}}));
   }).catch((err) => {
-    console.log(err);
     const errTransferResponse = middleware.transformErrorTransferResponse(err);
     Toast.show(getErrorMessage(err));
     dispatch(actions.setTransferResult({
@@ -151,7 +149,7 @@ export const verifyAndRegister = (code) => (dispatch, getState) => {
 
 
 export const createCreditRequest = (transactionId) => (dispatch, getState) => {
-  const userProfile = result(getState(), 'user.userprofile', {});
+  const userProfile = result(getState(), 'user.userProfile', {});
   const payload = middleware.prepareCreditRequest(userProfile.id, transactionId);
   return api.creditRequest(payload).then(() => {
     Toast.show(language.CREDIT_REQUEST__REQUEST_PROCESSED);

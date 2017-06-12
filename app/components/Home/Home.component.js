@@ -24,6 +24,12 @@ class HomeView extends React.Component {
     [{icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
     [{icon: 'line-chart', id: 'TransactionHistory', title: language.HOME__TRANSACTION_HISTORY}],
   ]
+
+  linksWithDistributor = [
+    [{icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
+    [{icon: 'line-chart', id: 'TransactionHistory', title: language.CREDIT_REQUEST__INDEX_TITLE},{icon: 'address-card, vcard', id: 'CreditRequest', title: language.CREDIT_REQUEST__INDEX_TITLE}],
+  ]
+
   tabs = [
     {icon: 'user', id: 'profile', title: language.HOME__PROFILE},
     {icon: 'wrench', id: 'settings', title: language.HOME__SETTINGS},
@@ -42,15 +48,17 @@ class HomeView extends React.Component {
   }
   render () {
     const {onLinkClick = noop, user, onLogoutClick = noop} = this.props;
-    const name = result(user, 'userprofile.name', '--');
+    const name = result(user, 'userProfile.name', '--');
     const balance = result(user, 'balanceAccount.balance', '--');
     const phone = result(user, 'phone', '--');
+    const userType = result(user,'userProfile.userType','REGULAR')
     return (
       <KeyboardAwareScrollView  keyboardShouldPersistTaps='handled' style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}
         refreshControl={<RefreshControl refreshing={this.state.dashboardRefreshing} onRefresh={this.onDashboardRefresh} tintColor={styles.refreshColor} colors={[styles.refreshColor]} enabled/>}
           >
-        <Banner name={name} amount={String(balance)} phone={phone} onLogoutClick={onLogoutClick}/>
-        <LinkPaneContainer onClick={onLinkClick} links={this.links} />
+        <Banner name={name} amount={String(balance)} phone={phone.toString()} onLogoutClick={onLogoutClick}/>
+        {userType=='DISTRIBUTOR' ? <LinkPaneContainer onClick={onLinkClick} links={this.linksWithDistributor} /> : <LinkPaneContainer onClick={onLinkClick} links={this.links} />}
+        
         <TabsHolder onClick={onLinkClick} tabs={this.tabs} />
       </KeyboardAwareScrollView >
     );
