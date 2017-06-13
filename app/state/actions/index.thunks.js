@@ -8,7 +8,7 @@ import result from 'lodash/result';
 import {language} from '../../config/language';
 
 
-export const login = (username, password) => (dispatch) => {
+export const login = (username, password) => (dispatch, getState) => {
   const payload = middleware.prepareLogin(username, password);
   return api.login(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data.user', {})));
@@ -16,7 +16,12 @@ export const login = (username, password) => (dispatch) => {
       index: 0,
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
-
+    const currentUser = result(getState(), 'user', {});
+    api.getTransactions().
+  then((res) => {
+    const transactionList = middleware.transformTransactionHistory(res.data, currentUser);
+    dispatch(actions.updateTransactions(transactionList));
+  });
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
   });
@@ -44,7 +49,6 @@ export const transfer = (transferInfo) => (dispatch) => {
     payeePhone: transferInfo.payeePhone
   };
   dispatch(actions.setTransferResult(transferModalDetails));
-  dispatch(NavigationActions.navigate({routeName: 'SendResult'}));
   const payload = middleware.prepareTransfer(transferInfo.payeePhone, transferInfo.amount);
   return api.transfer(payload).
   then((res) => {
@@ -53,9 +57,11 @@ export const transfer = (transferInfo) => (dispatch) => {
       ...transferModalDetails,
       ...transferResponse,
       ...{status: 'SUCCESS'}}));
+    dispatch(NavigationActions.navigate({routeName: 'SendResult'}));
   }).catch((err) => {
     const errTransferResponse = middleware.transformErrorTransferResponse(err);
     Toast.show(getErrorMessage(err));
+
     dispatch(actions.setTransferResult({
       ...transferModalDetails,
       ...errTransferResponse,

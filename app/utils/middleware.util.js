@@ -22,7 +22,7 @@ export const prepareConfirmTransfer = (mobileNo, amount) => ({
 });
 
 export const prepareTransfer = (mobileNo, amount) => ({
-  'to_phone': mobileNo,
+  'toPhone': mobileNo,
   'amount': amount
 });
 
