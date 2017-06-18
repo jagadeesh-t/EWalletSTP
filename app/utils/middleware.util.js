@@ -33,7 +33,7 @@ export const transformTransactionHistory = (transactionList, currentUser) => {
     return []; // just to make sure if phone doesnt exist
   }
   return map(transactionList, (eachTransaction) => {
-    const transactionFrom = result(eachTransaction, 'from_account.phone', null);
+    const transactionFrom = result(eachTransaction, 'fromAccount.phone', null);
     let transactionHistoryType = constants.TH_CREDIT;
     if (transactionFrom === userPhone) {
       transactionHistoryType = constants.TH_DEBIT;
@@ -103,5 +103,10 @@ export const prepareVerification = (phone, countryCode, code) => ({
   'countryCode': countryCode,
   'code': code
 });
+
+export const prepareChangePassword = (password) => ({
+  'password': password
+});
+
 
 

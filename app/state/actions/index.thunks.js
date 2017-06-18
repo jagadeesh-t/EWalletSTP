@@ -169,3 +169,38 @@ export const createCreditRequest = (transactionId) => (dispatch, getState) => {
   });
 };
 
+export const chanagePassword = (currentPassword, newPassword, confirmPassword) => (dispatch, getState) => {
+  const userPhone = result(getState(), 'user.phone', {});
+  const payload = middleware.prepareLogin(userPhone, currentPassword);
+  const changePassPayload = middleware.prepareChangePassword(newPassword);
+  return api.login(payload).then((res) => {
+    return api.changePassword(changePassPayload);
+    Toast.show(language.SETTINGS__SUCCESSFUL_PASSWORD_CHANGE);
+    dispatch(NavigationActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({routeName: 'Home'})]
+    }));
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+  });
+
+};
+
+
+export const updateProfile = (payload) => (dispatch, getState) => {
+  
+  return api.updateProfile(payload).then((res) => {
+
+    Toast.show(language.PROFILE__SUCCESSFUL_UPDATE);
+     api.user().
+    then((res) => dispatch(actions.populateUser(result(res, 'data', {}))));
+    dispatch(NavigationActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({routeName: 'Home'})]
+    }));
+
+
+  }).catch((err) => {
+    Toast.show(getErrorMessage(err));
+  });
+};

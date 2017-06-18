@@ -13,14 +13,26 @@ import {getCurrentRouteTitle} from '../utils/transformer.util';
 import {language} from '../config/language';
 import CreditRequest from  '../pages/Distributor/CreditRequestPage';
 import VerificationPage from '../pages/Onboarding/Verification.page';
+import SettingsPage from  '../pages/Settings/Settings.page';
+import ProfilePage from  '../pages/Profile/Profile.page';
+
 
 export const MainRoutes = {
-
-
-  Login: {
+   Login: {
     screenTitle: language.TITLE__LOGIN,
     screen: LoginPage
   },
+
+  Settings:{
+    screenTitle: language.SETTINGS__INDEX_TITLE,
+    screen : SettingsPage
+  },
+
+  Profile:{
+    screenTitle: language.SETTINGS__INDEX_TITLE,
+    screen : ProfilePage
+  },
+ 
   Verification: {
     screenTitle: language.VERIFICATION__INDEX_TITLE,
     screen: VerificationPage

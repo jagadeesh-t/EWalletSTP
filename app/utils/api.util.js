@@ -30,3 +30,9 @@ Http.post('SENDVERIFICATIONMESSAGE', payload, {additional: ['FTXID']});
 
 export const verifyPhone = (payload) => 
 Http.post('VERIFYPHONE', payload, {additional: ['FIXID']});
+
+export const changePassword = (payload) => 
+Http.post('CHANGEPASSWORD', payload, {additional: ['FIXID']});
+
+export const updateProfile = (payload) => 
+Http.post('UPDATEPROFILE', payload, {additional: ['FIXID']});

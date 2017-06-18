@@ -15,7 +15,8 @@ class HomeView extends React.Component {
     onLinkClick: PropTypes.func,
     user: PropTypes.object,
     onLogoutClick: PropTypes.func,
-    refreshUserData: PropTypes.func
+    refreshUserData: PropTypes.func,
+    onTabClick : PropTypes.func
   }
   state = {
     dashboardRefreshing: false
@@ -31,8 +32,8 @@ class HomeView extends React.Component {
   ]
 
   tabs = [
-    {icon: 'user', id: 'profile', title: language.HOME__PROFILE},
-    {icon: 'wrench', id: 'settings', title: language.HOME__SETTINGS},
+    {icon: 'user', id: 'Profile', title: language.HOME__PROFILE},
+    {icon: 'wrench', id: 'Settings', title: language.HOME__SETTINGS},
     {icon: 'handshake-o', id: 'CustomerCare', title: language.HOME__CUSTOMER_CARE}
   ]
   showPullSpinner = () => {
@@ -47,7 +48,7 @@ class HomeView extends React.Component {
     return refreshUserData().then(this.hidePullSpinner);
   }
   render () {
-    const {onLinkClick = noop, user, onLogoutClick = noop} = this.props;
+    const {onLinkClick = noop, user, onLogoutClick = noop,onTabClick = noop} = this.props;
     const name = result(user, 'userProfile.name', '--');
     const balance = result(user, 'balanceAccount.balance', '--');
     const phone = result(user, 'phone', '--');
@@ -59,7 +60,7 @@ class HomeView extends React.Component {
         <Banner name={name} amount={String(balance)} phone={phone.toString()} onLogoutClick={onLogoutClick}/>
         {userType === 'DISTRIBUTOR' ? <LinkPaneContainer onClick={onLinkClick} links={this.linksWithDistributor} /> : <LinkPaneContainer onClick={onLinkClick} links={this.links} />}
         
-        <TabsHolder onClick={onLinkClick} tabs={this.tabs} />
+        <TabsHolder onClick={onTabClick} tabs={this.tabs} />
       </KeyboardAwareScrollView >
     );
   }

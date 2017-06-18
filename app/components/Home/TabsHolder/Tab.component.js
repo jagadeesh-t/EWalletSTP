@@ -14,7 +14,7 @@ class Tab extends React.Component {
 
   render () {
     return (
-      <Touchable style={styles.container}>
+      <Touchable style={styles.container} onPress={this.props.onClick}>
         <RNIcon name={this.props.icon} style={styles.icon} size={styles.iconSize}/>
         <Text style={styles.title}>{this.props.title}</Text>
       </Touchable>

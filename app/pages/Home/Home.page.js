@@ -11,6 +11,12 @@ const mapDispatchToProps = (dispatch) => ({
     const routeName = link.id;
     dispatch(NavigationActions.navigate({routeName}));
   },
+
+  tabNavigateTo: (tab = {}) => {
+    const routeName = tab.id;
+    dispatch(NavigationActions.navigate({routeName}));
+  },
+
   onLogoutClick: () => dispatch(logout()),
   refreshUserData: () => dispatch(getUser())
 });
@@ -24,12 +30,15 @@ class HomeScreen extends Component {
     navigateTo: PropTypes.func,
     user: PropTypes.object,
     onLogoutClick: PropTypes.func,
-    refreshUserData: PropTypes.func
+    refreshUserData: PropTypes.func,
+    tabNavigateTo : PropTypes.func
+  
+
   }
   render () {
-    const {navigateTo, user, onLogoutClick, refreshUserData} = this.props;
+    const {navigateTo, user, onLogoutClick, refreshUserData,tabNavigateTo} = this.props;
     return (
-      <HomeView user={user} onLogoutClick={onLogoutClick} onLinkClick={navigateTo} refreshUserData={refreshUserData}/>);
+      <HomeView user={user} onLogoutClick={onLogoutClick} onLinkClick={navigateTo} onTabClick={tabNavigateTo} refreshUserData={refreshUserData}/>);
   }
 }
 
