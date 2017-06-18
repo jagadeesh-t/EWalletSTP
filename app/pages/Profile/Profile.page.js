@@ -5,6 +5,8 @@ import {connect} from 'react-redux';
 import {updateProfile} from '../../state/actions/index.thunks';
 import * as validations from '../../utils/validator.util';
 import result from 'lodash/result';
+import PropTypes from 'prop-types';
+
 
 
 const formConfig = {
