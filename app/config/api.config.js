@@ -12,8 +12,8 @@ export const endpoints = {
   CREDITREQUEST: '/createCreditRequest',
   SENDVERIFICATIONMESSAGE: '/sendVerificationMessage',
   VERIFYPHONE: '/verifyMessage',
-  CHANGEPASSWORD : '/passwordReset',
-  UPDATEPROFILE : '/profile'
+  CHANGEPASSWORD: '/passwordReset',
+  UPDATEPROFILE: '/profile'
 };
 
 export const mockResponses = env.fixtures || {};

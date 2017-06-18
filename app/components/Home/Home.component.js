@@ -16,7 +16,7 @@ class HomeView extends React.Component {
     user: PropTypes.object,
     onLogoutClick: PropTypes.func,
     refreshUserData: PropTypes.func,
-    onTabClick : PropTypes.func
+    onTabClick: PropTypes.func
   }
   state = {
     dashboardRefreshing: false
@@ -48,7 +48,7 @@ class HomeView extends React.Component {
     return refreshUserData().then(this.hidePullSpinner);
   }
   render () {
-    const {onLinkClick = noop, user, onLogoutClick = noop,onTabClick = noop} = this.props;
+    const {onLinkClick = noop, user, onLogoutClick = noop, onTabClick = noop} = this.props;
     const name = result(user, 'userProfile.name', '--');
     const balance = result(user, 'balanceAccount.balance', '--');
     const phone = result(user, 'phone', '--');

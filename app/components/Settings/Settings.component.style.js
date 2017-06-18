@@ -35,7 +35,6 @@ export default {
     color: theme.textColor,
     paddingLeft: 10,
     paddingBottom: 20,
-    paddingBottom:5
   },
   scan: {
     padding: 5,

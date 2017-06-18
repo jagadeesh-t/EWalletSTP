@@ -11,7 +11,7 @@ const formConfig = {
   form: 'login',
   destroyOnUnmount: true,
   initialValues: {
-    mobileNo: '1234455',
+    mobileNo: '1234567',
     password: 'qwerty123'
   },
   onSubmit: (values, dispatch) => {
@@ -20,9 +20,9 @@ const formConfig = {
   },
   validate: (values) => {
     const errors = {};
-   // validations.required(values, ['mobileNo', 'password'], errors);
+    validations.required(values, ['mobileNo', 'password'], errors);
     validations.validateMobileNo(values, ['mobileNo'], errors);
-    // validations.validatePassword(values, ['password'], errors);
+    validations.validatePassword(values, ['password'], errors);
     return errors;
   }
 };

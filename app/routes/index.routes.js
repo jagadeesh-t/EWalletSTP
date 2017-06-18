@@ -18,19 +18,19 @@ import ProfilePage from  '../pages/Profile/Profile.page';
 
 
 export const MainRoutes = {
-   Login: {
+  Login: {
     screenTitle: language.TITLE__LOGIN,
     screen: LoginPage
   },
 
-  Settings:{
+  Settings: {
     screenTitle: language.SETTINGS__INDEX_TITLE,
-    screen : SettingsPage
+    screen: SettingsPage
   },
 
-  Profile:{
+  Profile: {
     screenTitle: language.SETTINGS__INDEX_TITLE,
-    screen : ProfilePage
+    screen: ProfilePage
   },
  
   Verification: {

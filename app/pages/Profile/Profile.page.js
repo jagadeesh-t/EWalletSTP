@@ -12,20 +12,12 @@ const formConfig = {
   destroyOnUnmount: true,
   initialValues: {},
   
-  onSubmit: (values, dispatch) => {
-    const {name,email} = values;
-    console.log("logging =====");
-    console.log(values);
-
-    return dispatch(updateProfile(values));
-  },
+  onSubmit: (values, dispatch) => dispatch(updateProfile(values)),
 
   validate: (values) => {
     const errors = {};
-    validations.validateUpdate(values, ['name','email'], errors);
+    validations.validateUpdate(values, ['name', 'email'], errors);
     values.email && validations.validateEmail(values, ['email'], errors);
-     //validations.required(values, ['name'], errors);
-     //validations.required(values, [ 'email'], errors);
     return errors;
   }
 
@@ -41,9 +33,13 @@ const mapStateToProps = (state) => ({
 const SettingsForm = reduxForm(formConfig)(profileView);
 
 class SettingsPage extends Component {
+
+  static propTypes = {
+    user: PropTypes.object,
+  }
  
   render () {
-    const { user} = this.props;
+    const {user} = this.props;
     return (
       <SettingsForm  user={user} />);
   }

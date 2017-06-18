@@ -34,7 +34,7 @@ class ProfileView extends React.Component {
 
 
   render () {
-    const {invalid, submitting, handleSubmit = noop,user  } = this.props;
+    const {invalid, submitting, handleSubmit = noop, user} = this.props;
     const name = result(user, 'userProfile.name', '--');
     const phone = result(user, 'phone', '--').toString();
     const email = result(user, 'userProfile.test', 'Enter your Email');

@@ -35,7 +35,6 @@ export default {
     color: theme.textColor,
     paddingLeft: 10,
     paddingBottom: 20,
-    paddingBottom:5
   },
   scan: {
     padding: 5,
@@ -56,9 +55,9 @@ export default {
     backgroundColor: theme.transparent,
     justifyContent: 'space-between'
   },
-  phoneContainer:{
-    paddingBottom:40,
-    paddingTop:30,
+  phoneContainer: {
+    paddingBottom: 40,
+    paddingTop: 30,
     flexDirection: 'row'
   }
 };

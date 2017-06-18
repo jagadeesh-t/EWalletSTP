@@ -169,12 +169,12 @@ export const createCreditRequest = (transactionId) => (dispatch, getState) => {
   });
 };
 
-export const chanagePassword = (currentPassword, newPassword, confirmPassword) => (dispatch, getState) => {
+export const chanagePassword = (currentPassword, newPassword) => (dispatch, getState) => {
   const userPhone = result(getState(), 'user.phone', {});
   const payload = middleware.prepareLogin(userPhone, currentPassword);
   const changePassPayload = middleware.prepareChangePassword(newPassword);
-  return api.login(payload).then((res) => {
-    return api.changePassword(changePassPayload);
+  return api.login(payload).then(() => {
+    api.changePassword(changePassPayload);
     Toast.show(language.SETTINGS__SUCCESSFUL_PASSWORD_CHANGE);
     dispatch(NavigationActions.reset({
       index: 0,
@@ -187,20 +187,17 @@ export const chanagePassword = (currentPassword, newPassword, confirmPassword) =
 };
 
 
-export const updateProfile = (payload) => (dispatch, getState) => {
-  
-  return api.updateProfile(payload).then((res) => {
+export const updateProfile = (payload) => (dispatch) => api.updateProfile(payload).then(() => {
 
-    Toast.show(language.PROFILE__SUCCESSFUL_UPDATE);
-     api.user().
+  Toast.show(language.PROFILE__SUCCESSFUL_UPDATE);
+  api.user().
     then((res) => dispatch(actions.populateUser(result(res, 'data', {}))));
-    dispatch(NavigationActions.reset({
-      index: 0,
-      actions: [NavigationActions.navigate({routeName: 'Home'})]
-    }));
+  dispatch(NavigationActions.reset({
+    index: 0,
+    actions: [NavigationActions.navigate({routeName: 'Home'})]
+  }));
 
 
-  }).catch((err) => {
-    Toast.show(getErrorMessage(err));
-  });
-};
+}).catch((err) => {
+  Toast.show(getErrorMessage(err));
+});

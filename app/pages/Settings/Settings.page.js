@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {reduxForm} from 'redux-form';
 import settingsView from '../../components/Settings/Settings.component';
 import {connect} from 'react-redux';
-import {createCreditRequest,chanagePassword} from '../../state/actions/index.thunks';
+import {chanagePassword} from '../../state/actions/index.thunks';
 import * as validations from '../../utils/validator.util';
 
 
@@ -12,14 +12,14 @@ const formConfig = {
   initialValues: {},
   
   onSubmit: (values, dispatch) => {
-    const {currentPassword,newPassword,confirmPassword} = values;
-    return dispatch(chanagePassword(currentPassword,newPassword,confirmPassword));
+    const {currentPassword, newPassword} = values;
+    return dispatch(chanagePassword(currentPassword, newPassword));
   },
   validate: (values) => {
     const errors = {};
-    validations.required(values, ['currentPassword', 'newPassword','confirmPassword'], errors);
-    validations.validatePasswordUpdate(values, ['newPassword','confirmPassword'], errors);
-     validations.validatePassword(values, ['newPassword'], errors);
+    validations.required(values, ['currentPassword', 'newPassword', 'confirmPassword'], errors);
+    validations.validatePasswordUpdate(values, ['newPassword', 'confirmPassword'], errors);
+    validations.validatePassword(values, ['newPassword'], errors);
     return errors;
   }
 };

@@ -31,12 +31,12 @@ class HomeScreen extends Component {
     user: PropTypes.object,
     onLogoutClick: PropTypes.func,
     refreshUserData: PropTypes.func,
-    tabNavigateTo : PropTypes.func
+    tabNavigateTo: PropTypes.func
   
 
   }
   render () {
-    const {navigateTo, user, onLogoutClick, refreshUserData,tabNavigateTo} = this.props;
+    const {navigateTo, user, onLogoutClick, refreshUserData, tabNavigateTo} = this.props;
     return (
       <HomeView user={user} onLogoutClick={onLogoutClick} onLinkClick={navigateTo} onTabClick={tabNavigateTo} refreshUserData={refreshUserData}/>);
   }
