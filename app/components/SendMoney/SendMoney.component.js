@@ -37,10 +37,10 @@ class SendMoneyView extends React.Component {
             <Text style={styles.subTitle}>{language.SEND_MONEY__OR_ENTER_DETAILS}</Text>
 
             <View style={styles.formHeader}><RNIcon name='mobile, mobile-phone' size={15} /><Text style={styles.formHeaderText}>{language.SEND_MONEY__MOBILE_NUMBER} </Text></View>
-            <Field name='mobileNo' component={FormInput} placeholder={language.SEND_MONEY__MOBILE_PLACEHOLDER} />
+            <Field name='mobileNo' component={FormInput}  placeholder={language.SEND_MONEY__MOBILE_PLACEHOLDER} />
 
             <View style={styles.formHeader}><RNIcon name='money' size={15} /><Text style={styles.formHeaderText}>{language.SEND_MONEY__AMOUNT} </Text></View>
-            <Field name='amount' component={FormInput} placeholder={language.SEND_MONEY__AMOUNT_PLACEHOLDER} />
+            <View style={styles.amountInputContainer}><Field name='amount' component={FormInput} containerStyle={styles.amountInputStyle} placeholder={language.SEND_MONEY__AMOUNT_PLACEHOLDER} /><Text style={styles.trailingAmountText}>.000</Text></View>
           </View>
         </View>
         <View style={styles.buttonContainer} >

@@ -53,5 +53,19 @@ export default {
   },
   qrButton: {
     alignSelf: 'center'
+  },
+  amountInputContainer :{
+    flex:1,
+    flexDirection:'row'
+  },
+  amountInputStyle : {
+    width:280,
+    height:80
+  },
+  trailingAmountText: {
+    paddingTop:20,
+    paddingLeft:10,
+    color:'#9B9B9B',
+    fontSize:20
   }
 };

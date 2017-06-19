@@ -35,7 +35,7 @@ class LoginView extends React.Component {
           <Field name='mobileNo' iconName='mobile, mobile-phone' component={FormInput} placeholder={'Enter your mobile number'} />
 
           <View style={styles.formHeader}><RNIcon name='user-secret' size={15} /><Text style={styles.formHeaderText}>{'Password'} </Text></View>
-          <Field name='password' component={FormInput} placeholder={'Enter your password'} />
+          <Field name='password' secureTextEntry={true} component={FormInput} placeholder={'Enter your password'} />
         </View>
         <View style={styles.buttonContainer} >
           <FormButton disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={'Next'}/>

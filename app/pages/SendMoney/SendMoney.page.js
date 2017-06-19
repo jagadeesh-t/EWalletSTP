@@ -16,7 +16,8 @@ const formConfig = {
   },
   onSubmit: (values, dispatch) => {
     const {mobileNo, amount} = values;
-    return dispatch(confirmTransfer(mobileNo, amount));
+    var finalAmt  =  amount * 1000;
+    return dispatch(confirmTransfer(mobileNo, finalAmt));
   },
   validate: (values) => {
     const errors = {};

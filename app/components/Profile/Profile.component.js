@@ -49,7 +49,7 @@ class ProfileView extends React.Component {
         <View style={styles.mainAreaContainer}>
           <View style={styles.formContainer}>
             <View style={styles.formHeader}><RNIcon name='user' size={15} /><Text style={styles.formHeaderText}>{language.PROFILE__NAME} </Text></View>
-            <Field secureTextEntry={true} name='name' component={FormInput} placeholder={name} />
+            <Field name='name' component={FormInput} placeholder={name} />
             <View style={styles.formHeader}><RNIcon name='mobile, mobile-phone' size={15} /><Text style={styles.formHeaderText}>{language.PROFILE__PHONE + ': '} </Text></View>
             <Field name='phone' disabled={true} selectTextOnFocus={false} component={FormInput} placeholder={phone} />
             <View style={styles.formHeader}><RNIcon name='envelope' size={15} /><Text style={styles.formHeaderText}>{language.PROFILE__EMAIL} </Text></View>

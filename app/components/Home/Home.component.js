@@ -28,7 +28,7 @@ class HomeView extends React.Component {
 
   linksWithDistributor = [
     [{icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
-    [{icon: 'line-chart', id: 'TransactionHistory', title: language.CREDIT_REQUEST__INDEX_TITLE}, {icon: 'address-card, vcard', id: 'CreditRequest', title: language.CREDIT_REQUEST__INDEX_TITLE}],
+    [{icon: 'line-chart', id: 'TransactionHistory', title: language.HOME__TRANSACTION_HISTORY}, {icon: 'address-card, vcard', id: 'CreditRequest', title: language.CREDIT_REQUEST__INDEX_TITLE}],
   ]
 
   tabs = [
