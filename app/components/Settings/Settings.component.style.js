@@ -33,7 +33,8 @@ export default {
     fontWeight: theme.fontWeightBold,
     fontSize: theme.fontSizeNormal,
     color: theme.textColor,
-    paddingLeft: 10
+    paddingLeft: 10,
+    paddingBottom: 20,
   },
   scan: {
     padding: 5,
@@ -43,29 +44,15 @@ export default {
     fontWeight: theme.fontWeightBold,
     fontSize: theme.fontSizeNormal,
   },
-  scanQRIcon: {
-    textAlign: 'center',
-    fontSize: 100,
-    padding: 10,
-    textShadowOffset: {width: 1, height: 1},
-    color: theme.textColor,
-    transform: [{rotate: '10deg'}]
-  },
+  
   qrButton: {
     alignSelf: 'center'
   },
-  amountInputContainer :{
-    flex:1,
-    flexDirection:'row'
+  imageContainer: {
+    height: 130,
+    width: null,
+    padding: 20,
+    backgroundColor: theme.transparent,
+    justifyContent: 'space-between'
   },
-  amountInputStyle : {
-    width:280,
-    height:80
-  },
-  trailingAmountText: {
-    paddingTop:20,
-    paddingLeft:10,
-    color:'#9B9B9B',
-    fontSize:20
-  }
 };

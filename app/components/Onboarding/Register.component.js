@@ -28,7 +28,7 @@ class RegisterView extends React.Component {
           <Field name='mobileNo' iconName='mobile, mobile-phone' component={FormInput} placeholder={language.REGISTER__MOBILE_PLACEHOLDER} />
 
           <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='user-secret' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__PASSWORD} </Text></View>
-          <Field name='password' component={FormInput} placeholder={language.REGISTER__PASSWORD_PLACEHOLDER} />
+          <Field name='password' secureTextEntry={true} component={FormInput} placeholder={language.REGISTER__PASSWORD_PLACEHOLDER} />
 
           <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='user' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__NAME} </Text></View>
           <Field name='name' component={FormInput} placeholder={language.REGISTER__NAME_PLACEHOLDER} />

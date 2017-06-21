@@ -15,7 +15,8 @@ class HomeView extends React.Component {
     onLinkClick: PropTypes.func,
     user: PropTypes.object,
     onLogoutClick: PropTypes.func,
-    refreshUserData: PropTypes.func
+    refreshUserData: PropTypes.func,
+    onTabClick: PropTypes.func
   }
   state = {
     dashboardRefreshing: false
@@ -24,9 +25,15 @@ class HomeView extends React.Component {
     [{icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
     [{icon: 'line-chart', id: 'TransactionHistory', title: language.HOME__TRANSACTION_HISTORY}],
   ]
+
+  linksWithDistributor = [
+    [{icon: 'money', id: 'SendMoney', title: language.HOME__PAY_MONEY}, {icon: 'qrcode', id: 'Receive', title: language.HOME__RECEIVE_MONEY}],
+    [{icon: 'line-chart', id: 'TransactionHistory', title: language.HOME__TRANSACTION_HISTORY}, {icon: 'address-card, vcard', id: 'CreditRequest', title: language.CREDIT_REQUEST__INDEX_TITLE}],
+  ]
+
   tabs = [
-    {icon: 'user', id: 'profile', title: language.HOME__PROFILE},
-    {icon: 'wrench', id: 'settings', title: language.HOME__SETTINGS},
+    {icon: 'user', id: 'Profile', title: language.HOME__PROFILE},
+    {icon: 'wrench', id: 'Settings', title: language.HOME__SETTINGS},
     {icon: 'handshake-o', id: 'CustomerCare', title: language.HOME__CUSTOMER_CARE}
   ]
   showPullSpinner = () => {
@@ -41,17 +48,19 @@ class HomeView extends React.Component {
     return refreshUserData().then(this.hidePullSpinner);
   }
   render () {
-    const {onLinkClick = noop, user, onLogoutClick = noop} = this.props;
-    const name = result(user, 'userprofile.name', '--');
+    const {onLinkClick = noop, user, onLogoutClick = noop, onTabClick = noop} = this.props;
+    const name = result(user, 'userProfile.name', '--');
     const balance = result(user, 'balanceAccount.balance', '--');
     const phone = result(user, 'phone', '--');
+    const userType = result(user, 'userProfile.userType', 'REGULAR');
     return (
       <KeyboardAwareScrollView  keyboardShouldPersistTaps='handled' style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}
         refreshControl={<RefreshControl refreshing={this.state.dashboardRefreshing} onRefresh={this.onDashboardRefresh} tintColor={styles.refreshColor} colors={[styles.refreshColor]} enabled/>}
           >
-        <Banner name={name} amount={String(balance)} phone={phone} onLogoutClick={onLogoutClick}/>
-        <LinkPaneContainer onClick={onLinkClick} links={this.links} />
-        <TabsHolder onClick={onLinkClick} tabs={this.tabs} />
+        <Banner name={name} amount={String(balance)} phone={phone.toString()} onLogoutClick={onLogoutClick}/>
+        {userType === 'DISTRIBUTOR' ? <LinkPaneContainer onClick={onLinkClick} links={this.linksWithDistributor} /> : <LinkPaneContainer onClick={onLinkClick} links={this.links} />}
+        
+        <TabsHolder onClick={onTabClick} tabs={this.tabs} />
       </KeyboardAwareScrollView >
     );
   }

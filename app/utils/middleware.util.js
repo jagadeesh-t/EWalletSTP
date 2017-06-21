@@ -22,7 +22,7 @@ export const prepareConfirmTransfer = (mobileNo, amount) => ({
 });
 
 export const prepareTransfer = (mobileNo, amount) => ({
-  'to_phone': mobileNo,
+  'toPhone': mobileNo,
   'amount': amount
 });
 
@@ -33,7 +33,7 @@ export const transformTransactionHistory = (transactionList, currentUser) => {
     return []; // just to make sure if phone doesnt exist
   }
   return map(transactionList, (eachTransaction) => {
-    const transactionFrom = result(eachTransaction, 'from_account.phone', null);
+    const transactionFrom = result(eachTransaction, 'fromAccount.phone', null);
     let transactionHistoryType = constants.TH_CREDIT;
     if (transactionFrom === userPhone) {
       transactionHistoryType = constants.TH_DEBIT;
@@ -47,15 +47,17 @@ export const transformTransactionHistory = (transactionList, currentUser) => {
 };
 
 export const transformConfirmTransfer = (transactionInfo) => {
-  const {amount = '--', finalAmount = '--', transactionFee = '--', destinationAcc = {}} = transactionInfo;
-  const payeeName = result(destinationAcc, 'userprofile.name', '--');
-  const payeePhone = result(destinationAcc, 'phone', '--');
+  console.log('logging transactionInfo');
+  console.log(transactionInfo);
+  const {amount = '--', totalAmount = '--', fee = '--', toAccount = {}} = transactionInfo;
+  const payeeName = result(toAccount, 'userProfile.name', '--');
+  const payeePhone = result(toAccount, 'phone', '--');
   return {
     'payeeName': String(payeeName),
     'payeePhone': String(payeePhone),
     'amount': String(amount),
-    'totalAmount': String(finalAmount),
-    'fee': String(transactionFee)
+    'totalAmount': String(totalAmount),
+    'fee': String(fee)
   };
 };
 
@@ -101,5 +103,10 @@ export const prepareVerification = (phone, countryCode, code) => ({
   'countryCode': countryCode,
   'code': code
 });
+
+export const prepareChangePassword = (password) => ({
+  'password': password
+});
+
 
 

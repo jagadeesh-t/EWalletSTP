@@ -22,7 +22,7 @@ export const getCurrentRouteName  = (navigationState) => {
 export const formatFieldAmount = (value) => {
   const replaceRegex = /(\d)(?=(\d{3})+(?!\d))/g;
   return (!value && parseInt(value) !== 0) ? '' :
-        Number(value).toFixed(0).replace(replaceRegex, '$1,');
+        Number(value).toFixed(0).replace(replaceRegex, '$1.');
 };
 
 export const currencyFormatter = (unformatted) => {

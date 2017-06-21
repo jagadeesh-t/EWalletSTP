@@ -44,14 +44,7 @@ class SendConfirmationView extends React.Component {
               <Text style={styles.fieldValue}>STD {currencyFormatter(amount)}</Text>
             </View>
 
-            <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Transaction Fee</Text>
-              <Text style={styles.fieldValue}>{fee}%</Text>
-            </View>
-            <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Total Amount</Text>
-              <Text style={styles.fieldValue}>STD {currencyFormatter(totalAmount)}</Text>
-            </View>
+           
           </ScrollView>
         </View>
         <View style={styles.buttonContainer} >

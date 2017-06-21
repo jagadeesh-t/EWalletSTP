@@ -40,7 +40,7 @@ export default {
   TRANSACTION_HISTORY__CREDITS: 'Credits',
   VALIDATION__REQUIRED_FIELD: 'Required',
   VALIDATION__INCORRECT_USERNAME: 'Mobile Number is invalid',
-  VALIDATION__INCORRECT_PASSWORD: 'Minimum 8 characters at least 1 Alphabet, 1 Number and 1 Special Character',
+  VALIDATION__INCORRECT_PASSWORD: 'Minimum 6 characters at least 1 Alphabet and 1 Number is Required',
   VALIDATION__INCORRECT_EMAIL: 'Not a valid email address',
   VALIDATION__INCORRECT_NUMBER: 'Not a valid amount',
   TITLE__TRANSACTION_HISTORY: 'Transaction History',
@@ -56,5 +56,16 @@ export default {
   CREDIT_REQUEST__REQUEST_PROCESSED: 'Your Request Will be Processed and Balance will be Updated',
   VERIFICATION__INDEX_TITLE: 'Verification',
   VERIFICATION__OTP_ENTER: 'Enter OTP For Verification',
-  VERIFICATION__OTP_DETAILS: 'A Text Message will be Sent To Your Number With a 4 Digit Code, Please Enter the Code in the Above Area'
+  VERIFICATION__OTP_DETAILS: 'A Text Message will be Sent To Your Number With a 4 Digit Code, Please Enter the Code in the Above Area',
+  SETTINGS__INDEX_TITLE: 'Change Password',
+  SETTINGS__CURRENT_PASSWORD: 'Enter Your Current Password',
+  SETTINGS__NEW_PASSWORD: 'Enter New Password',
+  SETTINGS__CONFIRM_NEW_PASSWORD: 'Confirm Password',
+  SETTINGS__CUR_NEW_PASSWORD_MISMATCH: 'Passwords Do not Match',
+  SETTINGS__SUCCESSFUL_PASSWORD_CHANGE: 'Your Password has been Successfully changed!',
+  PROFILE__NAME: 'Name',
+  PROFILE__PHONE: 'Phone',
+  PROFILE__EMAIL: 'e-mail',
+  PROFILE__INDEX_TITLE: 'Your Profile',
+  PROFILE__SUCCESSFUL_UPDATE: ' Your Profile has Been Successfully Updated'
 };

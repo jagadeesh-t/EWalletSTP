@@ -11,6 +11,18 @@ export const required = (values, fields, errors) => {
   return errors;
 };
 
+
+export const validateUpdate = (values, fields, errors) => {
+  
+  for (var i in fields) {
+    if (!values[fields[0]] && !values[fields[1]]) {
+      errors[fields[i]] = ' ';
+    }
+  }
+  return errors;
+};
+
+
 export const validateMobileNo = (values, fields, errors) => {
   each(fields, ((field) => {
     // checks if the mobile no only contains numbers and more than or equal to 6 character
@@ -23,12 +35,22 @@ export const validateMobileNo = (values, fields, errors) => {
   return errors;
 };
 
+export const validatePasswordUpdate = (values, fields, errors) => {
+  
+  if (values.confirmPassword !== values.newPassword) {
+    errors['confirmPassword'] = language.SETTINGS__CUR_NEW_PASSWORD_MISMATCH;
+    errors['newPassword'] = language.SETTINGS__CUR_NEW_PASSWORD_MISMATCH;
+  }
+  return errors;
+};
+
+
 export const validatePassword = (values, fields, errors) => {
   each(fields, ((field) => {
     // https://stackoverflow.com/a/21456918
     // Minimum 8 characters at least 1 Alphabet, 1 Number and 1 Special Character:
-    const passwordRegx = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
-    const result = passwordRegx.test(values[field]);
+    const passwordRegex = /^(((?=.*[[A-Za-z])(?=.*[0-9]))|((?=.*[A-Za-z])(?=.*[0-9])))(?=.{6,})/;
+    const result = passwordRegex.test(values[field]);
     if (!result) {
       errors[field] = language.VALIDATION__INCORRECT_PASSWORD;
     }
