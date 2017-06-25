@@ -13,7 +13,6 @@ class ReceiveView extends React.Component {
   render () {
     const {user} = this.props;
     const qrValue = result(user, 'phone', null);
-    console.log(user);
     return (
       <View style={styles.pageContainer}>
         <View style={styles.qrContainer}>
