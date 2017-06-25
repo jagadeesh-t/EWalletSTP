@@ -2,487 +2,94 @@
   "url": "http://localhost:1337/transactions",
   "method": "get",
   "response": [{
-      "from_account": {
-        "phone": "12345678",
+      "fromAccount": {
+        "phone": 12345,
         "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "countryCode": "+239",
         "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
+        "userProfile": 3
       },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 12,
-      "createdAt": "2017-06-04T05:09:55.000Z",
-      "updatedAt": "2017-06-04T05:09:55.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
+      "toAccount": {
+        "phone": 12345,
         "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "countryCode": "+239",
         "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
+        "userProfile": 3
       },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 13,
-      "createdAt": "2017-06-04T05:09:55.000Z",
-      "updatedAt": "2017-06-04T05:09:55.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 14,
-      "createdAt": "2017-06-04T05:09:55.000Z",
-      "updatedAt": "2017-06-04T05:09:55.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 15,
-      "createdAt": "2017-06-04T05:09:55.000Z",
-      "updatedAt": "2017-06-04T05:09:55.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 16,
-      "createdAt": "2017-06-04T05:09:55.000Z",
-      "updatedAt": "2017-06-04T05:09:55.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 17,
-      "createdAt": "2017-06-04T05:09:55.000Z",
-      "updatedAt": "2017-06-04T05:09:55.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 7,
-      "createdAt": "2017-06-04T05:09:54.000Z",
-      "updatedAt": "2017-06-04T05:09:54.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 8,
-      "createdAt": "2017-06-04T05:09:54.000Z",
-      "updatedAt": "2017-06-04T05:09:54.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 9,
-      "createdAt": "2017-06-04T05:09:54.000Z",
-      "updatedAt": "2017-06-04T05:09:54.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 10,
-      "createdAt": "2017-06-04T05:09:54.000Z",
-      "updatedAt": "2017-06-04T05:09:54.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 11,
-      "createdAt": "2017-06-04T05:09:54.000Z",
-      "updatedAt": "2017-06-04T05:09:54.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 4,
-      "createdAt": "2017-06-04T05:09:53.000Z",
-      "updatedAt": "2017-06-04T05:09:53.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 5,
-      "createdAt": "2017-06-04T05:09:53.000Z",
-      "updatedAt": "2017-06-04T05:09:53.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
-      "id": 6,
-      "createdAt": "2017-06-04T05:09:53.000Z",
-      "updatedAt": "2017-06-04T05:09:53.000Z"
-    },
-    {
-      "from_account": {
-        "phone": "12345678",
-        "status": "active",
-        "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
-        "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
-      },
-      "to_account": {
-        "phone": "111111",
-        "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
-        "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
-      },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
+      "amount": 2020,
+      "note": null,
       "id": 3,
-      "createdAt": "2017-06-04T05:09:52.000Z",
-      "updatedAt": "2017-06-04T05:09:52.000Z"
+      "createdAt": "2017-06-25T06:55:50.000Z",
+      "updatedAt": "2017-06-25T06:55:50.000Z",
+      "transactionType": "WALLET_TO_WALLET",
+      "fee": 0,
+      "totalAmount": 2020
     },
     {
-      "from_account": {
-        "phone": "12345678",
+      "fromAccount": {
+        "phone": 10000,
         "status": "active",
         "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
+        "createdAt": "2017-06-25T06:02:47.000Z",
+        "updatedAt": "2017-06-25T06:02:47.000Z",
+        "countryCode": "+232",
         "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
+        "userProfile": 1
       },
-      "to_account": {
-        "phone": "111111",
+      "toAccount": {
+        "phone": 12345,
         "status": "active",
-        "id": 5,
-        "createdAt": "2017-06-04T04:56:55.000Z",
-        "updatedAt": "2017-06-04T04:56:55.000Z",
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "countryCode": "+239",
         "balanceAccount": 3,
-        "userprofile": 3,
-        "bank": null
+        "userProfile": 3
       },
-      "transaction_type": "WALLET",
-      "amount": 200,
-      "metadata": "{\"from_name\": \"test user\" ,  \"to_name\": \"test 2\"}",
-      "finalAmount": null,
+      "amount": 20000,
+      "note": "From Bank Account",
       "id": 2,
-      "createdAt": "2017-06-04T04:58:31.000Z",
-      "updatedAt": "2017-06-04T04:58:31.000Z"
+      "createdAt": "2017-06-25T06:55:46.000Z",
+      "updatedAt": "2017-06-25T06:55:46.000Z",
+      "transactionType": "BANK_TO_WALLET",
+      "fee": 0,
+      "totalAmount": 20000
     },
     {
-      "to_account": {
-        "phone": "12345678",
+      "fromAccount": {
+        "phone": 10000,
         "status": "active",
         "id": 1,
-        "createdAt": "2017-06-04T03:18:29.000Z",
-        "updatedAt": "2017-06-04T03:18:29.000Z",
+        "createdAt": "2017-06-25T06:02:47.000Z",
+        "updatedAt": "2017-06-25T06:02:47.000Z",
+        "countryCode": "+232",
         "balanceAccount": 1,
-        "userprofile": 1,
-        "bank": null
+        "userProfile": 1
       },
-      "transaction_type": "CREDIT",
+      "toAccount": {
+        "phone": 12345,
+        "status": "active",
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "countryCode": "+239",
+        "balanceAccount": 3,
+        "userProfile": 3
+      },
       "amount": 20000,
-      "metadata": "From Bank Account",
-      "finalAmount": "20000",
+      "note": "From Bank Account",
       "id": 1,
-      "createdAt": "2017-06-04T04:54:16.000Z",
-      "updatedAt": "2017-06-04T04:54:16.000Z"
+      "createdAt": "2017-06-25T06:55:42.000Z",
+      "updatedAt": "2017-06-25T06:55:42.000Z",
+      "transactionType": "BANK_TO_WALLET",
+      "fee": 0,
+      "totalAmount": 20000
     }
   ]
 }

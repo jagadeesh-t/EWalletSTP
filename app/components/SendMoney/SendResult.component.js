@@ -37,6 +37,7 @@ class SendResultView extends React.Component {
     const {status = 'PROGRESS', amount, fee,
        totalAmount, transactionId, payeeName, payeePhone} = transactionResult;
     const statusEntity = result(this.assetMap, `[${status}]`, 'PROGRESS');
+    console.log(transactionResult);
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
@@ -57,7 +58,7 @@ class SendResultView extends React.Component {
             </View>
             <View style={styles.fieldRow}>
               <Text style={styles.fieldKey}>Transfer Fee</Text>
-              <Text style={styles.fieldValue}>{fee || '--'}%</Text>
+              <Text style={styles.fieldValue}>{fee}%</Text>
             </View>
             <View style={styles.fieldRow}>
               <Text style={styles.fieldKey}>Total</Text>

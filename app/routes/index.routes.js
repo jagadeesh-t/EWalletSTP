@@ -22,28 +22,22 @@ export const MainRoutes = {
     screenTitle: language.TITLE__LOGIN,
     screen: LoginPage
   },
-
   Settings: {
     screenTitle: language.SETTINGS__INDEX_TITLE,
     screen: SettingsPage
   },
-
   Profile: {
-    screenTitle: language.SETTINGS__INDEX_TITLE,
+    screenTitle: language.PROFILE__INDEX_TITLE,
     screen: ProfilePage
   },
- 
   Verification: {
     screenTitle: language.VERIFICATION__INDEX_TITLE,
     screen: VerificationPage
   },
-
   CreditRequest: {
     screenTitle: language.CREDIT_REQUEST__INDEX_TITLE,
     screen: CreditRequest
   },
-
-  
   Register: {
     screenTitle: language.TITLE__REGISTER,
     screen: RegisterPage

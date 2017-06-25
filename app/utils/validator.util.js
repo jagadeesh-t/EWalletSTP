@@ -13,10 +13,10 @@ export const required = (values, fields, errors) => {
 
 
 export const validateUpdate = (values, fields, errors) => {
-  
+
   for (var i in fields) {
     if (!values[fields[0]] && !values[fields[1]]) {
-      errors[fields[i]] = ' ';
+      errors[fields[i]] = language.VALIDATION__NO_UPDATE;
     }
   }
   return errors;
@@ -36,7 +36,7 @@ export const validateMobileNo = (values, fields, errors) => {
 };
 
 export const validatePasswordUpdate = (values, fields, errors) => {
-  
+
   if (values.confirmPassword !== values.newPassword) {
     errors['confirmPassword'] = language.SETTINGS__CUR_NEW_PASSWORD_MISMATCH;
     errors['newPassword'] = language.SETTINGS__CUR_NEW_PASSWORD_MISMATCH;
@@ -73,7 +73,6 @@ export const validateEmail = (values, fields, errors) => {
 
 export const validateNumber = (values, fields, errors) => {
   each(fields, ((field) => {
-    // https:// emailregex.com/
     const numberR = (/(^[0-9]*$)/);
     const result = numberR.test(values[field]);
     if (!result) {

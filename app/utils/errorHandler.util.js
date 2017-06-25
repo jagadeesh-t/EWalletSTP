@@ -7,7 +7,7 @@ import tracker from './googleAnalytics.util';
 import VersionNumber from 'react-native-version-number';
 
 const errorHandler = (e = {}, isFatal) => {
-  console.error(e); // for logging to android logs or ios logs
+  console.log(e); // for logging to android logs or ios logs
   if (isFatal) {
     tracker.trackEvent('FATAL_ERROR', `STACK_TRACE: ${e.stack}`);
     Alert.alert(language.APP_ERROR__TITLE, `${language.APP_ERROR__BODY} App Version: ${VersionNumber.appVersion}`, [{

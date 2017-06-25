@@ -47,9 +47,7 @@ export const transformTransactionHistory = (transactionList, currentUser) => {
 };
 
 export const transformConfirmTransfer = (transactionInfo) => {
-  console.log('logging transactionInfo');
-  console.log(transactionInfo);
-  const {amount = '--', totalAmount = '--', fee = '--', toAccount = {}} = transactionInfo;
+  const {amount = '--', totalAmount = '--', fee = 0, toAccount = {}} = transactionInfo;
   const payeeName = result(toAccount, 'userProfile.name', '--');
   const payeePhone = result(toAccount, 'phone', '--');
   return {
@@ -66,7 +64,7 @@ export const transformTransferResponse = (rawTransferResponse) => {
   return {
     amount: transferResponse.amount,
     fee: transferResponse.fee,
-    totalAmount: transferResponse.finalAmount,
+    totalAmount: transferResponse.totalAmount,
     transactionId: transferResponse.id,
   // payeeName: transferResponse.payeeName, //TODO
   // payeePhone: transferResponse.payeePhone
@@ -107,6 +105,3 @@ export const prepareVerification = (phone, countryCode, code) => ({
 export const prepareChangePassword = (password) => ({
   'password': password
 });
-
-
-

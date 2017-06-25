@@ -9,7 +9,7 @@ const formConfig = {
   form: 'creditRequest',
   destroyOnUnmount: true,
   initialValues: {},
-  
+
   onSubmit: (values, dispatch) => {
     const {transactionId} = values;
     return dispatch(createCreditRequest(transactionId));
@@ -17,7 +17,7 @@ const formConfig = {
 };
 
 const mapDispatchToProps = () => ({
- 
+
 });
 
 const mapStateToProps = () => ({});
@@ -25,7 +25,7 @@ const mapStateToProps = () => ({});
 const CreditRequestForm = reduxForm(formConfig)(CreditRequestView);
 
 class CreditRequestPage extends Component {
- 
+
   render () {
     return (
       <CreditRequestForm />);
