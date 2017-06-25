@@ -3,7 +3,7 @@
   "method": "post",
   "requestBody": {
     "name": "test 2",
-    "phone": 1235,
+    "phone": 123456,
     "password": "qwerty",
     "email": "mail@test.com",
     "country_code": "+239"
@@ -13,24 +13,25 @@
     "toTransactions": [],
     "balanceAccount": {
       "balance": 0,
-      "id": 3,
-      "createdAt": "2017-06-03T10:26:01.000Z",
-      "updatedAt": "2017-06-03T10:26:01.000Z",
-      "account": 3
+      "id": 4,
+      "createdAt": "2017-06-25T07:57:37.000Z",
+      "updatedAt": "2017-06-25T07:57:37.000Z",
+      "account": 4
     },
-    "userprofile": {
-      "name": "test 3",
-      "email": null,
-      "distributor": false,
-      "id": 3,
-      "createdAt": "2017-06-03T10:26:01.000Z",
-      "updatedAt": "2017-06-03T10:26:01.000Z",
-      "account": 3
+    "userProfile": {
+      "name": "test 2",
+      "email": "mail3@test.com",
+      "id": 4,
+      "createdAt": "2017-06-25T07:57:37.000Z",
+      "updatedAt": "2017-06-25T07:57:37.000Z",
+      "account": 4,
+      "userType": "REGULAR"
     },
-    "phone": "12345",
+    "phone": 123456,
     "status": "active",
-    "id": 3,
-    "createdAt": "2017-06-03T10:26:00.000Z",
-    "updatedAt": "2017-06-03T10:26:01.000Z"
+    "id": 4,
+    "createdAt": "2017-06-25T07:57:37.000Z",
+    "updatedAt": "2017-06-25T07:57:37.000Z",
+    "countryCode": "+239"
   }
 }

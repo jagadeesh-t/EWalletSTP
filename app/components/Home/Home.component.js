@@ -59,7 +59,7 @@ class HomeView extends React.Component {
           >
         <Banner name={name} amount={String(balance)} phone={phone.toString()} onLogoutClick={onLogoutClick}/>
         {userType === 'DISTRIBUTOR' ? <LinkPaneContainer onClick={onLinkClick} links={this.linksWithDistributor} /> : <LinkPaneContainer onClick={onLinkClick} links={this.links} />}
-        
+
         <TabsHolder onClick={onTabClick} tabs={this.tabs} />
       </KeyboardAwareScrollView >
     );

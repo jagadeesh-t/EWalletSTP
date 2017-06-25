@@ -38,7 +38,7 @@ class CreditRequestview extends React.Component {
           </View>
         </View>
         <View style={styles.buttonContainer} >
-          <FormButton style={styles.button} disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={language.SUBMIT_TEXT}/>
+          <FormButton style={styles.button} disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={language.COMMON__SUBMIT_TEXT}/>
         </View>
 
       </KeyboardAwareScrollView>

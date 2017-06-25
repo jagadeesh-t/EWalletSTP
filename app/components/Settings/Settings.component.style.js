@@ -11,30 +11,33 @@ export default {
     flex: 4,
   },
   buttonContainer: {
-    flex: 1,
-    paddingBottom: 20
-  },
-  qrReaderContainer: {
     flex: 1
+  },
+  phoneText: {
+    paddingBottom: 20,
+    paddingTop: 10,
+    color: theme.textColorHighlight
   },
   formContainer: {
     flex: 2,
     paddingTop: 10
   },
   subTitle: {
-    fontSize: theme.fontSizeNormal,
-    paddingBottom: 20,
-    color: theme.textColor
+    fontSize: theme.fontSizeLarge,
+    paddingVertical: 10,
+    fontWeight: theme.fontWeightLight,
+    color: theme.secondary
   },
   formHeader: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingTop: 10
   },
   formHeaderText: {
     fontWeight: theme.fontWeightBold,
     fontSize: theme.fontSizeNormal,
     color: theme.textColor,
     paddingLeft: 10,
-    paddingBottom: 20,
+    paddingBottom: 10,
   },
   scan: {
     padding: 5,
@@ -44,10 +47,6 @@ export default {
     fontWeight: theme.fontWeightBold,
     fontSize: theme.fontSizeNormal,
   },
-  
-  qrButton: {
-    alignSelf: 'center'
-  },
   imageContainer: {
     height: 130,
     width: null,
@@ -55,4 +54,9 @@ export default {
     backgroundColor: theme.transparent,
     justifyContent: 'space-between'
   },
+  phoneContainer: {
+    paddingBottom: 40,
+    paddingTop: 30,
+    flexDirection: 'row'
+  }
 };

@@ -13,6 +13,7 @@ class ReceiveView extends React.Component {
   render () {
     const {user} = this.props;
     const qrValue = result(user, 'phone', null);
+    console.log(user);
     return (
       <View style={styles.pageContainer}>
         <View style={styles.qrContainer}>
@@ -21,7 +22,7 @@ class ReceiveView extends React.Component {
           </View>
         </View>
         <View style={styles.infoContainer}>
-          <View style={styles.infoGroup}><Text style={styles.infoKey}>NAME :</Text><Text style={styles.infoValue}>{user.userProfile.name}</Text></View>
+          <View style={styles.infoGroup}><Text style={styles.infoKey}>NAME :</Text><Text style={styles.infoValue}>{result(user, 'userProfile.name', '--')}</Text></View>
           <View style={styles.infoGroup}><Text style={styles.infoKey}>ACCOUNT :</Text><Text style={styles.infoValue}>{user.phone}</Text></View>
         </View>
         <View style={styles.demoContainer}>

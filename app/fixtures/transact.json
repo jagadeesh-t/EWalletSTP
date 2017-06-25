@@ -7,17 +7,16 @@
     "transaction_type": "WALLET"
   },
   "response": {
-    "from_account": 1,
-    "to_account": 2,
-    "transaction_type": "WALLET",
-    "finalAmount": 550,
-    "fee": 4,
-    "amount": 500,
-    "metadata": "{\"from_name\": \"test 1\" ,  \"to_name\": \"test 2\"}",
-    "createdAt": "2017-06-03T10:29:57.208Z",
-    "updatedAt": "2017-06-03T10:29:57.208Z",
-    "id": 10
-  },
+    "amount": 2020,
+    "createdAt": "2017-06-25T06:55:50.523Z",
+    "updatedAt": "2017-06-25T06:55:50.523Z",
+    "id": 3,
+    "transactionType": "WALLET_TO_WALLET",
+    "fee": 0,
+    "totalAmount": 2020,
+    "fromAccount": 3,
+    "toAccount": 3
+},
   "error": {
     "message": "reason",
     "transactionInfo":{

@@ -17,7 +17,7 @@ class SendConfirmationView extends React.Component {
   }
 
   render () {
-    const {totalAmount, fee, amount, onConfirm, payeeName, payeePhone} = this.props;
+    const {amount, onConfirm, payeeName, payeePhone} = this.props;
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
@@ -44,7 +44,6 @@ class SendConfirmationView extends React.Component {
               <Text style={styles.fieldValue}>STD {currencyFormatter(amount)}</Text>
             </View>
 
-           
           </ScrollView>
         </View>
         <View style={styles.buttonContainer} >

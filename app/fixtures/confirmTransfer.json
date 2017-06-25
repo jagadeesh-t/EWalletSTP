@@ -6,27 +6,57 @@
     "password": "qwerty"
   },
   "response": {
-    "finalAmount": 450,
-    "transactionFee":"5",
-    "amount": 200,
-    "destinationAcc": {
-      "balanceAccount": 2,
-      "userprofile": {
-        "name": "test 2",
-        "email": null,
-        "distributor": false,
-        "id": 2,
-        "createdAt": "2017-05-30T18:11:17.000Z",
-        "updatedAt": "2017-05-30T18:11:17.000Z",
-        "account": 2
+    "fromAccount": {
+      "balanceAccount": {
+        "balance": 0,
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "account": 3
       },
-      "bank": null,
-      "phone": "1235",
-      "country_code": null,
+      "userProfile": {
+        "name": "test 2",
+        "email": "mail3@test.com",
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "account": 3,
+        "userType": "REGULAR"
+      },
+      "phone": 12345,
       "status": "active",
-      "id": 2,
-      "createdAt": "2017-05-30T18:11:17.000Z",
-      "updatedAt": "2017-05-30T18:11:17.000Z"
-    }
+      "id": 3,
+      "createdAt": "2017-06-25T06:47:44.000Z",
+      "updatedAt": "2017-06-25T06:47:44.000Z",
+      "countryCode": "+239"
+    },
+    "toAccount": {
+      "balanceAccount": {
+        "balance": 0,
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "account": 3
+      },
+      "userProfile": {
+        "name": "test 2",
+        "email": "mail3@test.com",
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "account": 3,
+        "userType": "REGULAR"
+      },
+      "phone": 12345,
+      "status": "active",
+      "id": 3,
+      "createdAt": "2017-06-25T06:47:44.000Z",
+      "updatedAt": "2017-06-25T06:47:44.000Z",
+      "countryCode": "+239"
+    },
+    "transactionType": "WALLET_TO_WALLET",
+    "amount": 2020,
+    "fee": 0,
+    "totalAmount": 2020
   }
 }

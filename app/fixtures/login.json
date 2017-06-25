@@ -8,27 +8,28 @@
   "response": {
     "message": "Logged In Successfully",
     "user": {
-      "balanceAccount": {
-        "balance": 500023,
-        "id": 1,
-        "createdAt": "2017-05-30T18:11:09.000Z",
-        "updatedAt": "2017-05-30T18:11:09.000Z",
-        "account": 1
-      },
-      "userprofile": {
-        "name": "test 1",
-        "email": null,
-        "distributor": false,
-        "id": 1,
-        "createdAt": "2017-05-30T18:11:09.000Z",
-        "updatedAt": "2017-05-30T18:11:09.000Z",
-        "account": 1
-      },
-      "phone": "12345678",
-      "status": "active",
-      "id": 1,
-      "createdAt": "2017-05-30T18:11:09.000Z",
-      "updatedAt": "2017-05-30T18:11:09.000Z"
+        "balanceAccount": {
+            "balance": 40000,
+            "id": 3,
+            "createdAt": "2017-06-25T06:47:44.000Z",
+            "updatedAt": "2017-06-25T06:47:44.000Z",
+            "account": 3
+        },
+        "userProfile": {
+            "name": "test 2",
+            "email": "mail3@test.com",
+            "id": 3,
+            "createdAt": "2017-06-25T06:47:44.000Z",
+            "updatedAt": "2017-06-25T06:47:44.000Z",
+            "account": 3,
+            "userType": "REGULAR"
+        },
+        "phone": 12345,
+        "status": "active",
+        "id": 3,
+        "createdAt": "2017-06-25T06:47:44.000Z",
+        "updatedAt": "2017-06-25T06:47:44.000Z",
+        "countryCode": "+239"
     }
   }
 }
