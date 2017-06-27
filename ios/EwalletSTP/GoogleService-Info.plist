@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>268728619884-qt79ujsvgke38u4ff7uati9921f8823k.apps.googleusercontent.com</string>
+	<string>268728619884-huvkk72d13j4hn4pgiqff24mc07ubjll.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.268728619884-qt79ujsvgke38u4ff7uati9921f8823k</string>
+	<string>com.googleusercontent.apps.268728619884-huvkk72d13j4hn4pgiqff24mc07ubjll</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBMA4Y8cy9AYNO7dIIr-p6tm4RiO_2tzsA</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.walletSTP</string>
+	<string>com.ewalletstp</string>
 	<key>PROJECT_ID</key>
 	<string>ewallet-1f485</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:268728619884:ios:777989d0cc576030</string>
+	<string>1:268728619884:ios:c777a289247de94b</string>
 	<key>DATABASE_URL</key>
 	<string>https://ewallet-1f485.firebaseio.com</string>
 </dict>
