@@ -37,7 +37,6 @@ class SendResultView extends React.Component {
     const {status = 'PROGRESS', amount, fee,
        totalAmount, transactionId, payeeName, payeePhone} = transactionResult;
     const statusEntity = result(this.assetMap, `[${status}]`, 'PROGRESS');
-    console.log(transactionResult);
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>

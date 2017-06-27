@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'EwalletSTP' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  pod 'Firebase/Core'
+  # Pods for EwalletSTP
+
+  # target 'EwalletSTP-tvOSTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
+
+  target 'EwalletSTPTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'EwalletSTP-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for EwalletSTP-tvOS
+
+  target 'EwalletSTP-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

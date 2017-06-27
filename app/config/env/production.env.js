@@ -1,7 +1,7 @@
 const defaults = {
   ENV: 'production',
   MOCKAPI: false,
-  URL: 'https://www.production.com/test',
+  URL: 'https://wallet-stp.com/',
   GA_TRACKER_ID: 'UA-XXXXX',
   GA_TRACKER_INTERVAL: 2,
   fixtures: {}

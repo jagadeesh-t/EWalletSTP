@@ -34,13 +34,17 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* EwalletSTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EwalletSTPTests.m */; };
+		2E04C732D50F4C498BB9E404 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CDC6D88912442BB9F86BD3 /* libRNFirebase.a */; };
+		38F535E45DDCDF4148E8F55C /* libPods-EwalletSTP-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F34F7AE45F5D497C5C1E08C /* libPods-EwalletSTP-tvOS.a */; };
 		4CD38D6ED69D45F9A9299C11 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F83EF43B4254568B2C608BE /* libRCTCamera.a */; };
 		574D17F270A64849AB934AB5 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A884B4FB9E5414683FE44D9 /* MaterialIcons.ttf */; };
+		58424E9F9A8935091CD8B8CC /* libPods-EwalletSTPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC98B4629EA5EC40AEDFA75C /* libPods-EwalletSTPTests.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6B58FE83CBA84B8D91E063F5 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C51D76AED29F46DBBB1513C6 /* libRNVectorIcons.a */; };
 		6DD464F4C1584ED48479FC2B /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5619E56EA898490983DE85D5 /* MaterialCommunityIcons.ttf */; };
 		758F64A45AAB446A85D72721 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41AAA5EA412F415A87AEB89E /* Zocial.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8FC450132B0E5A2E98E39632 /* libPods-EwalletSTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF04496A70080FDE654E2B0 /* libPods-EwalletSTP.a */; };
 		927B217DE9BC45E6ABB3FAF5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D7817370984517AA2B4F1A /* EvilIcons.ttf */; };
 		942FE0F24C7746AB844E5954 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FAAB2CF6474C49ACDBE416 /* libSplashScreen.a */; };
 		A686D3451ED169A400F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
@@ -51,12 +55,17 @@
 		A69E839C1ED09AD3003E46E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69E839B1ED09AD3003E46E5 /* SystemConfiguration.framework */; };
 		A69E839E1ED09AE2003E46E5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A69E839D1ED09AE2003E46E5 /* libz.tbd */; };
 		A69E83A01ED09AEE003E46E5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A69E839F1ED09AEE003E46E5 /* libsqlite3.0.tbd */; };
+		A6C84EB71F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C84EB61F02AB7F0084DD79 /* GoogleService-Info.plist */; };
+		A6C84EB81F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C84EB61F02AB7F0084DD79 /* GoogleService-Info.plist */; };
+		A6C84EB91F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C84EB61F02AB7F0084DD79 /* GoogleService-Info.plist */; };
+		A6C84EBA1F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C84EB61F02AB7F0084DD79 /* GoogleService-Info.plist */; };
 		B8E854A5FB9F43F3BF1C1766 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22892A48C9B6477C89F95979 /* FontAwesome.ttf */; };
 		C0930C3410394FD4BF8B8FEC /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB664603A064EBF846C46D4 /* Foundation.ttf */; };
 		C4F8FCB8C1144EC097C6EFB3 /* libRNVersionNumber.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E08644FC8C41A3B6861B96 /* libRNVersionNumber.a */; };
 		D9801D4C23E846428CFA7EA1 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDA6EA534CF492C98E4E3C0 /* Ionicons.ttf */; };
 		E32DFD4A220243A48FFA34D6 /* libRCTRestart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6647453736F4370A04D17D1 /* libRCTRestart.a */; };
 		E6C3F4B52288468099F22BC4 /* libRCTGoogleAnalyticsBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5078F5BAC5C0421AA5E948C9 /* libRCTGoogleAnalyticsBridge.a */; };
+		EC0A1196FD54B7A5198BB23E /* libPods-EwalletSTP-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCAD169AC7C145C189A1891 /* libPods-EwalletSTP-tvOSTests.a */; };
 		F1AADF9C43EB41BFA5EDA1AA /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988FD3F712B04670B29DA8B2 /* Octicons.ttf */; };
 		F470F1E6E25A4042868D10E6 /* libLRDRCTSimpleToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7987F0915F4AA0A153B24C /* libLRDRCTSimpleToast.a */; };
 		FC0B0FE375F648D5824C126D /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCCD0D7E13574B008F1F53E9 /* Entypo.ttf */; };
@@ -301,6 +310,27 @@
 			remoteGlobalIDString = 3D7682761D8E76B80014119E;
 			remoteInfo = SplashScreen;
 		};
+		A6C84EAC1F02A85A0084DD79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		A6C84EAE1F02A85A0084DD79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		A6C84EB11F02A85A0084DD79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNFirebase;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -329,15 +359,22 @@
 		22892A48C9B6477C89F95979 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* EwalletSTP-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EwalletSTP-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* EwalletSTP-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EwalletSTP-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
+		3CF04496A70080FDE654E2B0 /* libPods-EwalletSTP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EwalletSTP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FCAD169AC7C145C189A1891 /* libPods-EwalletSTP-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EwalletSTP-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		418A11332EA33C6CF80EB086 /* Pods-EwalletSTP-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTP-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTP-tvOSTests/Pods-EwalletSTP-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		41AAA5EA412F415A87AEB89E /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		48FAAB2CF6474C49ACDBE416 /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		4A884B4FB9E5414683FE44D9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		4F34F7AE45F5D497C5C1E08C /* libPods-EwalletSTP-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EwalletSTP-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5078F5BAC5C0421AA5E948C9 /* libRCTGoogleAnalyticsBridge.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTGoogleAnalyticsBridge.a; sourceTree = "<group>"; };
 		5619E56EA898490983DE85D5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		5C944E2B8A573A7709F8B3C8 /* Pods-EwalletSTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTPTests/Pods-EwalletSTPTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5F83EF43B4254568B2C608BE /* libRCTCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTCamera.a; sourceTree = "<group>"; };
 		74BCB14FBA404D76BF1434A5 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		75D7817370984517AA2B4F1A /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		76CA2356E07ABD9175FC9143 /* Pods-EwalletSTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTP/Pods-EwalletSTP.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7CC7050C7738441E924C6D25 /* RCTRestart.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTRestart.xcodeproj; path = "../node_modules/react-native-restart/ios/RCTRestart.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -348,13 +385,21 @@
 		A69E839B1ED09AD3003E46E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A69E839D1ED09AE2003E46E5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A69E839F1ED09AEE003E46E5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A6C84EB61F02AB7F0084DD79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "EwalletSTP/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A904A569AEBA836D59050A55 /* Pods-EwalletSTPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTPTests/Pods-EwalletSTPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD6BDB4942D90F9074A1A399 /* Pods-EwalletSTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTP/Pods-EwalletSTP.debug.xcconfig"; sourceTree = "<group>"; };
 		C51D76AED29F46DBBB1513C6 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		C6FDF69F9A084B229A0E1195 /* RNVersionNumber.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVersionNumber.xcodeproj; path = "../node_modules/react-native-version-number/ios/RNVersionNumber.xcodeproj"; sourceTree = "<group>"; };
+		CA01E24C850B305F26763B87 /* Pods-EwalletSTP-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTP-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTP-tvOS/Pods-EwalletSTP-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CB215845C7CF454981A6F600 /* RCTGoogleAnalyticsBridge.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTGoogleAnalyticsBridge.xcodeproj; path = "../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/RCTGoogleAnalyticsBridge.xcodeproj"; sourceTree = "<group>"; };
+		CC98B4629EA5EC40AEDFA75C /* libPods-EwalletSTPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EwalletSTPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCD0D7E13574B008F1F53E9 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		D5A095EB3B97A2B638CEE1F0 /* Pods-EwalletSTP-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTP-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTP-tvOSTests/Pods-EwalletSTP-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5CDC6D88912442BB9F86BD3 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
 		DE6498C2D6484EE7A85022AF /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		EA7987F0915F4AA0A153B24C /* libLRDRCTSimpleToast.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLRDRCTSimpleToast.a; sourceTree = "<group>"; };
 		EBB664603A064EBF846C46D4 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		F28C45586A4EFCCC312BEAF3 /* Pods-EwalletSTP-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTP-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTP-tvOS/Pods-EwalletSTP-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F6647453736F4370A04D17D1 /* libRCTRestart.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTRestart.a; sourceTree = "<group>"; };
 		FCDA6EA534CF492C98E4E3C0 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -365,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				58424E9F9A8935091CD8B8CC /* libPods-EwalletSTPTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +440,8 @@
 				C4F8FCB8C1144EC097C6EFB3 /* libRNVersionNumber.a in Frameworks */,
 				4CD38D6ED69D45F9A9299C11 /* libRCTCamera.a in Frameworks */,
 				6B58FE83CBA84B8D91E063F5 /* libRNVectorIcons.a in Frameworks */,
+				2E04C732D50F4C498BB9E404 /* libRNFirebase.a in Frameworks */,
+				8FC450132B0E5A2E98E39632 /* libPods-EwalletSTP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +457,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				38F535E45DDCDF4148E8F55C /* libPods-EwalletSTP-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +465,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0A1196FD54B7A5198BB23E /* libPods-EwalletSTP-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +554,7 @@
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				A6C84EB61F02AB7F0084DD79 /* GoogleService-Info.plist */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -524,6 +575,8 @@
 				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
 				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
 				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
+				A6C84EAD1F02A85A0084DD79 /* libthird-party.a */,
+				A6C84EAF1F02A85A0084DD79 /* libdouble-conversion.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -585,6 +638,7 @@
 				C6FDF69F9A084B229A0E1195 /* RNVersionNumber.xcodeproj */,
 				12A46ADE987449F4B68CB90A /* RCTCamera.xcodeproj */,
 				197E7E5F4C184248B65F9459 /* RNVectorIcons.xcodeproj */,
+				31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -607,6 +661,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				1569965293C4438BB593661D /* Resources */,
 				A69E83981ED09AC6003E46E5 /* Frameworks */,
+				C9ABE99C15EE56688E69DB2F /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -686,8 +741,35 @@
 				A69E839D1ED09AE2003E46E5 /* libz.tbd */,
 				A69E839B1ED09AD3003E46E5 /* SystemConfiguration.framework */,
 				A69E83991ED09AC6003E46E5 /* CoreData.framework */,
+				3CF04496A70080FDE654E2B0 /* libPods-EwalletSTP.a */,
+				4F34F7AE45F5D497C5C1E08C /* libPods-EwalletSTP-tvOS.a */,
+				3FCAD169AC7C145C189A1891 /* libPods-EwalletSTP-tvOSTests.a */,
+				CC98B4629EA5EC40AEDFA75C /* libPods-EwalletSTPTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6C84E8B1F02A85A0084DD79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6C84EB21F02A85A0084DD79 /* libRNFirebase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9ABE99C15EE56688E69DB2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD6BDB4942D90F9074A1A399 /* Pods-EwalletSTP.debug.xcconfig */,
+				76CA2356E07ABD9175FC9143 /* Pods-EwalletSTP.release.xcconfig */,
+				CA01E24C850B305F26763B87 /* Pods-EwalletSTP-tvOS.debug.xcconfig */,
+				F28C45586A4EFCCC312BEAF3 /* Pods-EwalletSTP-tvOS.release.xcconfig */,
+				D5A095EB3B97A2B638CEE1F0 /* Pods-EwalletSTP-tvOSTests.debug.xcconfig */,
+				418A11332EA33C6CF80EB086 /* Pods-EwalletSTP-tvOSTests.release.xcconfig */,
+				A904A569AEBA836D59050A55 /* Pods-EwalletSTPTests.debug.xcconfig */,
+				5C944E2B8A573A7709F8B3C8 /* Pods-EwalletSTPTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,9 +779,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EwalletSTPTests" */;
 			buildPhases = (
+				4364139FAEB7DEA5B10A3783 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				7F408EF9333E9A83879FE238 /* [CP] Embed Pods Frameworks */,
+				B81D0EF1F8CD91083F28418C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -715,10 +800,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EwalletSTP" */;
 			buildPhases = (
+				DA12395E73FF5C9EEB5EFFB0 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				B0CA67CCEC6935ABD78B4A1A /* [CP] Embed Pods Frameworks */,
+				349C74A756A2C49B17BFE5EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -733,10 +821,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EwalletSTP-tvOS" */;
 			buildPhases = (
+				BC4644F7C492106D067759B6 /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
 				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+				CCDF9723BA13842415F88B60 /* [CP] Embed Pods Frameworks */,
+				CC47980EFF2C1FC5CE033009 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -751,9 +842,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EwalletSTP-tvOSTests" */;
 			buildPhases = (
+				2CFD75BEC36C3075D7C287DA /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
+				7E1C6F65EBD966B8949604BC /* [CP] Embed Pods Frameworks */,
+				ACA4E5ACBED1844A1975E034 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -864,6 +958,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = A6C84E8B1F02A85A0084DD79 /* Products */;
+					ProjectRef = 31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */;
 				},
 				{
 					ProductGroup = A68FBBE11ED6B4B100214290 /* Products */;
@@ -1113,6 +1211,27 @@
 			remoteRef = A69E83961ED09A27003E46E5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		A6C84EAD1F02A85A0084DD79 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = A6C84EAC1F02A85A0084DD79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6C84EAF1F02A85A0084DD79 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = A6C84EAE1F02A85A0084DD79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6C84EB21F02A85A0084DD79 /* libRNFirebase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFirebase.a;
+			remoteRef = A6C84EB11F02A85A0084DD79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1121,6 +1240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A686D3461ED169A600F65C19 /* ewstp.ttf in Resources */,
+				A6C84EB81F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,6 +1261,7 @@
 				F1AADF9C43EB41BFA5EDA1AA /* Octicons.ttf in Resources */,
 				1C94C9BE41ED4CF1BF100D54 /* SimpleLineIcons.ttf in Resources */,
 				758F64A45AAB446A85D72721 /* Zocial.ttf in Resources */,
+				A6C84EB71F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,6 +1271,7 @@
 			files = (
 				A686D3471ED169A600F65C19 /* ewstp.ttf in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				A6C84EB91F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1158,6 +1280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A686D3481ED169A700F65C19 /* ewstp.ttf in Resources */,
+				A6C84EBA1F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1178,6 +1301,21 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		2CFD75BEC36C3075D7C287DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1191,6 +1329,171 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+		349C74A756A2C49B17BFE5EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTP/Pods-EwalletSTP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4364139FAEB7DEA5B10A3783 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E1C6F65EBD966B8949604BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTP-tvOSTests/Pods-EwalletSTP-tvOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F408EF9333E9A83879FE238 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTPTests/Pods-EwalletSTPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACA4E5ACBED1844A1975E034 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTP-tvOSTests/Pods-EwalletSTP-tvOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0CA67CCEC6935ABD78B4A1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTP/Pods-EwalletSTP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B81D0EF1F8CD91083F28418C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTPTests/Pods-EwalletSTPTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4644F7C492106D067759B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC47980EFF2C1FC5CE033009 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTP-tvOS/Pods-EwalletSTP-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDF9723BA13842415F88B60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EwalletSTP-tvOS/Pods-EwalletSTP-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA12395E73FF5C9EEB5EFFB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1259,6 +1562,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A904A569AEBA836D59050A55 /* Pods-EwalletSTPTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 5PE6299DER;
@@ -1275,12 +1579,14 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = EwalletSTPTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1293,6 +1599,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C944E2B8A573A7709F8B3C8 /* Pods-EwalletSTPTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1306,12 +1613,14 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = EwalletSTPTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1324,6 +1633,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD6BDB4942D90F9074A1A399 /* Pods-EwalletSTP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1338,6 +1648,7 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = EwalletSTP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1346,6 +1657,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.walletSTP;
 				PRODUCT_NAME = EwalletSTP;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1353,6 +1665,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CA2356E07ABD9175FC9143 /* Pods-EwalletSTP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1366,6 +1679,7 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = EwalletSTP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1374,6 +1688,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.walletSTP;
 				PRODUCT_NAME = EwalletSTP;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1381,6 +1696,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA01E24C850B305F26763B87 /* Pods-EwalletSTP-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1400,11 +1716,13 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = "EwalletSTP-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1420,6 +1738,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28C45586A4EFCCC312BEAF3 /* Pods-EwalletSTP-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1439,11 +1758,13 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = "EwalletSTP-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1459,6 +1780,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5A095EB3B97A2B638CEE1F0 /* Pods-EwalletSTP-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1472,6 +1794,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EwalletSTP-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1483,6 +1806,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 418A11332EA33C6CF80EB086 /* Pods-EwalletSTP-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1496,6 +1820,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EwalletSTP-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

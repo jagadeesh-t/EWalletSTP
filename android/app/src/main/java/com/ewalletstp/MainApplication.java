@@ -3,6 +3,10 @@ package com.ewalletstp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.invertase.firebase.RNFirebasePackage; // Firebase core
+import io.invertase.firebase.crash.RNFirebaseCrashPackage; // Firebase Crash Reporting
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage; // Firebase Cloud Messaging
+import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage; // Firebase Analytics
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.apsl.versionnumber.RNVersionNumberPackage;
@@ -34,7 +38,11 @@ public class MainApplication extends Application implements ReactApplication {
             new RNVersionNumberPackage(),
             new SplashScreenReactPackage(),
             new ReactNativeRestartPackage(),
-            new GoogleAnalyticsBridgePackage()
+            new GoogleAnalyticsBridgePackage(),
+            new RNFirebasePackage(),
+            new RNFirebaseCrashPackage(),
+            new RNFirebaseMessagingPackage(),
+            new RNFirebaseAnalyticsPackage()
       );
     }
   };
