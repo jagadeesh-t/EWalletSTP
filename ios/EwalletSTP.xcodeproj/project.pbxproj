@@ -48,6 +48,10 @@
 		8FC450132B0E5A2E98E39632 /* libPods-EwalletSTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF04496A70080FDE654E2B0 /* libPods-EwalletSTP.a */; };
 		927B217DE9BC45E6ABB3FAF5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D7817370984517AA2B4F1A /* EvilIcons.ttf */; };
 		942FE0F24C7746AB844E5954 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FAAB2CF6474C49ACDBE416 /* libSplashScreen.a */; };
+		A67A7DDE1F03300B000A758C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A67A7DDD1F03300B000A758C /* Podfile */; };
+		A67A7DDF1F03300B000A758C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A67A7DDD1F03300B000A758C /* Podfile */; };
+		A67A7DE01F03300B000A758C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A67A7DDD1F03300B000A758C /* Podfile */; };
+		A67A7DE11F03300B000A758C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A67A7DDD1F03300B000A758C /* Podfile */; };
 		A686D3451ED169A400F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
 		A686D3461ED169A600F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
 		A686D3471ED169A600F65C19 /* ewstp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A686D3441ED1699E00F65C19 /* ewstp.ttf */; };
@@ -381,6 +385,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		85E08644FC8C41A3B6861B96 /* libRNVersionNumber.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVersionNumber.a; sourceTree = "<group>"; };
 		988FD3F712B04670B29DA8B2 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		A67A7DDD1F03300B000A758C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A686D3441ED1699E00F65C19 /* ewstp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ewstp.ttf; sourceTree = SOURCE_ROOT; };
 		A69E83991ED09AC6003E46E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A69E839B1ED09AD3003E46E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -559,6 +564,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				A67A7DDD1F03300B000A758C /* Podfile */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -876,6 +882,11 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 5PE6299DER;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1240,6 +1251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67A7DDF1F03300B000A758C /* Podfile in Resources */,
 				A686D3461ED169A600F65C19 /* ewstp.ttf in Resources */,
 				A6C84EB81F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */,
 			);
@@ -1249,6 +1261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67A7DDE1F03300B000A758C /* Podfile in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				A686D3451ED169A400F65C19 /* ewstp.ttf in Resources */,
@@ -1272,6 +1285,7 @@
 			files = (
 				A686D3471ED169A600F65C19 /* ewstp.ttf in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				A67A7DE01F03300B000A758C /* Podfile in Resources */,
 				A6C84EB91F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1280,6 +1294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67A7DE11F03300B000A758C /* Podfile in Resources */,
 				A686D3481ED169A700F65C19 /* ewstp.ttf in Resources */,
 				A6C84EBA1F02AB7F0084DD79 /* GoogleService-Info.plist in Resources */,
 			);
@@ -1590,6 +1605,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
@@ -1624,6 +1640,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
@@ -1726,6 +1743,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
@@ -1768,6 +1786,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);

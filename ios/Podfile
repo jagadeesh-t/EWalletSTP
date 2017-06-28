@@ -6,7 +6,6 @@ target 'EwalletSTP' do
   # use_frameworks!
 
   pod 'Firebase/Core'
-  pod 'Firebase/Core'
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
 
   # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
