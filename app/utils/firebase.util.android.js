@@ -7,6 +7,7 @@ const configurationOptions = {
 
 const firebase = RNFirebase.initializeApp(configurationOptions);
 firebase.messaging().requestPermissions();
+
 firebase.messaging().getToken().
   then((token) => {
     console.log('Device FCM Token: ', token);

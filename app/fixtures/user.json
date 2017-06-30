@@ -1,22 +1,25 @@
 {
   "url": "http://localhost:1337/user",
   "method": "get",
+  "query": {
+    "deviceId": "123456"
+  },
   "response": {
     "balanceAccount": {
-        "balance": 40000,
-        "id": 3,
-        "createdAt": "2017-06-25T06:47:44.000Z",
-        "updatedAt": "2017-06-25T06:47:44.000Z",
-        "account": 3
+      "balance": 40000,
+      "id": 3,
+      "createdAt": "2017-06-25T06:47:44.000Z",
+      "updatedAt": "2017-06-25T06:47:44.000Z",
+      "account": 3
     },
     "userProfile": {
-        "name": "test 2",
-        "email": "mail3@test.com",
-        "id": 3,
-        "createdAt": "2017-06-25T06:47:44.000Z",
-        "updatedAt": "2017-06-25T06:47:44.000Z",
-        "account": 3,
-        "userType": "REGULAR"
+      "name": "test 2",
+      "email": "mail3@test.com",
+      "id": 3,
+      "createdAt": "2017-06-25T06:47:44.000Z",
+      "updatedAt": "2017-06-25T06:47:44.000Z",
+      "account": 3,
+      "userType": "REGULAR"
     },
     "phone": 12345,
     "status": "active",
@@ -24,5 +27,5 @@
     "createdAt": "2017-06-25T06:47:44.000Z",
     "updatedAt": "2017-06-25T06:47:44.000Z",
     "countryCode": "+239"
-}
+  }
 }

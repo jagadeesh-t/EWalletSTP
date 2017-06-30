@@ -7,8 +7,7 @@ import {getErrorMessage} from '../../utils/transformer.util';
 import result from 'lodash/result';
 import {language} from '../../config/language';
 
-
-export const login = (username, password) => (dispatch, getState) => {
+export const login = (username, password) => (dispatch) => {
   const payload = middleware.prepareLogin(username, password);
   return api.login(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data.user', {})));
@@ -16,12 +15,6 @@ export const login = (username, password) => (dispatch, getState) => {
       index: 0,
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
-    const currentUser = result(getState(), 'user', {});
-    api.getTransactions().
-  then((res) => {
-    const transactionList = middleware.transformTransactionHistory(res.data, currentUser);
-    dispatch(actions.updateTransactions(transactionList));
-  });
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
   });
@@ -82,13 +75,9 @@ export const confirmTransfer = (mobileNo, amount) => (dispatch) => {
 
 export const register = (phone, password, name, email, countryCode) => (dispatch) => {
   const payload = middleware.prepareRegister(phone, password, name, email, countryCode);
-  return api.register(payload).then((res) => {
-    dispatch(actions.populateUser(result(res, 'data', {})));
-    dispatch(NavigationActions.reset({
-      index: 0,
-      actions: [NavigationActions.navigate({routeName: 'Home'})]
-    }));
-  }).catch((err) => {
+  return api.register(payload).
+  then(() => dispatch(login(phone, password))).
+  catch((err) => {
     Toast.show(getErrorMessage(err));
   });
 };
@@ -119,7 +108,6 @@ export const getTransactions = () => (dispatch, getState) => {
 export const sendVerificationMessage = (phone, countryCode) => (dispatch) => {
   const payload =  middleware.prepareVerificationRequest(phone, countryCode);
   return api.sendVerificationMessage(payload).then(() => {
-   
     dispatch(NavigationActions.navigate({routeName: 'Verification'}));
   }).catch((err) => {
     Toast.show(getErrorMessage(err));
@@ -132,10 +120,10 @@ export const verifyAndRegister = (code) => (dispatch, getState) => {
   const regDetails = result(getState(), 'registrationDetails', {});
   const phone = regDetails.mobileNo;
 
-  
+
   const countryCode = regDetails.country;
   const payload =  middleware.prepareVerification(phone, countryCode, code);
-  
+
   return api.verifyPhone(payload).then(() => {
     const registerPayload = middleware.prepareRegister(regDetails.mobileNo, regDetails.password, regDetails.name, regDetails.email, regDetails.country);
     return api.register(registerPayload).then((res) => {

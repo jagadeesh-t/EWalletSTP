@@ -2,36 +2,37 @@
   "url": "https://wallet-stp.com/signup",
   "method": "post",
   "requestBody": {
-    "name": "test 2",
-    "phone": 123456,
+    "name": "atul",
+    "phone": 961231233,
     "password": "qwerty",
-    "email": "mail@test.com",
-    "country_code": "+239"
+    "email": "mail3@test.com",
+    "countryCode": "+91"
   },
   "response": {
     "fromTransactions": [],
     "toTransactions": [],
+    "devices": [],
     "balanceAccount": {
       "balance": 0,
-      "id": 4,
-      "createdAt": "2017-06-25T07:57:37.000Z",
-      "updatedAt": "2017-06-25T07:57:37.000Z",
-      "account": 4
+      "id": 2,
+      "createdAt": "2017-06-29T02:11:33.000Z",
+      "updatedAt": "2017-06-29T02:11:33.000Z",
+      "account": 2
     },
     "userProfile": {
-      "name": "test 2",
+      "name": "atul",
       "email": "mail3@test.com",
-      "id": 4,
-      "createdAt": "2017-06-25T07:57:37.000Z",
-      "updatedAt": "2017-06-25T07:57:37.000Z",
-      "account": 4,
+      "id": 2,
+      "createdAt": "2017-06-29T02:11:33.000Z",
+      "updatedAt": "2017-06-29T02:11:33.000Z",
+      "account": 2,
       "userType": "REGULAR"
     },
-    "phone": 123456,
+    "phone": 961231233,
     "status": "active",
-    "id": 4,
-    "createdAt": "2017-06-25T07:57:37.000Z",
-    "updatedAt": "2017-06-25T07:57:37.000Z",
-    "countryCode": "+239"
+    "id": 2,
+    "createdAt": "2017-06-29T02:11:33.000Z",
+    "updatedAt": "2017-06-29T02:11:33.000Z",
+    "countryCode": "+91"
   }
 }

@@ -2,34 +2,45 @@
   "url": "https://wallet-stp.com/login",
   "method": "post",
   "requestBody": {
-    "phone": 12345678,
-    "password": "qwerty"
+    "phone": 961231233,
+    "password": "qwerty",
+    "deviceId": "123456"
   },
   "response": {
     "message": "Logged In Successfully",
     "user": {
-        "balanceAccount": {
-            "balance": 40000,
-            "id": 3,
-            "createdAt": "2017-06-25T06:47:44.000Z",
-            "updatedAt": "2017-06-25T06:47:44.000Z",
-            "account": 3
-        },
-        "userProfile": {
-            "name": "test 2",
-            "email": "mail3@test.com",
-            "id": 3,
-            "createdAt": "2017-06-25T06:47:44.000Z",
-            "updatedAt": "2017-06-25T06:47:44.000Z",
-            "account": 3,
-            "userType": "REGULAR"
-        },
-        "phone": 12345,
-        "status": "active",
-        "id": 3,
-        "createdAt": "2017-06-25T06:47:44.000Z",
-        "updatedAt": "2017-06-25T06:47:44.000Z",
-        "countryCode": "+239"
+      "devices": [{
+        "account": 2,
+        "deviceId": "123456",
+        "deviceName": "Moto G",
+        "notificationId": null,
+        "verified": true,
+        "id": 1,
+        "createdAt": "2017-06-29T02:14:19.000Z",
+        "updatedAt": "2017-06-29T02:14:19.000Z"
+      }],
+      "balanceAccount": {
+        "balance": 0,
+        "id": 2,
+        "createdAt": "2017-06-29T02:11:33.000Z",
+        "updatedAt": "2017-06-29T02:11:33.000Z",
+        "account": 2
+      },
+      "userProfile": {
+        "name": "atul",
+        "email": "mail3@test.com",
+        "id": 2,
+        "createdAt": "2017-06-29T02:11:33.000Z",
+        "updatedAt": "2017-06-29T02:11:33.000Z",
+        "account": 2,
+        "userType": "REGULAR"
+      },
+      "phone": 961231233,
+      "status": "active",
+      "id": 2,
+      "createdAt": "2017-06-29T02:11:33.000Z",
+      "updatedAt": "2017-06-29T02:11:33.000Z",
+      "countryCode": "+91"
     }
   }
 }

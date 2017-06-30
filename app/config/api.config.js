@@ -10,8 +10,8 @@ export const endpoints = {
   USER: '/user',
   CONFIRMTRANSFER: '/transactionInfo',
   CREDITREQUEST: '/createCreditRequest',
-  SENDVERIFICATIONMESSAGE: '/sendVerificationMessage',
-  VERIFYPHONE: '/verifyMessage',
+  SENDVERIFICATIONMESSAGE: '/send-verification-message',
+  VERIFYPHONE: '/verify-device',
   CHANGEPASSWORD: '/passwordReset',
   UPDATEPROFILE: '/profile'
 };

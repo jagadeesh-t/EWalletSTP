@@ -9,12 +9,11 @@ import {setRegisterDetails} from '../../state/actions/index.actions';
 const formConfig = {
   form: 'register',
   destroyOnUnmount: true,
-  
+
   onSubmit: (values, dispatch) => {
     const {mobileNo, password, name, email, country} = values;
     dispatch(sendVerificationMessage(mobileNo, country));
     return dispatch(setRegisterDetails({mobileNo, password, name, email, country}));
-    
   },
   validate: (values) => {
     const errors = {};

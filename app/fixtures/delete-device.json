@@ -1,0 +1,17 @@
+{
+  "url": "https://wallet-stp.com/device/1111",
+  "method": "delete",
+  "requestBody": {
+    "deviceId": "123456-this is the authenticated and verified device which makes the request"
+  },
+  "response": [{
+    "deviceId": "1111",
+    "deviceName": "Dummy G4",
+    "notificationId": null,
+    "verified": 1,
+    "id": 2,
+    "createdAt": "2017-06-29T02:45:08.000Z",
+    "updatedAt": "2017-06-29T02:45:08.000Z",
+    "account": 2
+  }]
+}
