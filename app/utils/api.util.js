@@ -4,8 +4,8 @@ export const login = (loginPayload) =>
 Http.post('LOGIN', loginPayload,
   {additional: ['FTXID']});
 
-export const register = (registerPayload) =>
-  Http.post('REGISTER', registerPayload,
+export const signup = (signupPayload) =>
+  Http.post('SIGNUP', signupPayload,
     {additional: ['FTXID']});
 
 export const logout = () => Http.get('LOGOUT');

@@ -3,6 +3,7 @@ package com.ewalletstp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import io.invertase.firebase.RNFirebasePackage; // Firebase core
 import io.invertase.firebase.crash.RNFirebaseCrashPackage; // Firebase Crash Reporting
 import io.invertase.firebase.messaging.RNFirebaseMessagingPackage; // Firebase Cloud Messaging
@@ -33,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNDeviceInfo(),
             new VectorIconsPackage(),
             new RCTCameraPackage(),
             new RNVersionNumberPackage(),

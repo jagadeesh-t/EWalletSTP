@@ -6,9 +6,11 @@ import * as actions from '../actions/index.actions';
 import {getErrorMessage} from '../../utils/transformer.util';
 import result from 'lodash/result';
 import {language} from '../../config/language';
+import {deviceInfo} from '../../utils/device.util';
 
 export const login = (username, password) => (dispatch) => {
-  const payload = middleware.prepareLogin(username, password);
+  const {deviceId} = deviceInfo;
+  const payload = middleware.prepareLogin(username, password, deviceId);
   return api.login(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data.user', {})));
     dispatch(NavigationActions.reset({
@@ -16,6 +18,7 @@ export const login = (username, password) => (dispatch) => {
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
   }).catch((err) => {
+    console.log(err);
     Toast.show(getErrorMessage(err));
   });
 };
@@ -54,7 +57,6 @@ export const transfer = (transferInfo) => (dispatch) => {
   }).catch((err) => {
     const errTransferResponse = middleware.transformErrorTransferResponse(err);
     Toast.show(getErrorMessage(err));
-
     dispatch(actions.setTransferResult({
       ...transferModalDetails,
       ...errTransferResponse,
@@ -73,9 +75,9 @@ export const confirmTransfer = (mobileNo, amount) => (dispatch) => {
   });
 };
 
-export const register = (phone, password, name, email, countryCode) => (dispatch) => {
-  const payload = middleware.prepareRegister(phone, password, name, email, countryCode);
-  return api.register(payload).
+export const signup = (phone, password, name, email, countryCode) => (dispatch) => {
+  const payload = middleware.prepareSignup(phone, password, name, email, countryCode);
+  return api.signup(payload).
   then(() => dispatch(login(phone, password))).
   catch((err) => {
     Toast.show(getErrorMessage(err));
@@ -117,27 +119,27 @@ export const sendVerificationMessage = (phone, countryCode) => (dispatch) => {
 };
 
 export const verifyAndRegister = (code) => (dispatch, getState) => {
-  const regDetails = result(getState(), 'registrationDetails', {});
-  const phone = regDetails.mobileNo;
-
-
-  const countryCode = regDetails.country;
-  const payload =  middleware.prepareVerification(phone, countryCode, code);
-
-  return api.verifyPhone(payload).then(() => {
-    const registerPayload = middleware.prepareRegister(regDetails.mobileNo, regDetails.password, regDetails.name, regDetails.email, regDetails.country);
-    return api.register(registerPayload).then((res) => {
-      dispatch(actions.populateUser(result(res, 'data', {})));
-      dispatch(NavigationActions.reset({
-        index: 0,
-        actions: [NavigationActions.navigate({routeName: 'Home'})]
-      }));
-    });
-
-  }).catch((err) => {
-    Toast.show(getErrorMessage(err));
-    Toast.show('Error Processing the Request');
-  });
+  // const regDetails = result(getState(), 'registrationDetails', {});
+  // const phone = regDetails.mobileNo;
+  //
+  //
+  // const countryCode = regDetails.country;
+  // const payload =  middleware.prepareVerification(phone, countryCode, code);
+  //
+  // return api.verifyPhone(payload).then(() => {
+  //   const registerPayload = middleware.prepareRegister(regDetails.mobileNo, regDetails.password, regDetails.name, regDetails.email, regDetails.country);
+  //   return api.register(registerPayload).then((res) => {
+  //     dispatch(actions.populateUser(result(res, 'data', {})));
+  //     dispatch(NavigationActions.reset({
+  //       index: 0,
+  //       actions: [NavigationActions.navigate({routeName: 'Home'})]
+  //     }));
+  //   });
+  //
+  // }).catch((err) => {
+  //   Toast.show(getErrorMessage(err));
+  //   Toast.show('Error Processing the Request');
+  // });
 
 };
 

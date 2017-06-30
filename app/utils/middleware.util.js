@@ -3,17 +3,18 @@ import result from 'lodash/result';
 import * as constants from '../config/constants.config';
 import {removeFalsy} from './transformer.util';
 // OUTGOING
-export const prepareLogin = (phone, password) => ({
+export const prepareLogin = (phone, password, deviceId) => ({
   'phone': phone,
-  'password': password
+  'password': password,
+  'deviceId': deviceId
 });
 
-export const prepareRegister = (phone, password, name, email, countryCode) => ({
+export const prepareSignup = (phone, password, name, email, countryCode) => ({
   'name': name,
   'phone': phone,
   'password': password,
   'email': email,
-  'country_code': countryCode
+  'countryCode': countryCode
 });
 
 export const prepareConfirmTransfer = (mobileNo, amount) => ({

@@ -4,7 +4,7 @@ export const SERVER_URL = env.URL;
 export const endpoints = {
   LOGIN: '/login',
   LOGOUT: '/logout',
-  REGISTER: '/signup',
+  SIGNUP: '/signup',
   TRANSACT: '/transact',
   TRANSACTIONHISTORY: '/transactions',
   USER: '/user',

@@ -10,21 +10,21 @@ const formConfig = {
   form: 'Verification',
   destroyOnUnmount: true,
   initialValues: {},
-  
+
   onSubmit: (values, dispatch) => {
     const {OTP} = values;
     return dispatch(verifyAndRegister(OTP));
-     
+
   },
 };
 
 const mapDispatchToProps = () => ({
- 
+
 });
 
 
 const mapStateToProps = (state) => ({
- 
+
   regisrationDetails: state
 });
 
