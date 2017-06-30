@@ -42,18 +42,34 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - React/BatchedBridge (0.45.0-rc.2):
+    - React/Core
+    - React/cxxreact_legacy
+  - React/Core (0.45.0-rc.2):
+    - Yoga (= 0.45.0-rc.2.React)
+  - React/cxxreact_legacy (0.45.0-rc.2):
+    - React/jschelpers_legacy
+  - React/jschelpers_legacy (0.45.0-rc.2)
   - RNFirebase (2.0.0)
+  - Yoga (0.45.0-rc.2.React)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Crash
   - Firebase/Messaging
+  - React/BatchedBridge (from `../node_modules/react-native`)
+  - React/Core (from `../node_modules/react-native`)
   - RNFirebase (from `../node_modules/react-native-firebase`)
+  - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
+  React:
+    :path: "../node_modules/react-native"
   RNFirebase:
     :path: "../node_modules/react-native-firebase"
+  Yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   Firebase: 53b2343db1ebfa3eb16bdb4318b8bb65360b2220
@@ -65,8 +81,10 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  React: c30b44eb8e84d2071fb78cd1ed58e1512a822a57
   RNFirebase: dcc4dcb1c9400a9bc01866e50d1351272a7df311
+  Yoga: d43165f478a090e7b603edc5796965a1de27d473
 
-PODFILE CHECKSUM: cf329c07acfe24e3f044b20509637f47388d57a2
+PODFILE CHECKSUM: b2f8c4c72a27a7f80d1d31a3f190a9e843a97020
 
 COCOAPODS: 1.2.1
