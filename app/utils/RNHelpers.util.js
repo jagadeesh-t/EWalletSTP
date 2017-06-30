@@ -1,4 +1,4 @@
-import Toast from 'react-native-simple-toast';
+import RNToast from 'react-native-simple-toast';
 import {Alert} from 'react-native';
 import RNSnackBar from 'react-native-snackbar-dialog';
 import {theme} from '../styles/theme.styles';
@@ -16,6 +16,13 @@ const SnackBar = {
       duration: 4000,
     });
   }
+};
+
+const Toast = (message, disableToast = false) => {
+  if (disableToast) {
+    return;
+  }
+  RNToast.show(message);
 };
 
 module.exports = {

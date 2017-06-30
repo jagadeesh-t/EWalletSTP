@@ -2,6 +2,7 @@ import {mockResponses} from '../config/api.config';
 import env from '../config/env.config';
 import result from 'lodash/result';
 import tracker from '../utils/googleAnalytics.util.js';
+import {serverStatusHandler, serverErrorDataHandler} from '../utils/errorHandler.util';
 
 // Interceptor that checks the status of the response
 export const getStatusValidatorInterceptor = (/* store*/) => (response) => {
@@ -9,11 +10,8 @@ export const getStatusValidatorInterceptor = (/* store*/) => (response) => {
   if (status >= 200 && status < 300) {
     return response;
   }
-  if (status === 401) {
-    console.log('logout');
-  }
   tracker.trackEvent('API_FAILED', `ENDPOINT: ${result(response, 'config.endpoint', 'NOT FOUND')}`, {label: `STATUS_CODE: ${status}`});
-  throw response;
+  throw serverStatusHandler(response) || serverErrorDataHandler(response);
 };
 
 // Interceptor that sets mock response

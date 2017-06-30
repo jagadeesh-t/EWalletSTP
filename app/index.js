@@ -11,10 +11,10 @@ import {Provider} from 'react-redux';
 import {initStore} from './state/store';
 import App from './App.container';
 import {setJSExceptionHandler} from 'react-native-exception-handler';
-import errorHandler from './utils/errorHandler.util';
+import {jsErrorHandler} from './utils/errorHandler.util';
 import {initializeHTTPInterceptors} from './utils/http.util';
 
-setJSExceptionHandler(errorHandler);
+setJSExceptionHandler(jsErrorHandler);
 
 const store = initStore();
 initializeHTTPInterceptors(store);

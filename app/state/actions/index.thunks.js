@@ -18,8 +18,7 @@ export const login = (username, password) => (dispatch) => {
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
   }).catch((err) => {
-    console.log(err);
-    Toast.show(getErrorMessage(err));
+    Toast.show(getErrorMessage(err), err.disableToast);
   });
 };
 
@@ -27,7 +26,7 @@ export const logout = () => (dispatch) => {
   api.logout().then(() => {
     Toast.show('Logged out successfuly !');
   }).catch((err) => {
-    Toast.show(getErrorMessage(err));
+    Toast.show(getErrorMessage(err), err.disableToast);
   });
   return dispatch(NavigationActions.reset({
     index: 0,
@@ -56,7 +55,7 @@ export const transfer = (transferInfo) => (dispatch) => {
     dispatch(NavigationActions.navigate({routeName: 'SendResult'}));
   }).catch((err) => {
     const errTransferResponse = middleware.transformErrorTransferResponse(err);
-    Toast.show(getErrorMessage(err));
+    Toast.show(getErrorMessage(err), err.disableToast);
     dispatch(actions.setTransferResult({
       ...transferModalDetails,
       ...errTransferResponse,
@@ -71,7 +70,7 @@ export const confirmTransfer = (mobileNo, amount) => (dispatch) => {
     const transactionDetails = middleware.transformConfirmTransfer(result(res, 'data', {}));
     dispatch(NavigationActions.navigate({routeName: 'SendConfirmation', params: {transactionDetails}}));
   }).catch((err) => {
-    Toast.show(getErrorMessage(err));
+    Toast.show(getErrorMessage(err), err.disableToast);
   });
 };
 
@@ -80,7 +79,8 @@ export const signup = (phone, password, name, email, countryCode) => (dispatch) 
   return api.signup(payload).
   then(() => dispatch(login(phone, password))).
   catch((err) => {
-    Toast.show(getErrorMessage(err));
+    console.log(err);
+    Toast.show(getErrorMessage(err, language.ERROR__SIGNUP_FAILED), err.disableToast);
   });
 };
 
@@ -89,7 +89,7 @@ export const getUser = () => (dispatch) => {
   return api.user().
   then((res) => dispatch(actions.populateUser(result(res, 'data', defaultUserData)))).
   catch((err) => {
-    Toast.show(getErrorMessage(err));
+    Toast.show(getErrorMessage(err), err.disableToast);
     return Promise.resolve();
   });
 };
@@ -102,7 +102,7 @@ export const getTransactions = () => (dispatch, getState) => {
     dispatch(actions.updateTransactions(transactionList));
   }).
   catch((err) => {
-    Toast.show(getErrorMessage(err));
+    Toast.show(getErrorMessage(err), err.disableToast);
     return Promise.resolve();
   });
 };
@@ -112,8 +112,7 @@ export const sendVerificationMessage = (phone, countryCode) => (dispatch) => {
   return api.sendVerificationMessage(payload).then(() => {
     dispatch(NavigationActions.navigate({routeName: 'Verification'}));
   }).catch((err) => {
-    Toast.show(getErrorMessage(err));
-    Toast.show('Error Processing the Request');
+    Toast.show(getErrorMessage(err, 'Error Processing the Request'), err.disableToast);
   });
 
 };
@@ -138,8 +137,7 @@ export const verifyAndRegister = (code) => (dispatch, getState) => {
     });
 
   }).catch((err) => {
-    Toast.show(getErrorMessage(err));
-    Toast.show('Error Processing the Request');
+    Toast.show(getErrorMessage(err, 'Error Processing the Request'), err.disableToast);
   });
 
 };
@@ -155,8 +153,7 @@ export const createCreditRequest = (transactionId) => (dispatch, getState) => {
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
   }).catch((err) => {
-    Toast.show(getErrorMessage(err));
-    Toast.show('Error Processing the Request');
+    Toast.show(getErrorMessage(err, 'Error Processing the Request'), err.disableToast);
   });
 };
 
@@ -172,14 +169,11 @@ export const chanagePassword = (currentPassword, newPassword) => (dispatch, getS
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
   }).catch((err) => {
-    Toast.show(getErrorMessage(err));
+    Toast.show(getErrorMessage(err), err.disableToast);
   });
-
 };
 
-
 export const updateProfile = (payload) => (dispatch) => api.updateProfile(payload).then(() => {
-
   Toast.show(language.PROFILE__SUCCESSFUL_UPDATE);
   api.user().
     then((res) => dispatch(actions.populateUser(result(res, 'data', {}))));
@@ -187,8 +181,6 @@ export const updateProfile = (payload) => (dispatch) => api.updateProfile(payloa
     index: 0,
     actions: [NavigationActions.navigate({routeName: 'Home'})]
   }));
-
-
 }).catch((err) => {
-  Toast.show(getErrorMessage(err));
+  Toast.show(getErrorMessage(err), err.disableToast);
 });

@@ -1,5 +1,6 @@
 import result from 'lodash/result';
 import filter from 'lodash/filter';
+import map from 'lodash/map';
 import {MainRoutes} from '../routes/index.routes';
 import * as constants from '../config/constants.config';
 import moment from 'moment';
@@ -30,7 +31,10 @@ export const currencyFormatter = (unformatted) => {
   return formatted === 'NaN' ? unformatted : formatted;
 };
 
-export const getErrorMessage = (response, ifNotPresentMessage) => result(response, 'data.message', ifNotPresentMessage);
+export const getErrorMessage = (error, ifNotPresentMessage) => {
+  const parsedMessage = result(error, 'message', ifNotPresentMessage);
+  return parsedMessage;
+};
 
 export const getCurrentRouteTitle = (nav) => {
   const currentRouteName = result(nav, 'navigation.state.routeName');
@@ -71,4 +75,11 @@ export const removeFalsy = (object) => {
     }
   });
   return duplicate;
+};
+
+export const parseServerEValidationErrors = (error) => {
+  const {summary, invalidAttributes} = error;
+  const getErrorSummaryPerKey = (arrayoferrors) => map(arrayoferrors, 'message').join(',');
+  const errordetails =  map(invalidAttributes, (v, k) => [k, getErrorSummaryPerKey(v)].join(':'));
+  return {error: 'E_VALIDATION', message: [summary, ...errordetails].join('\n')};
 };

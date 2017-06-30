@@ -73,5 +73,6 @@ export default {
   PROFILE__SUBTITLE: 'Your profile details',
   PROFILE__SUCCESSFUL_UPDATE: ' Your Profile has Been Successfully Updated',
   PROFILE__EMAIL_NOT_PRESENT_TEXT: 'Add your email address',
-  PROFILE__UPDATE_BUTTON_TEXT: 'Update Profile'
+  PROFILE__UPDATE_BUTTON_TEXT: 'Update Profile',
+  ERROR__SIGNUP_FAILED: 'Signup failed! Check if details are correct'
 };

@@ -2,7 +2,8 @@ import RNFirebase from 'react-native-firebase';
 
 const configurationOptions = {
   debug: true,
-  promptOnMissingPlayServices: true
+  promptOnMissingPlayServices: false,
+  errorOnMissingPlayServices: false
 };
 
 const firebase = RNFirebase.initializeApp(configurationOptions);

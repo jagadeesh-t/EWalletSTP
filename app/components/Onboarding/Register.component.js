@@ -37,7 +37,7 @@ class RegisterView extends React.Component {
           <Field name='email' component={FormInput} placeholder={language.REGISTER__EMAIL_PLACEHOLDER} />
 
           <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='flag' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__COUNTRY} </Text></View>
-          <Field name='country' component={FormInput} placeholder={language.REGISTER__COUNTRY_PLACEHOLDER} />
+          <Field name='countryCode' component={FormInput} placeholder={language.REGISTER__COUNTRY_PLACEHOLDER} />
         </View>
         <FormButton disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={language.COMMON__NEXT}/>
       </KeyboardAwareScrollView>
