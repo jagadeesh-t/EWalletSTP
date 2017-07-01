@@ -18,8 +18,6 @@ export const CLEAN_APP_STATE = 'CLEAN_APP_STATE';
 // LANGUAGE action constant
 export const SET_LANGUAGE = 'SET_LANGUAGE';
 
-export const SET_REGISTER_DETAILS = 'SET_REGISTER_DETAILS';
-
 // =================
 //  ACTION CREATORS
 // =================
@@ -37,5 +35,3 @@ export const setLanguage = createAction(SET_LANGUAGE); // payload u send is lang
 
 // CLEAN REDUX STATE action creators
 export const cleanAppState = createAction(CLEAN_APP_STATE);
-
-export const setRegisterDetails = createAction(SET_REGISTER_DETAILS);

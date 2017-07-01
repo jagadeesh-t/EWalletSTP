@@ -4,6 +4,7 @@ import VersionNumber from 'react-native-version-number';
 import {wrapMethodInFunction, parseServerEValidationErrors} from './transformer.util';
 import {language} from '../config/language';
 import tracker from './googleAnalytics.util';
+import {NavigationActions} from 'react-navigation';
 
 export const jsErrorHandler = (e = {}, isFatal) => {
   console.log(e); // for logging to android logs or ios logs
@@ -18,21 +19,25 @@ export const jsErrorHandler = (e = {}, isFatal) => {
   }
 };
 
-export const serverStatusHandler = (response = {}) => {
+export const serverStatusHandler = (response = {}, store) => {
   const {status} = response;
   switch (status) {
   case 401: {
-    console.log('Unauthorized');
+    const resetToLogin = NavigationActions.reset({index: 0, actions: [NavigationActions.back()]});
+    store.dispatch(resetToLogin);
     return {disableToast: false, ...response.data};
   }
   default: return null; // so that the control goes to serverErrorDataHandler
   }
 };
 
-export const serverErrorDataHandler = (response = {}) => {
+export const serverErrorDataHandler = (response = {}, store) => {
   const {data = {}} = response;
   switch (data.error) {
   case 'E_VALIDATION': {
+    return {disableToast: false, ...parseServerEValidationErrors(data)};
+  }
+  case 'CUSTOM_VALIDATION': {
     return {disableToast: false, ...parseServerEValidationErrors(data)};
   }
   case 'DEVICE_NOT_VERIFIED': {

@@ -5,13 +5,13 @@ import tracker from '../utils/googleAnalytics.util.js';
 import {serverStatusHandler, serverErrorDataHandler} from '../utils/errorHandler.util';
 
 // Interceptor that checks the status of the response
-export const getStatusValidatorInterceptor = (/* store*/) => (response) => {
+export const getStatusValidatorInterceptor = (store) => (response) => {
   const {status} = response;
   if (status >= 200 && status < 300) {
     return response;
   }
   tracker.trackEvent('API_FAILED', `ENDPOINT: ${result(response, 'config.endpoint', 'NOT FOUND')}`, {label: `STATUS_CODE: ${status}`});
-  throw serverStatusHandler(response) || serverErrorDataHandler(response);
+  throw serverStatusHandler(response, store) || serverErrorDataHandler(response, store);
 };
 
 // Interceptor that sets mock response

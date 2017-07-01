@@ -16,8 +16,8 @@ class RouterWrapper extends React.Component {
     BackHandler.addEventListener('hardwareBackPress', () => {
       const {dispatch, nav} = this.props;
       const currentRoute = getCurrentRouteName(nav);
-      if (currentRoute === 'Landing') { // exit the app from landing page
-        return false;
+      if (currentRoute === 'MainRoutes') {
+        return false; // do not press back if its starting page
       }
       dispatch({type: 'Navigation/BACK'});
       return true;
