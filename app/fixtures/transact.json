@@ -2,9 +2,9 @@
   "url": "https://wallet-stp.com/transact",
   "method": "post",
   "requestBody": {
-    "to_phone": 1235,
-    "amount": 500,
-    "transaction_type": "WALLET"
+    "amount": 2020,
+    "toPhone": 111111,
+    "deviceId": "123456"
   },
   "response": {
     "amount": 2020,
@@ -16,19 +16,16 @@
     "totalAmount": 2020,
     "fromAccount": 3,
     "toAccount": 3
-},
+  },
   "error": {
-    "message": "reason",
-    "transactionInfo":{
-      "from_account": 1,
-      "to_account": 2,
-      "transaction_type": "WALLET",
-      "finalAmount": null,
-      "amount": 500,
-      "metadata": "{\"from_name\": \"test 1\" ,  \"to_name\": \"test 2\"}",
-      "createdAt": "2017-06-03T10:29:57.208Z",
-      "updatedAt": "2017-06-03T10:29:57.208Z",
-      "id": 10
-    }
+    "amount": 2020,
+    "createdAt": "2017-07-02T20:31:25.232Z",
+    "updatedAt": "2017-07-02T20:31:25.232Z",
+    "id": 3,
+    "transactionType": "WALLET_TO_WALLET",
+    "fee": 0,
+    "totalAmount": 2020,
+    "fromAccount": 2,
+    "toAccount": 4
   }
 }

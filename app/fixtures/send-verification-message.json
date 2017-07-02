@@ -1,7 +1,10 @@
 {
   "url": "https://wallet-stp.com/send-verification-message",
   "method": "post",
-  "requestBody": {},
+  "requestBody": {
+    "phone": "123456",
+    "countryCode": "+91"
+  },
   "response": {
     "status": "SUCCESS",
     "success": "{\"carrier\":\"Bharti Airtel Ltd\",\"is_cellphone\":true,\"message\":\"पाठ संदेश 961231233 करने के लिए भेजा है।\",\"seconds_to_expire\":599,\"uuid\":\"370650f0-3e9e-0135-ba71-0e690b363fd4\",\"success\":true}"

@@ -1,6 +1,13 @@
 {
   "url": "http://localhost:1337/transactions",
   "method": "get",
+  "query":{
+    "deviceId": 123456,
+    "type": "DEBIT/CREDIT/ALL",
+    "page":1,
+    "fromDate": "2017-07-02T20:29:40.000Z",
+    "toDate": "2017-07-03T20:30:40.000Z"
+  },
   "response": [{
       "fromAccount": {
         "phone": 12345,

@@ -2,57 +2,58 @@
   "url": "https://wallet-stp.com/transactionInfo",
   "method": "post",
   "requestBody": {
-    "phone": 12345678,
-    "password": "qwerty"
+    "amount": 2020,
+    "toPhone": 111111,
+    "deviceId": "123456"
   },
   "response": {
     "fromAccount": {
       "balanceAccount": {
-        "balance": 0,
-        "id": 3,
-        "createdAt": "2017-06-25T06:47:44.000Z",
-        "updatedAt": "2017-06-25T06:47:44.000Z",
-        "account": 3
+        "balance": 11980,
+        "id": 2,
+        "createdAt": "2017-07-02T20:29:40.000Z",
+        "updatedAt": "2017-07-02T20:29:40.000Z",
+        "account": 2
       },
       "userProfile": {
-        "name": "test 2",
+        "name": "atul",
         "email": "mail3@test.com",
-        "id": 3,
-        "createdAt": "2017-06-25T06:47:44.000Z",
-        "updatedAt": "2017-06-25T06:47:44.000Z",
-        "account": 3,
+        "id": 2,
+        "createdAt": "2017-07-02T20:29:40.000Z",
+        "updatedAt": "2017-07-02T20:29:40.000Z",
+        "account": 2,
         "userType": "REGULAR"
       },
-      "phone": 12345,
+      "phone": 9632144542,
       "status": "active",
-      "id": 3,
-      "createdAt": "2017-06-25T06:47:44.000Z",
-      "updatedAt": "2017-06-25T06:47:44.000Z",
-      "countryCode": "+239"
+      "id": 2,
+      "createdAt": "2017-07-02T20:29:40.000Z",
+      "updatedAt": "2017-07-02T20:29:40.000Z",
+      "countryCode": "+91"
     },
     "toAccount": {
       "balanceAccount": {
-        "balance": 0,
-        "id": 3,
-        "createdAt": "2017-06-25T06:47:44.000Z",
-        "updatedAt": "2017-06-25T06:47:44.000Z",
-        "account": 3
+        "balance": 2020,
+        "id": 4,
+        "createdAt": "2017-07-02T20:31:15.000Z",
+        "updatedAt": "2017-07-02T20:31:15.000Z",
+        "account": 4
       },
       "userProfile": {
-        "name": "test 2",
+        "name": "atul",
         "email": "mail3@test.com",
-        "id": 3,
-        "createdAt": "2017-06-25T06:47:44.000Z",
-        "updatedAt": "2017-06-25T06:47:44.000Z",
-        "account": 3,
+        "id": 4,
+        "createdAt": "2017-07-02T20:31:15.000Z",
+        "updatedAt": "2017-07-02T20:31:15.000Z",
+        "account": 4,
         "userType": "REGULAR"
       },
-      "phone": 12345,
+      "phone": 111111,
       "status": "active",
-      "id": 3,
-      "createdAt": "2017-06-25T06:47:44.000Z",
-      "updatedAt": "2017-06-25T06:47:44.000Z",
-      "countryCode": "+239"
+      "id": 4,
+      "createdAt": "2017-07-02T20:31:15.000Z",
+      "updatedAt": "2017-07-02T20:31:15.000Z",
+      "countryCode": "+91"
     },
     "transactionType": "WALLET_TO_WALLET",
     "amount": 2020,

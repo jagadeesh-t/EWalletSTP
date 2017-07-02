@@ -3,36 +3,21 @@
   "method": "post",
   "requestBody": {
     "name": "atul",
-    "phone": 961231233,
+    "phone": 96321445421,
     "password": "qwerty",
     "email": "mail3@test.com",
-    "countryCode": "+91"
+    "countryCode": "+91",
+    "code": "1234",
+    "deviceId": "123456",
+    "deviceName": "test device"
   },
   "response": {
-    "fromTransactions": [],
-    "toTransactions": [],
-    "devices": [],
-    "balanceAccount": {
-      "balance": 0,
-      "id": 2,
-      "createdAt": "2017-06-29T02:11:33.000Z",
-      "updatedAt": "2017-06-29T02:11:33.000Z",
-      "account": 2
-    },
-    "userProfile": {
-      "name": "atul",
-      "email": "mail3@test.com",
-      "id": 2,
-      "createdAt": "2017-06-29T02:11:33.000Z",
-      "updatedAt": "2017-06-29T02:11:33.000Z",
-      "account": 2,
-      "userType": "REGULAR"
-    },
-    "phone": 961231233,
-    "status": "active",
-    "id": 2,
-    "createdAt": "2017-06-29T02:11:33.000Z",
-    "updatedAt": "2017-06-29T02:11:33.000Z",
-    "countryCode": "+91"
+    "deviceId": "123456",
+    "deviceName": "test device",
+    "account": 6,
+    "verified": true,
+    "createdAt": "2017-07-02T20:36:54.573Z",
+    "updatedAt": "2017-07-02T20:36:54.573Z",
+    "id": 5
   }
 }

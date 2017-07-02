@@ -3,17 +3,17 @@
   "method": "post",
   "requestBody": {
     "code": "0327",
-    "deviceId": "123456",
+    "deviceId": "1234567",
     "deviceName": "Moto G4"
   },
   "response": [{
-    "deviceId": "123456",
+    "deviceId": "1234567",
     "deviceName": "Moto G4",
     "notificationId": null,
     "verified": true,
-    "id": 1,
-    "createdAt": "2017-06-29T02:14:19.000Z",
-    "updatedAt": "2017-06-29T02:14:19.000Z",
+    "id": 4,
+    "createdAt": "2017-07-02T20:32:52.000Z",
+    "updatedAt": "2017-07-02T20:32:52.000Z",
     "account": 2
   }]
 }
