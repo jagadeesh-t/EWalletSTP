@@ -9,12 +9,15 @@ export const prepareLogin = (phone, password, deviceId) => ({
   'deviceId': deviceId
 });
 
-export const prepareSignup = (phone, password, name, email, countryCode) => ({
-  'name': name,
+export const prepareSignup = (phone, password, countryCode, name, email, code, deviceId, deviceName) => ({
   'phone': phone,
   'password': password,
+  'countryCode': countryCode,
+  'name': name,
   'email': email,
-  'countryCode': countryCode
+  'code': code,
+  'deviceId': deviceId,
+  'deviceName': deviceName
 });
 
 export const prepareConfirmTransfer = (mobileNo, amount) => ({
@@ -93,8 +96,8 @@ export const prepareCreditRequest = (userProfile, transactionId, creditStatus) =
 });
 
 export const prepareVerificationRequest = (phone, countryCode) => ({
-  'phone_number': phone,
-  'country_code': countryCode
+  'phone': phone,
+  'countryCode': countryCode
 });
 
 export const prepareVerification = (phone, countryCode, code) => ({

@@ -11,10 +11,11 @@ export default {
     flex: 1
   },
   logoContainer: {
-    height: 120,
+    height: 100,
     paddingBottom: 10
   },
   formContainer: {
+    paddingBottom: 20,
     flex: 3,
     justifyContent: 'center'
   },
@@ -28,13 +29,12 @@ export default {
     height: null,
     width: null
   },
-  subTitle: {
-    fontSize: theme.fontSizeNormal,
-    paddingBottom: 30,
-    color: theme.textColor
+  title: {
+    fontWeight: theme.fontWeightLight,
+    fontSize: theme.fontSizeLarge,
+    color: theme.ternary
   },
   logoSize: 80,
-
   formHeader: {
     flexDirection: 'row'
   },

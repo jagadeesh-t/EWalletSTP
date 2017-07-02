@@ -24,22 +24,25 @@ class RegisterView extends React.Component {
       <KeyboardAwareScrollView keyboardShouldPersistTaps='handled' style={styles.pageContainer} contentContainerStyle={styles.contentContainer} extraHeight={120}>
         <View style={styles.formContainer}>
 
+          <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='user' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__NAME} </Text></View>
+          <Field name='name' component={FormInput} placeholder={language.REGISTER__NAME_PLACEHOLDER} />
+
           <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='mobile, mobile-phone' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__MOBILENO} </Text></View>
           <Field name='mobileNo' iconName='mobile, mobile-phone' component={FormInput} placeholder={language.REGISTER__MOBILE_PLACEHOLDER} />
+
+          <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='flag' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__COUNTRY} </Text></View>
+          <Field name='countryCode' component={FormInput} placeholder={language.REGISTER__COUNTRY_PLACEHOLDER} />
 
           <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='user-secret' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__PASSWORD} </Text></View>
           <Field name='password' secureTextEntry={true} component={FormInput} placeholder={language.REGISTER__PASSWORD_PLACEHOLDER} />
 
-          <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='user' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__NAME} </Text></View>
-          <Field name='name' component={FormInput} placeholder={language.REGISTER__NAME_PLACEHOLDER} />
-
           <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='inbox' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__EMAIL} </Text></View>
           <Field name='email' component={FormInput} placeholder={language.REGISTER__EMAIL_PLACEHOLDER} />
 
-          <View style={styles.formHeader}><RNIcon style={styles.headerIcon} name='flag' size={15} /><Text style={styles.formHeaderText}>{language.REGISTER__COUNTRY} </Text></View>
-          <Field name='countryCode' component={FormInput} placeholder={language.REGISTER__COUNTRY_PLACEHOLDER} />
         </View>
-        <FormButton disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={language.COMMON__NEXT}/>
+        <View style={styles.buttonContainer}>
+          <FormButton disabled={invalid || submitting} onPress={wrapMethodInFunction(handleSubmit)} text={language.COMMON__NEXT}/>
+        </View>
       </KeyboardAwareScrollView>
     );
   }

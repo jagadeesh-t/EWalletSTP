@@ -31,7 +31,7 @@ export const serverStatusHandler = (response = {}, store) => {
   }
 };
 
-export const serverErrorDataHandler = (response = {}, store) => {
+export const serverErrorDataHandler = (response = {}, /* store*/) => {
   const {data = {}} = response;
   switch (data.error) {
   case 'E_VALIDATION': {

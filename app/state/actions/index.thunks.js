@@ -74,12 +74,15 @@ export const confirmTransfer = (mobileNo, amount) => (dispatch) => {
   });
 };
 
-export const signup = (phone, password, name, email, countryCode) => (dispatch) => {
-  const payload = middleware.prepareSignup(phone, password, name, email, countryCode);
+export const signup = () => (dispatch, getState) => {
+  const state = getState();
+  const {mobileNo, password, countryCode, name, email} = result(state, 'form.register.values', {});
+  const otp = result(state, 'form.smsOtpForm.values.otp', null);
+  const {deviceId, deviceName} = deviceInfo;
+  const payload = middleware.prepareSignup(mobileNo, password, countryCode, name, email, otp, deviceId, deviceName);
   return api.signup(payload).
-  then(() => dispatch(login(phone, password))).
+  then(() => dispatch(login(mobileNo, password))).
   catch((err) => {
-    console.log(err);
     Toast.show(getErrorMessage(err, language.ERROR__SIGNUP_FAILED), err.disableToast);
   });
 };
@@ -107,41 +110,14 @@ export const getTransactions = () => (dispatch, getState) => {
   });
 };
 
-export const sendVerificationMessage = (phone, countryCode) => (dispatch) => {
+export const sendVerificationMessage = (phone, countryCode, actionOnSubmit) => (dispatch) => {
   const payload =  middleware.prepareVerificationRequest(phone, countryCode);
   return api.sendVerificationMessage(payload).then(() => {
-    dispatch(NavigationActions.navigate({routeName: 'Verification'}));
+    dispatch(NavigationActions.navigate({routeName: 'SmsOtpModal', params: {actionOnSubmit}}));
   }).catch((err) => {
     Toast.show(getErrorMessage(err, 'Error Processing the Request'), err.disableToast);
   });
-
 };
-
-export const verifyAndRegister = (code) => (dispatch, getState) => {
-// TODO
-  const regDetails = result(getState(), 'registrationDetails', {});
-  const phone = regDetails.mobileNo;
-
-
-  const countryCode = regDetails.country;
-  const payload =  middleware.prepareVerification(phone, countryCode, code);
-
-  return api.verifyPhone(payload).then(() => {
-    const registerPayload = middleware.prepareRegister(regDetails.mobileNo, regDetails.password, regDetails.name, regDetails.email, regDetails.country);
-    return api.register(registerPayload).then((res) => {
-      dispatch(actions.populateUser(result(res, 'data', {})));
-      dispatch(NavigationActions.reset({
-        index: 0,
-        actions: [NavigationActions.navigate({routeName: 'Home'})]
-      }));
-    });
-
-  }).catch((err) => {
-    Toast.show(getErrorMessage(err, 'Error Processing the Request'), err.disableToast);
-  });
-
-};
-
 
 export const createCreditRequest = (transactionId) => (dispatch, getState) => {
   const userProfile = result(getState(), 'user.userProfile', {});

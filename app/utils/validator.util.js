@@ -13,7 +13,6 @@ export const required = (values, fields, errors) => {
 
 
 export const validateUpdate = (values, fields, errors) => {
-
   for (var i in fields) {
     if (!values[fields[0]] && !values[fields[1]]) {
       errors[fields[i]] = language.VALIDATION__NO_UPDATE;
@@ -77,6 +76,17 @@ export const validateNumber = (values, fields, errors) => {
     const result = numberR.test(values[field]);
     if (!result) {
       errors[field] = language.VALIDATION__INCORRECT_NUMBER;
+    }
+  }));
+  return errors;
+};
+
+export const validateLength = (values, fields, lengths, errors) => {
+  each(fields, ((field, i) => {
+    const reqLength = lengths[i];
+    const value = values[field] || '';
+    if (value.length !== reqLength) {
+      errors[field] = language.VALIDATION__INCORRECT_LENGTH;
     }
   }));
   return errors;

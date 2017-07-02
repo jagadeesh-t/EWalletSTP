@@ -9,6 +9,8 @@ export default {
   },
   container: {
     backgroundColor: theme.inputBackground,
+  },
+  outerContainer: {
     marginBottom: 20
   },
   placeholderTextColor: theme.textColorHighlight

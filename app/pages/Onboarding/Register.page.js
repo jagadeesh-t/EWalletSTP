@@ -3,15 +3,14 @@ import {reduxForm} from 'redux-form';
 import RegisterView from '../../components/Onboarding/Register.component';
 import {connect} from 'react-redux';
 import * as validations from '../../utils/validator.util';
-import {signup} from '../../state/actions/index.thunks';
+import {sendVerificationMessage, signup} from '../../state/actions/index.thunks';
 
 const formConfig = {
   form: 'register',
   destroyOnUnmount: true,
-
   onSubmit: (values, dispatch) => {
-    const {mobileNo, password, name, email, countryCode} = values;
-    return dispatch(signup(mobileNo, password, name, email, countryCode));
+    const {mobileNo, countryCode} = values;
+    return dispatch(sendVerificationMessage(mobileNo, countryCode, signup()));
   },
   validate: (values) => {
     const errors = {};
@@ -20,6 +19,13 @@ const formConfig = {
     validations.validatePassword(values, ['password'], errors);
     values.email && validations.validateEmail(values, ['email'], errors);
     return errors;
+  },
+  initialValues: {
+    mobileNo: null,
+    password: null,
+    countryCode: null,
+    name: null,
+    email: null
   }
 };
 
@@ -29,11 +35,11 @@ const mapStateToProps = () => ({});
 
 const RegisterForm = reduxForm(formConfig)(RegisterView);
 
-class RegisterScreen extends Component {
+class Register extends Component {
   render () {
     return (
       <RegisterForm />);
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegisterScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

@@ -14,11 +14,9 @@ import {setJSExceptionHandler} from 'react-native-exception-handler';
 import {jsErrorHandler} from './utils/errorHandler.util';
 import {initializeHTTPInterceptors} from './utils/http.util';
 
-setJSExceptionHandler(jsErrorHandler);
-
 const store = initStore();
+setJSExceptionHandler(jsErrorHandler);
 initializeHTTPInterceptors(store);
-
 
 // ===========================================
 // ===========================================

@@ -2,16 +2,22 @@ import theme from '../../styles/theme.styles';
 export default {
   pageContainer: theme.pageContainer,
   contentContainer: {
-    paddingBottom: 40
+    flexGrow: 1,
+    paddingBottom: 20,
+    paddingTop: 10
   },
   headerIcon: {
     color: theme.textColor
   },
   formContainer: {
-    paddingBottom: 20
+    flex: 3
   },
   formHeader: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+  },
+  buttonContainer: {
+    flex: 1,
+    justifyContent: 'flex-end'
   },
   formHeaderText: {
     fontWeight: theme.fontWeightBold,

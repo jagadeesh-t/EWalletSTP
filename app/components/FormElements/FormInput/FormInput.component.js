@@ -47,7 +47,7 @@ class FormInput extends Component {
     const inputProps = {onChange, onFocus, onBlur, onInputChange, value, ...input};
 
     return (
-      <View>
+      <View style={styles.outerContainer}>
         <View style={[wrapperStyle, containerStyle]}>
           <TextInput
           {...extraProps}

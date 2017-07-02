@@ -6,7 +6,7 @@ import {wrapMethodInFunction} from './transformer.util';
 import {language} from '../config/language';
 
 const SnackBar = {
-  show (title) {
+  show: (title) => {
     RNSnackBar.show(title, {
       backgroundColor: theme.snackbarBg,
       textColor: theme.contrast,
@@ -18,11 +18,10 @@ const SnackBar = {
   }
 };
 
-const Toast = (message, disableToast = false) => {
-  if (disableToast) {
-    return;
+const Toast = {
+  show: (message, disableToast = false) => {
+    !disableToast && RNToast.show(message);
   }
-  RNToast.show(message);
 };
 
 module.exports = {

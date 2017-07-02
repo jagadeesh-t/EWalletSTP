@@ -12,10 +12,9 @@ import {getTitleBar} from '../components/TitleBar/TitleBar.component';
 import {getCurrentRouteTitle} from '../utils/transformer.util';
 import {language} from '../config/language';
 import CreditRequest from  '../pages/Distributor/CreditRequestPage';
-import VerificationPage from '../pages/Onboarding/Verification.page';
 import SettingsPage from  '../pages/Settings/Settings.page';
 import ProfilePage from  '../pages/Profile/Profile.page';
-
+import SmsOtpPage from '../pages/SmsOtp/SmsOtp.page';
 
 export const MainRoutes = {
   Login: {
@@ -29,10 +28,6 @@ export const MainRoutes = {
   Profile: {
     screenTitle: language.PROFILE__INDEX_TITLE,
     screen: ProfilePage
-  },
-  Verification: {
-    screenTitle: language.VERIFICATION__INDEX_TITLE,
-    screen: VerificationPage
   },
   CreditRequest: {
     screenTitle: language.CREDIT_REQUEST__INDEX_TITLE,
@@ -84,6 +79,10 @@ const Routes = StackNavigator({
   },
   SendResult: {
     screen: SendResultPage
+  },
+  SmsOtpModal: {
+    screenTitle: language.SMS_OTP__INDEX_TITLE,
+    screen: SmsOtpPage
   }
 }, {
   headerMode: 'none',
