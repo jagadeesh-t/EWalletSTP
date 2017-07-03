@@ -35,3 +35,24 @@ Currently whenever you push three types of tests run to make sure you are pushin
 **For direct contributors:**
  - No direct push to master is allowed. (enforced in Github)
  - Raise a PR and it will be reviewed and merged.
+
+
+ ## Tech stack
+
+- React Native
+- Javascript/ ES6
+
+## Services used
+
+- firebase sdk
+- google analytics
+
+## Access requirements
+- Play store admin account
+- IOS developer account
+- Firebase admin account
+- Google analytics admin account
+- Twillio admin account
+- AWS admin account
+- Github repo
+- Slack 
