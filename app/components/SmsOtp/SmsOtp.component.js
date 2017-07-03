@@ -5,7 +5,6 @@ import RNIcon from '../../assets/fonts/RNIcon';
 import {FormInput, FormButton} from '../FormElements';
 import {Field} from 'redux-form';
 import noop from 'lodash/noop';
-import {wrapMethodInFunction} from '../../utils/transformer.util';
 import styles from './SmsOtp.component.style';
 import logoImage from '../../assets/images/otplogo.jpg';
 import {language} from '../../config/language';

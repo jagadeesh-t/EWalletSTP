@@ -6,7 +6,6 @@ import {NavigationActions} from 'react-navigation';
 import PropTypes from 'prop-types';
 import * as validations from '../../utils/validator.util';
 import result from 'lodash/result';
-import {signup} from '../../state/actions/index.thunks';
 
 const formConfig = {
   form: 'smsOtpForm',
