@@ -3,6 +3,28 @@ import env from '../config/env.config';
 import result from 'lodash/result';
 import tracker from '../utils/googleAnalytics.util.js';
 import {serverStatusHandler, serverErrorDataHandler} from '../utils/errorHandler.util';
+import uuidV4 from 'uuid/v4';
+import {deviceInfo, currentAppVersion, currentPlatform} from '../utils/device.util';
+
+// Interceptor that sets the defaultPayload
+export const addDefaultPayloadInterceptor = () => (config) => {
+  const completeExtraPayload = {
+    lang: 'en',
+    deviceId: deviceInfo.deviceId,
+    deviceName: deviceInfo.deviceName,
+    appVersion: currentAppVersion,
+    OS: currentPlatform,
+    FTXID: uuidV4()
+  };
+
+  if (config.method === 'get') {
+    config.params = {...completeExtraPayload, ...config.params};
+  } else {
+    config.data = {...completeExtraPayload, ...config.data};
+  }
+  return config;
+};
+
 
 // Interceptor that checks the status of the response
 export const getStatusValidatorInterceptor = (store) => (response) => {

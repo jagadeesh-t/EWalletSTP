@@ -4,19 +4,20 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {NavigationActions} from 'react-navigation';
 import result from 'lodash/result';
-import {logout, getUser} from '../../state/actions/index.thunks';
+import {logout, getUser, getTransactions} from '../../state/actions/index.thunks';
 
 const mapDispatchToProps = (dispatch) => ({
   navigateTo: (link = {}) => {
     const routeName = link.id;
     dispatch(NavigationActions.navigate({routeName}));
+    if (routeName === 'TransactionHistory') {
+      dispatch(getTransactions());
+    }
   },
-
   tabNavigateTo: (tab = {}) => {
     const routeName = tab.id;
     dispatch(NavigationActions.navigate({routeName}));
   },
-
   onLogoutClick: () => dispatch(logout()),
   refreshUserData: () => dispatch(getUser())
 });
@@ -32,8 +33,6 @@ class HomeScreen extends Component {
     onLogoutClick: PropTypes.func,
     refreshUserData: PropTypes.func,
     tabNavigateTo: PropTypes.func
-  
-
   }
   render () {
     const {navigateTo, user, onLogoutClick, refreshUserData, tabNavigateTo} = this.props;

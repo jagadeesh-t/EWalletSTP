@@ -4,7 +4,8 @@ import VersionNumber from 'react-native-version-number';
 import {wrapMethodInFunction, parseServerEValidationErrors} from './transformer.util';
 import {language} from '../config/language';
 import tracker from './googleAnalytics.util';
-import {NavigationActions} from 'react-navigation';
+import {sendVerificationMessage, verifyDevice, logout} from '../state/actions/index.thunks';
+import {deviceInfo} from '../utils/device.util';
 
 export const jsErrorHandler = (e = {}, isFatal) => {
   console.log(e); // for logging to android logs or ios logs
@@ -23,15 +24,14 @@ export const serverStatusHandler = (response = {}, store) => {
   const {status} = response;
   switch (status) {
   case 401: {
-    const resetToLogin = NavigationActions.reset({index: 0, actions: [NavigationActions.back()]});
-    store.dispatch(resetToLogin);
+    store.dispatch(logout());
     return {disableToast: false, ...response.data};
   }
   default: return null; // so that the control goes to serverErrorDataHandler
   }
 };
 
-export const serverErrorDataHandler = (response = {}, /* store*/) => {
+export const serverErrorDataHandler = (response = {}, store) => {
   const {data = {}} = response;
   switch (data.error) {
   case 'E_VALIDATION': {
@@ -41,6 +41,8 @@ export const serverErrorDataHandler = (response = {}, /* store*/) => {
     return {disableToast: false, ...parseServerEValidationErrors(data)};
   }
   case 'DEVICE_NOT_VERIFIED': {
+    const {deviceId, deviceName} = deviceInfo;
+    store.dispatch(sendVerificationMessage(data.phone, data.countryCode, verifyDevice(deviceId, deviceName)));
     return {disableToast: true, ...data};
   }
   case 'DEVICE_NOT_FOUND': {

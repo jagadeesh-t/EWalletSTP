@@ -1,5 +1,4 @@
 import result from 'lodash/result';
-import filter from 'lodash/filter';
 import map from 'lodash/map';
 import {MainRoutes} from '../routes/index.routes';
 import * as constants from '../config/constants.config';
@@ -20,10 +19,18 @@ export const getCurrentRouteName  = (navigationState) => {
   return route.routeName;
 };
 
+export const filterObjectProperties = (sourceObject = {}, keys = []) => {
+  const filtered = {};
+  keys.forEach((eachKey) => {
+    filtered[eachKey] = sourceObject[eachKey];
+  });
+  return filtered;
+};
+
 export const formatFieldAmount = (value) => {
   const replaceRegex = /(\d)(?=(\d{3})+(?!\d))/g;
   return (!value && parseInt(value) !== 0) ? '' :
-        Number(value).toFixed(0).replace(replaceRegex, '$1.');
+        Number(value).toFixed(0).replace(replaceRegex, '$1,');
 };
 
 export const currencyFormatter = (unformatted) => {
@@ -42,14 +49,6 @@ export const getCurrentRouteTitle = (nav) => {
   return result(routeConfig, 'screenTitle', currentRouteName);
 };
 
-export const filterTransactionHistory = (transactionList = [], transactionHistoryType = null) => {
-  // transactionHistoryType gets added in middleware utils
-  if (!transactionHistoryType) {
-    return transactionList;
-  }
-  return filter(transactionList, {transactionHistoryType});
-};
-
 export const formatTransactionHistoryListItem = (transactionHistoryItem) => {
   const getTransactionItemType = (transactionItem) => {
     switch (transactionItem.transactionHistoryType) {
@@ -62,6 +61,7 @@ export const formatTransactionHistoryListItem = (transactionHistoryItem) => {
     metadata: transactionHistoryItem.metadata,
     amount: currencyFormatter(transactionHistoryItem.amount),
     type: getTransactionItemType(transactionHistoryItem),
+    id: transactionHistoryItem.id,
     date: moment(transactionHistoryItem.date).format('Do MMM, h:mm a') // June 6th 2017, 8:14:05 am
   };
 };

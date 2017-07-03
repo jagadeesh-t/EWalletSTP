@@ -6,11 +6,9 @@ import * as actions from '../actions/index.actions';
 import {getErrorMessage} from '../../utils/transformer.util';
 import result from 'lodash/result';
 import {language} from '../../config/language';
-import {deviceInfo} from '../../utils/device.util';
 
 export const login = (username, password) => (dispatch) => {
-  const {deviceId} = deviceInfo;
-  const payload = middleware.prepareLogin(username, password, deviceId);
+  const payload = middleware.prepareLogin(username, password);
   return api.login(payload).then((res) => {
     dispatch(actions.populateUser(result(res, 'data.user', {})));
     dispatch(NavigationActions.reset({
@@ -78,8 +76,7 @@ export const signup = () => (dispatch, getState) => {
   const state = getState();
   const {mobileNo, password, countryCode, name, email} = result(state, 'form.register.values', {});
   const otp = result(state, 'form.smsOtpForm.values.otp', null);
-  const {deviceId, deviceName} = deviceInfo;
-  const payload = middleware.prepareSignup(mobileNo, password, countryCode, name, email, otp, deviceId, deviceName);
+  const payload = middleware.prepareSignup(mobileNo, password, countryCode, name, email, otp);
   return api.signup(payload).
   then(() => dispatch(login(mobileNo, password))).
   catch((err) => {
@@ -97,14 +94,19 @@ export const getUser = () => (dispatch) => {
   });
 };
 
-export const getTransactions = () => (dispatch, getState) => {
+export const getTransactions = () =>
+(dispatch, getState) => {
   const currentUser = result(getState(), 'user', {});
-  return api.getTransactions().
+  const {currentTab, page, fromDate, toDate} = result(getState(), 'transactions', {});
+  dispatch(actions.setTransactionHistoryGetStatus(true));
+  return api.getTransactions({type: currentTab, page, fromDate, toDate}).
   then((res) => {
     const transactionList = middleware.transformTransactionHistory(res.data, currentUser);
-    dispatch(actions.updateTransactions(transactionList));
+    dispatch(actions.updateTransactionHistory(transactionList));
+    dispatch(actions.setTransactionHistoryGetStatus(false));
   }).
   catch((err) => {
+    dispatch(actions.setTransactionHistoryGetStatus(false));
     Toast.show(getErrorMessage(err), err.disableToast);
     return Promise.resolve();
   });
@@ -160,3 +162,17 @@ export const updateProfile = (payload) => (dispatch) => api.updateProfile(payloa
 }).catch((err) => {
   Toast.show(getErrorMessage(err), err.disableToast);
 });
+
+export const verifyDevice = (deviceId, deviceName) => (dispatch, getState) => {
+  const state = getState();
+  const otp = result(state, 'form.smsOtpForm.values.otp', null);
+  const payload = middleware.prepareVerifyDevice(deviceId, deviceName, otp);
+  return api.verifyPhone(payload).
+  then(() => dispatch(getUser())).
+  then(() => dispatch(NavigationActions.reset({
+    index: 0,
+    actions: [NavigationActions.navigate({routeName: 'Home'})]
+  }))).catch((err) => {
+    Toast.show(getErrorMessage(err), err.disableToast);
+  });
+};

@@ -5,7 +5,7 @@ export default {
     backgroundColor: theme.pageContainer.backgroundColor,
   },
   contentContainer: {
-    flex: 1
+    flexGrow: 1
   },
   refreshColor: theme.primary
 };

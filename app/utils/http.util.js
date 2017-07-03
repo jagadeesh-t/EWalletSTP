@@ -1,6 +1,6 @@
 import {SERVER_URL, endpoints} from '../config/api.config';
 import axios from 'axios';
-import {getStatusValidatorInterceptor, mockInterceptor} from './interceptors.util';
+import {getStatusValidatorInterceptor, addDefaultPayloadInterceptor, mockInterceptor} from './interceptors.util';
 
 const baseConfig = {
   baseURL: SERVER_URL,
@@ -20,12 +20,13 @@ const baseConfig = {
 // for http.post('/test',body, {cancelToken: source.token});
 // source.cancel('Operation canceled by the user.');
 
-export const get = (endpoint, options = {}) => {
+export const get = (endpoint, query = {}, options = {}) => {
   const config = {
     ...baseConfig,
     ...options,
     method: 'get',
     endpoint,
+    params: query,
     url: endpoints[endpoint]
   };
   return axios(config);
@@ -47,6 +48,8 @@ export const post = (endpoint, data = {}, options = {}) => {
 export const initializeHTTPInterceptors = (store) => {
   // REQUEST INTERCEPTORS
   axios.interceptors.request.use(mockInterceptor, Promise.reject);
+  axios.interceptors.request.use(addDefaultPayloadInterceptor(), Promise.reject);
+
   // RESPONSE INTERCEPTORS
   axios.interceptors.response.use(getStatusValidatorInterceptor(store), Promise.reject);
 };

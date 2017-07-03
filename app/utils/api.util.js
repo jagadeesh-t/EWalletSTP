@@ -12,7 +12,7 @@ export const logout = () => Http.get('LOGOUT');
 
 export const user = () => Http.get('USER');
 
-export const getTransactions = () => Http.get('TRANSACTIONHISTORY');
+export const getTransactions = (queryParams) => Http.get('TRANSACTIONHISTORY', queryParams);
 
 export const confirmTransfer = (payload) =>
   Http.post('CONFIRMTRANSFER', payload, {additional: ['FTXID']});

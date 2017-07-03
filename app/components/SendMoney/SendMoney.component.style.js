@@ -56,16 +56,15 @@ export default {
   },
   amountInputContainer: {
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   amountInputStyle: {
-    width: 280,
-    height: 80
+    flex: 5
   },
   trailingAmountText: {
-    paddingTop: 20,
-    paddingLeft: 10,
-    color: '#9B9B9B',
-    fontSize: 20
+    color: theme.textColorHighlight,
+    fontSize: 20,
+    flex: 1
   }
 };

@@ -11,6 +11,7 @@ class TransactionListItem extends React.Component {
     type: PropTypes.oneOf(['CREDIT', 'DEBIT', 'ALL']),
     metadata: PropTypes.string,
     amount: PropTypes.string,
+    id: PropTypes.number,
     date: PropTypes.string,
     style: PropTypes.object
   }
@@ -25,9 +26,9 @@ class TransactionListItem extends React.Component {
     }
   }
   render () {
-    const {type = 'ALL', metadata = '', amount = 0, date = '', style = {}} = this.props;
+    const {type = 'ALL', metadata = '', amount = 0, id = '',  date = '', style = {}} = this.props;
     const selectedType = result(this.typeMap, type, this.typeMap.CREDIT);
-    const formattedAmount = currencyFormatter(amount) || amount;
+    const formattedAmount = currencyFormatter(amount);
     return (
       <View style={[styles.listItemContainer, style]}>
         <View style={styles.iconContainer}>
@@ -39,7 +40,10 @@ class TransactionListItem extends React.Component {
             : <RNIcon style={[styles.icon, selectedType.style]} name={selectedType.icon} />
           }
         </View>
-        <View style={styles.descriptionContainer}><Text style={styles.description}>{metadata}</Text></View>
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.description}>{metadata}</Text>
+          {id ? <Text style={styles.description}>txid: {id}</Text> : null}
+        </View>
         <View style={styles.amountContainer}><Text style={styles.amount}>{formattedAmount}</Text></View>
         <View style={styles.dateContainer}><Text style={styles.date}>{date}</Text></View>
       </View>

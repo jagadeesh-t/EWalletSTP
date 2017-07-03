@@ -4,47 +4,79 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import result from 'lodash/result';
 import {getTransactions} from '../../state/actions/index.thunks';
-import {filterTransactionHistory} from '../../utils/transformer.util';
+import {setTransactionHistoryCurrentTab, setTransactionHistoryFromDate,
+setTransactionHistoryToDate, setTransactionHistoryPage} from '../../state/actions/index.actions';
 import {TH_DEBIT, TH_CREDIT} from '../../config/constants.config';
 
 const mapDispatchToProps = (dispatch) => ({
-  refreshTransactions: () => dispatch(getTransactions())
+  refreshTransactions: () => dispatch(getTransactions()),
+  setCurrentTab: (current) => {
+    dispatch(setTransactionHistoryCurrentTab(current));
+    return dispatch(getTransactions());
+  },
+  setFromDate: (fromDate) => {
+    dispatch(setTransactionHistoryFromDate(fromDate));
+    return dispatch(getTransactions());
+  },
+  setToDate: (toDate) => {
+    dispatch(setTransactionHistoryToDate(toDate));
+    return dispatch(getTransactions());
+  },
+  setPage: (page) => {
+    dispatch(setTransactionHistoryPage(page));
+    return dispatch(getTransactions());
+  }
 });
 
 const mapStateToProps = (state) => ({
-  transactions: result(state, 'transactions', []),
+  transactionHistory: result(state, 'transactions', {}),
   user: result(state, 'user', {})
 });
 
 class TransactionHistoryScreen extends Component {
   static propTypes = {
-    transactions: PropTypes.array,
+    transactionHistory: PropTypes.object,
+    user: PropTypes.object,
+    setFromDate: PropTypes.func,
+    setToDate: PropTypes.func,
     refreshTransactions: PropTypes.func,
-    user: PropTypes.object
+    setPage: PropTypes.func,
+    setCurrentTab: PropTypes.func
   }
-  state = {
-    transactionsRefreshing: false,
-    currentTab: 'ALL'
+  onPrevPage = () => {
+    const {transactionHistory, setPage, refreshTransactions} = this.props;
+    const {page} = transactionHistory;
+    const prevPage = page - 1;
+    if (prevPage >= 1) {
+      setPage(prevPage);
+      refreshTransactions();
+    }
   }
-  setCurrentTab = (currentTab) => {
-    this.setState({currentTab});
-  }
-  getTransactionList = () => {
-    const {refreshTransactions} = this.props;
-    this.setState({transactionsRefreshing: true});
-    return refreshTransactions().then(() => this.setState({transactionsRefreshing: false}));
+  onNextPage = () => {
+    const {transactionHistory = {}, setPage, refreshTransactions} = this.props;
+    const {page} = transactionHistory;
+    const lengthOfTransactionList = result(transactionHistory, 'transactionList.length', 0);
+    const nextPage = page + 1;
+    if (lengthOfTransactionList > 0) {
+      setPage(nextPage);
+      refreshTransactions();
+    }
   }
   tabFilterMap = {
     'CREDIT': TH_CREDIT,
     'DEBIT': TH_DEBIT
   }
   render () {
-    const {transactions, user} = this.props;
+    const {transactionHistory = {}, user, refreshTransactions, setFromDate, setToDate, setCurrentTab} = this.props;
+    const {currentTab, transactionList, page, fromDate, toDate, transactionsRefreshing} = transactionHistory;
     const balance = String(result(user, 'balanceAccount.balance', '--'));
-    const filteredTransactions = filterTransactionHistory(transactions, this.tabFilterMap[this.state.currentTab]);
     return (
-      <TransactionHistoryView onTabClick={this.setCurrentTab} currentFilter={this.state.currentTab} refreshing={this.state.transactionsRefreshing} refreshTransactions={this.getTransactionList}
-        transactionList={filteredTransactions} balance={balance} />);
+      <TransactionHistoryView
+        currentFilter={currentTab}  page={page}  transactionList={transactionList}
+        fromDate={fromDate} toDate={toDate} balance={balance} refreshing={transactionsRefreshing}
+        onTabClick={setCurrentTab}  refreshTransactions={refreshTransactions}
+        onNextPage={this.onNextPage} onPrevPage={this.onPrevPage} setFromDate={setFromDate} setToDate={setToDate}
+        />);
   }
 }
 

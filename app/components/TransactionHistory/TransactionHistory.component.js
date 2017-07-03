@@ -12,15 +12,19 @@ import {currencyFormatter} from '../../utils/transformer.util';
 
 class TransactionHistoryView extends React.Component {
   static propTypes = {
-    transactionList: PropTypes.array,
-    balance: PropTypes.string,
     currentFilter: PropTypes.oneOf(['ALL', 'CREDIT', 'DEBIT']),
-    currentPagination: PropTypes.string,
-    onNextResult: PropTypes.func,
-    onPrevResult: PropTypes.func,
-    onTabClick: PropTypes.func,
+    page: PropTypes.number,
+    transactionList: PropTypes.array,
+    fromDate: PropTypes.string,
+    toDate: PropTypes.string,
     refreshing: PropTypes.bool,
-    refreshTransactions: PropTypes.func
+    balance: PropTypes.string,
+    onTabClick: PropTypes.func,
+    refreshTransactions: PropTypes.func,
+    onNextPage: PropTypes.func,
+    onPrevPage: PropTypes.func,
+    setFromDate: PropTypes.func,
+    setToDate: PropTypes.func
   }
 
   getListItem = ({item}) => {
@@ -41,8 +45,8 @@ class TransactionHistoryView extends React.Component {
   };
 
   render () {
-    const {transactionList = [], currentPagination = '1', refreshing,
-      onPrevResult = noop, balance = '--', onNextResult = noop, refreshTransactions = noop} = this.props;
+    const {transactionList = [], page = 1, refreshing,
+      onPrevPage = noop, balance = '--', onNextPage = noop, refreshTransactions = noop} = this.props;
 
     return (
       <View style={styles.pageContainer}>
@@ -66,14 +70,14 @@ class TransactionHistoryView extends React.Component {
         />
         <View style={styles.filterBar} >
           <View style={styles.paginateContainer}>
-            <Touchable onPress={onPrevResult}>
+            <Touchable onPress={onPrevPage}>
               <RNIcon style={styles.paginateControl} name='chevron-left' />
             </Touchable>
-            <Touchable onPress={onNextResult}>
+            <Touchable onPress={onNextPage}>
               <RNIcon style={styles.paginateControl} name='chevron-right' />
             </Touchable>
           </View>
-          <View style={styles.paginateStatus}><Text style={styles.paginateControl}>{currentPagination}</Text></View>
+          <View style={styles.paginateStatus}><Text style={styles.paginateControl}>{page}</Text></View>
         </View>
       </View>
     );

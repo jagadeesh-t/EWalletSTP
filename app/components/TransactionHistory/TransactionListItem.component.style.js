@@ -28,12 +28,15 @@ export default {
     fontSize: theme.fontSizeSmall
   },
   descriptionContainer: {
-    flex: 6
+    flex: 6,
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
   description: {
     textAlign: 'center',
+    flex: 1,
     fontSize: theme.fontSizeSmall,
-    fontWeight: theme.fontWeightNormal
+    fontWeight: theme.fontWeightBold
   },
   amountContainer: {
     flex: 3

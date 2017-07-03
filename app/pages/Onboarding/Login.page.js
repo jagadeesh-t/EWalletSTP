@@ -11,8 +11,8 @@ const formConfig = {
   form: 'login',
   destroyOnUnmount: true,
   initialValues: {
-    mobileNo: '1234567',
-    password: 'qwerty123'
+    mobileNo: '9632144542',
+    password: 'qwerty1'
   },
   onSubmit: (values, dispatch) => {
     const {mobileNo, password} = values;
