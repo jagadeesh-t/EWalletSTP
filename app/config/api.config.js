@@ -13,7 +13,8 @@ export const endpoints = {
   SENDVERIFICATIONMESSAGE: '/send-verification-message',
   VERIFYPHONE: '/verify-device',
   CHANGEPASSWORD: '/passwordReset',
-  UPDATEPROFILE: '/profile'
+  UPDATEPROFILE: '/profile',
+  UPDATEDEVICETOKEN: '/update-device-push-token'
 };
 
 export const mockResponses = env.fixtures || {};

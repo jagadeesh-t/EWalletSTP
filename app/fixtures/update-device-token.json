@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:1337/update-device-push-token",
+  "method": "post",
+  "body": {
+    "deviceId": "1234567",
+    "deviceName": "12345",
+    "notificationId": "21212121"
+  },
+  "response": [{
+    "deviceId": "1234567",
+    "deviceName": "Moto G4",
+    "notificationId": "21212121",
+    "verified": true,
+    "id": 2,
+    "createdAt": "2017-07-03T13:14:32.000Z",
+    "updatedAt": "2017-07-03T17:34:10.000Z",
+    "account": 2
+  }]
+}

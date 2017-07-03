@@ -5,7 +5,6 @@ import {wrapMethodInFunction, parseServerEValidationErrors} from './transformer.
 import {language} from '../config/language';
 import tracker from './googleAnalytics.util';
 import {sendVerificationMessage, verifyDevice, logout} from '../state/actions/index.thunks';
-import {deviceInfo} from '../utils/device.util';
 
 export const jsErrorHandler = (e = {}, isFatal) => {
   console.log(e); // for logging to android logs or ios logs
@@ -41,8 +40,7 @@ export const serverErrorDataHandler = (response = {}, store) => {
     return {disableToast: false, ...parseServerEValidationErrors(data)};
   }
   case 'DEVICE_NOT_VERIFIED': {
-    const {deviceId, deviceName} = deviceInfo;
-    store.dispatch(sendVerificationMessage(data.phone, data.countryCode, verifyDevice(deviceId, deviceName)));
+    store.dispatch(sendVerificationMessage(data.phone, data.countryCode, verifyDevice()));
     return {disableToast: true, ...data};
   }
   case 'DEVICE_NOT_FOUND': {

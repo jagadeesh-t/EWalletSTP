@@ -101,8 +101,10 @@ export const prepareChangePassword = (password) => ({
   'password': password
 });
 
-export const prepareVerifyDevice = (deviceId, deviceName, otp) => ({
-  'code': otp,
-  'deviceId': deviceId,
-  'deviceName': deviceName
+export const prepareVerifyDevice = (otp) => ({
+  'code': otp
+});
+
+export const prepareUpdateDevicePushToken = (notificationId) => ({
+  'notificationId': notificationId
 });

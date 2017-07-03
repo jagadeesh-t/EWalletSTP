@@ -6,6 +6,7 @@ import * as actions from '../actions/index.actions';
 import {getErrorMessage} from '../../utils/transformer.util';
 import result from 'lodash/result';
 import {language} from '../../config/language';
+import {updateClientFCMTokenOnServer} from '../../utils/firebase.util';
 
 export const login = (username, password) => (dispatch) => {
   const payload = middleware.prepareLogin(username, password);
@@ -15,7 +16,9 @@ export const login = (username, password) => (dispatch) => {
       index: 0,
       actions: [NavigationActions.navigate({routeName: 'Home'})]
     }));
-  }).catch((err) => {
+  }).
+  then(() => updateClientFCMTokenOnServer()).
+  catch((err) => {
     Toast.show(getErrorMessage(err), err.disableToast);
   });
 };
@@ -163,16 +166,18 @@ export const updateProfile = (payload) => (dispatch) => api.updateProfile(payloa
   Toast.show(getErrorMessage(err), err.disableToast);
 });
 
-export const verifyDevice = (deviceId, deviceName) => (dispatch, getState) => {
+export const verifyDevice = () => (dispatch, getState) => {
   const state = getState();
   const otp = result(state, 'form.smsOtpForm.values.otp', null);
-  const payload = middleware.prepareVerifyDevice(deviceId, deviceName, otp);
+  const payload = middleware.prepareVerifyDevice(otp);
   return api.verifyPhone(payload).
   then(() => dispatch(getUser())).
   then(() => dispatch(NavigationActions.reset({
     index: 0,
     actions: [NavigationActions.navigate({routeName: 'Home'})]
-  }))).catch((err) => {
+  }))).
+  then(() => updateClientFCMTokenOnServer()).
+  catch((err) => {
     Toast.show(getErrorMessage(err), err.disableToast);
   });
 };
