@@ -1,6 +1,6 @@
 const defaults = {
   ENV: 'dev',
-  MOCKAPI: true,
+  MOCKAPI: false,
   URL: 'https://test-dev.com/test',
   GA_TRACKER_ID: 'UA-XXXXX',
   GA_TRACKER_INTERVAL: 2,
