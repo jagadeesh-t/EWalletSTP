@@ -6,8 +6,8 @@ import result from 'lodash/result';
 
 const configurationOptions = {
   debug: true,
-  promptOnMissingPlayServices: false,
-  errorOnMissingPlayServices: false
+  promptOnMissingPlayServices: true,
+  errorOnMissingPlayServices: true
 };
 
 const firebase = RNFirebase.initializeApp(configurationOptions);
