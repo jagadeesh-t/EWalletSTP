@@ -2,5 +2,5 @@
 echo "$DEVICE: Before building"
 
 if [[ "$DEVICE" = "ANDROID" ]]; then
-  scripts/android/decrypt-keystore.sh
+  scripts/android/decrypt-files.sh
 fi

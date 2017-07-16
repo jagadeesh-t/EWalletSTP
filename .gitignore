@@ -57,3 +57,5 @@ cache
 coverage
 local.js
 yarn-error.log
+
+google-services.json
