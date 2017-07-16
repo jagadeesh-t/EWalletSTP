@@ -1,1 +1,13 @@
- version: 2
+version: 2
+jobs:
+  build:
+    working_directory: ~/code
+    docker:
+      - image: circleci/android:api-25-alpha
+    environment:
+      JVM_OPTS: -Xmx3200m
+    steps:
+      - checkout
+      - run:
+          name: Building android
+          command: chmod a+x ./scripts/**/* && sh ./scripts/main.sh
