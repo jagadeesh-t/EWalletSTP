@@ -141,9 +141,9 @@ dependencies {
     compile(project(':react-native-firebase')) {
         transitive = false
     }
-    compile 'com.google.firebase:firebase-core:11.0.1'
-    compile "com.google.firebase:firebase-crash:11.0.1"
-    compile "com.google.firebase:firebase-messaging:11.0.1"
+    compile "com.google.firebase:firebase-core:11.0.2"
+    compile "com.google.firebase:firebase-crash:11.0.2"
+    compile "com.google.firebase:firebase-messaging:11.0.2"
     compile project(':react-native-vector-icons')
     compile project(':react-native-camera')
     compile project(':react-native-version-number')
