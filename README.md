@@ -64,8 +64,13 @@ Currently whenever you push three types of tests run to make sure you are pushin
 3. Thats it.
 
 
-## Building Instructions
+## Issues and how to fix them
 
-**For android**
+1. ** google-services.json** not found -
 
-```export DEVICE="ANDROID" && export BUILD_NUMBER=<BUILD_NUMBER> && export KEY_PASSWORD=<PASSWORD> && export KEY_STORE_PASSWORD=<PASSWORD> && rm -fr $TMPDIR/react-* && ./scripts/before.sh && ./scripts/build.sh && ./scripts/package.sh && ./scripts/clean-up.sh```
+Run the command `KEY_STORE_PASSWORD=<THE_PASSWORD> ./scripts/android/decrypt-files.sh` once
+and then run the actual command. This will setup the google-services.json on your computer which is actually present in enrypted form in the repo because it contains the API KEYS.
+
+
+
+## Building

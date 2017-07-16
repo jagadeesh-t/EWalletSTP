@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 echo "$DEVICE: Before building"
 
 if [[ "$DEVICE" = "ANDROID" ]]; then

@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --verbose --coverage --forceExit",
     "ios": "rndebugger-open && react-native run-ios",
-    "android": "cd android && ./gradlew clean && cd .. && rndebugger-open && react-native run-android",
+    "android": "bash ./scripts/android/decrypt-files.sh && cd android && ./gradlew clean && cd .. && rndebugger-open && react-native run-android",
     "android:release": "cd android && ./gradlew assembleRelease && cd ..",
     "test:update": "jest --verbose --coverage --updateSnapshot",
     "test:watch": "jest --verbose --watch",

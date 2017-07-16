@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+if [[ $KEY_STORE_PASSWORD ]]; then echo "Keystore Password is set"; else echo "Err: SET KEY_STORE_PASSWORD env variable";exit;   fi
 
 echo "Decrypting keystores."
 
