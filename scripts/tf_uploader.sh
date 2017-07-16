@@ -2,7 +2,7 @@
 
 # This upload script is both for iOS and Android.
 
-UPLOADER_VERSION=2.11
+UPLOADER_VERSION=2.12
 # Put your TestFairy API_KEY here. Find it here: https://app.testfairy.com/settings/#tab-api-key
 TESTFAIRY_API_KEY=$TF_KEY
 
@@ -14,7 +14,7 @@ TESTER_GROUPS="dev"
 NOTIFY="on"
 
 # If AUTO_UPDATE is "on" all users will be prompt to update to this build next time they run the app
-AUTO_UPDATE="on"
+AUTO_UPDATE="off"
 
 # The maximum recording duration for every test.
 MAX_DURATION="10m"
@@ -28,7 +28,7 @@ COMMENT=""
 # locations of various tools
 CURL=curl
 
-SERVER_ENDPOINT=http://app.testfairy.com
+SERVER_ENDPOINT=https://upload.testfairy.com
 
 usage() {
 	echo "Usage: testfairy-upload-ios.sh APP_FILENAME"

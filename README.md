@@ -55,4 +55,17 @@ Currently whenever you push three types of tests run to make sure you are pushin
 - Twillio admin account
 - AWS admin account
 - Github repo
-- Slack 
+- Slack
+
+## Encrypting Instructions
+
+1. openssl aes-256-cbc -in <FILE_TO_ENCRYPT> -out <FILE_TO_ENCRYPT>.enc -a
+2. It will ask for password - enter your encryption password
+3. Thats it.
+
+
+## Building Instructions
+
+**For android**
+
+```export DEVICE="ANDROID" && export BUILD_NUMBER=<BUILD_NUMBER> && export KEY_PASSWORD=<PASSWORD> && export KEY_STORE_PASSWORD=<PASSWORD> && rm -fr $TMPDIR/react-* && ./scripts/before.sh && ./scripts/build.sh && ./scripts/package.sh && ./scripts/clean-up.sh```
