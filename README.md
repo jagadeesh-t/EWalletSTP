@@ -74,3 +74,12 @@ and then run the actual command. This will setup the google-services.json on you
 
 
 ## Building
+
+1.To build an APK for testing.
+
+`export KEY_PASSWORD=<PASSWORD> && export KEY_STORE_PASSWORD=<PASSWORD> && export BUILD_NUMBER=1.1.test && yarn run build-android-apk`
+
+
+2.To upload the generated APK to Testfairy after it is built.
+
+`export TF_KEY=<TESTFAIRY_API_KEY> && yarn run upload-apk-to-tf`

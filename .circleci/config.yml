@@ -3,11 +3,30 @@ jobs:
   build:
     working_directory: ~/code
     docker:
+      - image: circleci/node:8.1.4
       - image: circleci/android:api-25-alpha
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout
       - run:
+          name: node-version
+          command: 'echo `node -v`'
+      - run:
+          name: install-yarn
+          command: 'curl -L https://github.com/yarnpkg/yarn/releases/download/v0.28.1/yarn_0.28.1_all.deb -o yarn.deb && sudo dpkg -i yarn.deb'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: yarn-install
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
           name: Building android
-          command: chmod a+x ./scripts/**/* && sh ./scripts/main.sh
+          command: chmod a+x ./scripts/**/* && bash ./scripts/main.sh
+      - run:
+          name: Uploading to Test Fairy
+          command: npm run

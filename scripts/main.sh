@@ -7,18 +7,12 @@ if [[ "$DEVICE" = "ANDROID" ]]; then
   if [[ $KEY_STORE_PASSWORD ]]; then echo "Keystore Password is set"; else echo "Err: SET KEY_STORE_PASSWORD env variable";exit;   fi
   if [[ $BUILD_NUMBER ]]; then echo "Build number is set"; else echo "Err: SET BUILD_NUMBER env variable";exit;   fi
 
-  export DEVICE="ANDROID" &&
+  export DEVICE="ANDROID"
   rm -fr $TMPDIR/react-* &&
   bash ./scripts/before.sh &&
   bash ./scripts/build.sh &&
   bash ./scripts/package.sh &&
-  bash ./scripts/clean-up.sh &&
-
-  if [[ $TF_KEY ]]; then
-    echo "Testfairy key is set, Uploading to Test fairy...";
-    bash ./scripts/tf_uploader.sh android/app/build/outputs/apk/app-release.apk
-  else echo "TF_KEY env variable is not set, hence not uploading to Testfairy";exit;
-  fi
+  bash ./scripts/clean-up.sh
 
 fi
 
@@ -30,5 +24,4 @@ if [[ "$DEVICE" = "IOS" ]]; then
   export DEVICE="IOS";
 
   echo "BUILD SCRIPT YET TO BE IMPLEMENTED"
-
 fi
