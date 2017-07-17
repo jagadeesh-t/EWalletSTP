@@ -13,7 +13,8 @@
     "test:coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html",
     "lint": "eslint app/",
     "lint:fix": "eslint app/ --fix",
-    "build-android-apk":"export DEVICE=ANDROID && bash ./scripts/main.sh",
+    "build-android-apk":"export EWALLET_ENV='UAT' && export DEVICE=ANDROID && bash ./scripts/main.sh",
+    "build-android-apk-prod":"export EWALLET_ENV='PRODUCTION' && export DEVICE=ANDROID && bash ./scripts/main.sh",
     "upload-apk-to-tf": "export DEVICE=ANDROID && bash ./scripts/uploader.sh"
   },
   "dependencies": {

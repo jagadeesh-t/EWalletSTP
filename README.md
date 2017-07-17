@@ -75,11 +75,19 @@ and then run the actual command. This will setup the google-services.json on you
 
 ## Building
 
-1.To build an APK for testing.
+1.To build an signed UAT APK for testing.
 
-`export KEY_PASSWORD=<PASSWORD> && export KEY_STORE_PASSWORD=<PASSWORD> && export BUILD_NUMBER=1.1.test && yarn run build-android-apk`
+`export KEY_PASSWORD=<UAT_PASSWORD> && export KEY_STORE_PASSWORD=<UAT_PASSWORD> && export BUILD_NUMBER=1.1.test && yarn run build-android-apk`
 
 
 2.To upload the generated APK to Testfairy after it is built.
 
 `export TF_KEY=<TESTFAIRY_API_KEY> && yarn run upload-apk-to-tf`
+
+Note: DO NOT upload prod apk to Testfairy
+
+3. To build Production playstore apk for playstore upload.
+
+`export KEY_PASSWORD=<PROD_PASSWORD> && export KEY_STORE_PASSWORD=<PROD_PASSWORD> && export BUILD_NUMBER=<BUILD_NUMBER> && yarn run build-android-apk-prod`
+
+Note: PROD_PASSWORD is different from UAT_PASSWORD for security reasons.
