@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -23,7 +22,6 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		1C94C9BE41ED4CF1BF100D54 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74BCB14FBA404D76BF1434A5 /* SimpleLineIcons.ttf */; };
-		2E04C732D50F4C498BB9E404 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CDC6D88912442BB9F86BD3 /* libRNFirebase.a */; };
 		4CD38D6ED69D45F9A9299C11 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F83EF43B4254568B2C608BE /* libRCTCamera.a */; };
 		574D17F270A64849AB934AB5 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A884B4FB9E5414683FE44D9 /* MaterialIcons.ttf */; };
 		58424E9F9A8935091CD8B8CC /* libPods-EwalletSTPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC98B4629EA5EC40AEDFA75C /* libPods-EwalletSTPTests.a */; };
@@ -303,13 +301,6 @@
 			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
 			remoteInfo = "double-conversion";
 		};
-		A6C84EB11F02A85A0084DD79 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNFirebase;
-		};
 		A6FBFE091F05E33A00E62CD9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AB0173CB340540BFAD3C4E45 /* RNDeviceInfo.xcodeproj */;
@@ -343,7 +334,6 @@
 		197E7E5F4C184248B65F9459 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		215D8D3C76494BDC903CB9DF /* LRDRCTSimpleToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LRDRCTSimpleToast.xcodeproj; path = "../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast.xcodeproj"; sourceTree = "<group>"; };
 		22892A48C9B6477C89F95979 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		361C50FC38C64A26926A4D69 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		3CF04496A70080FDE654E2B0 /* libPods-EwalletSTP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EwalletSTP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCAD169AC7C145C189A1891 /* libPods-EwalletSTP-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EwalletSTP-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -382,7 +372,6 @@
 		CC98B4629EA5EC40AEDFA75C /* libPods-EwalletSTPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EwalletSTPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCD0D7E13574B008F1F53E9 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		D5A095EB3B97A2B638CEE1F0 /* Pods-EwalletSTP-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EwalletSTP-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EwalletSTP-tvOSTests/Pods-EwalletSTP-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D5CDC6D88912442BB9F86BD3 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
 		DE6498C2D6484EE7A85022AF /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		EA7987F0915F4AA0A153B24C /* libLRDRCTSimpleToast.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLRDRCTSimpleToast.a; sourceTree = "<group>"; };
 		EBB664603A064EBF846C46D4 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
@@ -427,7 +416,6 @@
 				C4F8FCB8C1144EC097C6EFB3 /* libRNVersionNumber.a in Frameworks */,
 				4CD38D6ED69D45F9A9299C11 /* libRCTCamera.a in Frameworks */,
 				6B58FE83CBA84B8D91E063F5 /* libRNVectorIcons.a in Frameworks */,
-				2E04C732D50F4C498BB9E404 /* libRNFirebase.a in Frameworks */,
 				8FC450132B0E5A2E98E39632 /* libPods-EwalletSTP.a in Frameworks */,
 				B6C99000696F4ED89A161224 /* libRNDeviceInfo.a in Frameworks */,
 			);
@@ -603,7 +591,6 @@
 				C6FDF69F9A084B229A0E1195 /* RNVersionNumber.xcodeproj */,
 				12A46ADE987449F4B68CB90A /* RCTCamera.xcodeproj */,
 				197E7E5F4C184248B65F9459 /* RNVectorIcons.xcodeproj */,
-				31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */,
 				AB0173CB340540BFAD3C4E45 /* RNDeviceInfo.xcodeproj */,
 			);
 			name = Libraries;
@@ -713,14 +700,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A6C84E8B1F02A85A0084DD79 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A6C84EB21F02A85A0084DD79 /* libRNFirebase.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A6FBFDE71F05E33A00E62CD9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,8 +783,8 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 5PE6299DER;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = GXNEV5845H;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -889,10 +868,6 @@
 				{
 					ProductGroup = A6FBFDE71F05E33A00E62CD9 /* Products */;
 					ProjectRef = AB0173CB340540BFAD3C4E45 /* RNDeviceInfo.xcodeproj */;
-				},
-				{
-					ProductGroup = A6C84E8B1F02A85A0084DD79 /* Products */;
-					ProjectRef = 31C6969B66BB44D7B1BDACDB /* RNFirebase.xcodeproj */;
 				},
 				{
 					ProductGroup = A68FBBE11ED6B4B100214290 /* Products */;
@@ -1154,13 +1129,6 @@
 			remoteRef = A6C84EAE1F02A85A0084DD79 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A6C84EB21F02A85A0084DD79 /* libRNFirebase.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNFirebase.a;
-			remoteRef = A6C84EB11F02A85A0084DD79 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		A6FBFE0A1F05E33A00E62CD9 /* libRNDeviceInfo.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1372,7 +1340,6 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 				);
 				INFOPLIST_FILE = EwalletSTPTests/Info.plist;
@@ -1380,8 +1347,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1409,7 +1374,6 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 				);
 				INFOPLIST_FILE = EwalletSTPTests/Info.plist;
@@ -1417,8 +1381,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1438,7 +1400,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 5PE6299DER;
+				DEVELOPMENT_TEAM = GXNEV5845H;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
@@ -1448,7 +1410,6 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 				);
 				INFOPLIST_FILE = EwalletSTP/Info.plist;
@@ -1458,9 +1419,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.walletSTP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallet.Ewallet.STP;
 				PRODUCT_NAME = EwalletSTP;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "69cfc91d-4655-410d-a565-2ba78522c76c";
+				PROVISIONING_PROFILE_SPECIFIER = "Firebase-APNS";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1472,7 +1434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5PE6299DER;
+				DEVELOPMENT_TEAM = GXNEV5845H;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
@@ -1482,7 +1444,6 @@
 					"$(SRCROOT)/../node_modules/react-native-version-number/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 				);
 				INFOPLIST_FILE = EwalletSTP/Info.plist;
@@ -1492,9 +1453,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.walletSTP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallet.Ewallet.STP;
 				PRODUCT_NAME = EwalletSTP;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "69cfc91d-4655-410d-a565-2ba78522c76c";
+				PROVISIONING_PROFILE_SPECIFIER = "Firebase-APNS";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

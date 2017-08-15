@@ -11,7 +11,7 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
-@import Firebase;
+#import <Firebase.h>
 #import "RNFirebaseMessaging.h"
 
 @implementation AppDelegate
@@ -34,13 +34,13 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   
-  [FIRApp configure]; //Firebase initialisation
+  
+  [FIRApp configure];
   [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
   
   return YES;
 }
 
-//Firebase cloud messaging methods
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
   [RNFirebaseMessaging didReceiveLocalNotification:notification];
 }
