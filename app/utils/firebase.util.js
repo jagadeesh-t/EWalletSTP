@@ -3,6 +3,7 @@ import * as api from './api.util';
 import * as middleware from './middleware.util';
 import {Toast} from '../utils/RNHelpers.util';
 import result from 'lodash/result';
+import {Platform} from 'react-native';
 
 const configurationOptions = {
   debug: true,
@@ -15,8 +16,12 @@ const firebase = RNFirebase.initializeApp(configurationOptions);
 firebase.messaging().requestPermissions();
 
 firebase.messaging().onMessage((message) => {
-  const title = result(message, 'fcm.title', null);
-  const body = result(message, 'fcm.body', null);
+  let title = result(message, 'fcm.title', '');
+  let body = result(message, 'fcm.body', '');
+  if (Platform.OS === 'ios') {
+    title = result(message, 'notification.body', '');
+    body = result(message, 'body', '');
+  }
   Toast.show(`${title} ${body}`);
 });
 
