@@ -5,7 +5,10 @@ import {connect} from 'react-redux';
 import {login} from '../../state/actions/index.thunks';
 import PropTypes from 'prop-types';
 import * as validations from '../../utils/validator.util';
+import {setLanguage} from '../../state/actions/index.actions';
 import {NavigationActions} from 'react-navigation';
+import result from 'lodash/result';
+import {setCurrent} from '../../config/language/index';
 
 const formConfig = {
   form: 'login',
@@ -28,21 +31,29 @@ const formConfig = {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  goToRegister: () => dispatch(NavigationActions.navigate({routeName: 'Register'}))
+  goToRegister: () => dispatch(NavigationActions.navigate({routeName: 'Register'})),
+  changeLanguage: (langId) => {
+    setCurrent(langId);
+    dispatch(setLanguage(langId));
+  }
 });
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => ({
+  selectedLangauge: result(state, 'currentLanguage.langCode')
+});
 
 const LoginForm = reduxForm(formConfig)(LoginView);
 
 class LoginScreen extends Component {
   static propTypes = {
-    goToRegister: PropTypes.func
+    goToRegister: PropTypes.func,
+    selectedLangauge: PropTypes.string,
+    changeLanguage: PropTypes.func
   }
   render () {
-    const {goToRegister} = this.props;
+    const {goToRegister, selectedLangauge, changeLanguage} = this.props;
     return (
-      <LoginForm goToRegister={goToRegister} />);
+      <LoginForm goToRegister={goToRegister} selectedLangauge={selectedLangauge} changeLanguage={changeLanguage}/>);
   }
 }
 

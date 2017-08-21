@@ -8,7 +8,9 @@ export default {
     flexGrow: 1
   },
   titleContainer: {
-    flex: 1
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   logoContainer: {
     height: 120,

@@ -6,6 +6,8 @@ export default {
   COMMON__ERROR: 'Error Processing the Request',
   QRSCANNER__FLASH: 'Flash',
   QRSCANNER__CLOSE: 'Close',
+  LOGIN__TITLE: 'Please Log in',
+  LOGIN__REGISTER_Q: 'New to EWallet ? Register Here',
   REGISTER__TITLE: 'New User Registration',
   REGISTER__MOBILENO: 'Mobile No',
   REGISTER__MOBILE_PLACEHOLDER: 'Enter your mobile number',

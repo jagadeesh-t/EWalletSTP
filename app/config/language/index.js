@@ -2,21 +2,23 @@ import English from './English';
 import Portugese from './Portugese';
 import storage from '../../utils/storage.util';
 
-const current = {
-  langCode: 'en'
+const currentLangState = {
+  langCode: 'pt'
 };
 
-export const listOfLanguages = {
+const listOfLanguages = {
   en: English,
   pt: Portugese
 };
 
 module.exports = {
   get language () {
-    return listOfLanguages[current.langCode];
+    return listOfLanguages[currentLangState.langCode];
   },
   setCurrent (langCode) {
     storage.set('LANGUAGE', langCode);
-    current.langCode = langCode;
-  }
+    currentLangState.langCode = langCode;
+  },
+  currentLangState,
+  listOfLanguages
 };

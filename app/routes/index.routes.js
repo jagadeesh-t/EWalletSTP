@@ -10,7 +10,6 @@ import LoginPage from '../pages/Onboarding/Login.page';
 import TransactionHistoryPage from '../pages/TransactionHistroy/TransactionHistory.page';
 import {getTitleBar} from '../components/TitleBar/TitleBar.component';
 import {getCurrentRouteTitle} from '../utils/transformer.util';
-import {language} from '../config/language';
 import CreditRequest from  '../pages/Distributor/CreditRequestPage';
 import SettingsPage from  '../pages/Settings/Settings.page';
 import ProfilePage from  '../pages/Profile/Profile.page';
@@ -18,47 +17,47 @@ import SmsOtpPage from '../pages/SmsOtp/SmsOtp.page';
 
 export const MainRoutes = {
   Login: {
-    screenTitle: language.TITLE__LOGIN,
+    screenTitle: 'TITLE__LOGIN',
     screen: LoginPage
   },
   Settings: {
-    screenTitle: language.SETTINGS__INDEX_TITLE,
+    screenTitle: 'SETTINGS__INDEX_TITLE',
     screen: SettingsPage
   },
   Profile: {
-    screenTitle: language.PROFILE__INDEX_TITLE,
+    screenTitle: 'PROFILE__INDEX_TITLE',
     screen: ProfilePage
   },
   CreditRequest: {
-    screenTitle: language.CREDIT_REQUEST__INDEX_TITLE,
+    screenTitle: 'CREDIT_REQUEST__INDEX_TITLE',
     screen: CreditRequest
   },
   Register: {
-    screenTitle: language.TITLE__REGISTER,
+    screenTitle: 'TITLE__REGISTER',
     screen: RegisterPage
   },
   Home: {
-    screenTitle: language.TITLE__HOME,
+    screenTitle: 'TITLE__HOME',
     screen: HomePage
   },
   QRCodeReader: {
-    screenTitle: language.TITLE__QRCODE_READER,
+    screenTitle: 'TITLE__QRCODE_READER',
     screen: QRCodeReaderPage
   },
   SendMoney: {
-    screenTitle: language.TITLE__SEND_MONEY,
+    screenTitle: 'TITLE__SEND_MONEY',
     screen: SendMoneyPage
   },
   SendConfirmation: {
-    screenTitle: language.TITLE__SEND_CONFIRMATION,
+    screenTitle: 'TITLE__SEND_CONFIRMATION',
     screen: SendConfirmationPage
   },
   Receive: {
-    screenTitle: language.TITLE__RECEIVE,
+    screenTitle: 'TITLE__RECEIVE',
     screen: ReceivePage
   },
   TransactionHistory: {
-    screenTitle: language.TITLE__TRANSACTION_HISTORY,
+    screenTitle: 'TITLE__TRANSACTION_HISTORY',
     screen: TransactionHistoryPage
   }
 };
@@ -81,7 +80,7 @@ const Routes = StackNavigator({
     screen: SendResultPage
   },
   SmsOtpModal: {
-    screenTitle: language.SMS_OTP__INDEX_TITLE,
+    screenTitle: 'SMS_OTP__INDEX_TITLE',
     screen: SmsOtpPage
   }
 }, {
