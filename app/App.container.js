@@ -7,23 +7,37 @@ import {setLanguage} from './state/actions/index.actions';
 import {ConnectedRoutes} from './routes/Router';
 import {connect} from 'react-redux';
 import './utils/firebase.util';
+import {View} from 'react-native';
+import result from 'lodash/result';
+import Spinner from 'react-native-loading-spinner-overlay';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => ({
+  spinner: result(state, 'spinner', {})
+});
 
 const mapDispatchToProps = (dispatch) => ({
   setInitialLanguage: () => {
     storage.get('LANGUAGE').then((langId) => {
-      setCurrent(langId);
-      dispatch(setLanguage(langId));
+      if (langId) {
+        setCurrent(langId);
+        dispatch(setLanguage(langId));
+      }
     }).catch((err) => {
       console.log(err);
     });
   }
 });
 
+const styles = {
+  container: {
+    flexGrow: 1
+  }
+};
+
 class AppComponent extends React.Component {
   static propTypes = {
-    setInitialLanguage: PropTypes.func
+    setInitialLanguage: PropTypes.func,
+    spinner: PropTypes.object
   }
   componentDidMount () {
     SplashScreen.hide();
@@ -31,8 +45,12 @@ class AppComponent extends React.Component {
   }
 
   render () {
+    const {spinner} = this.props;
     return (
-      <ConnectedRoutes />
+      <View style={styles.container}>
+        <Spinner visible={spinner.visible} />
+        <ConnectedRoutes />
+      </View>
     );
   }
 }

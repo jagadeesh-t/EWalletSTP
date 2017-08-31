@@ -23,6 +23,10 @@ export const CLEAN_APP_STATE = 'CLEAN_APP_STATE';
 // LANGUAGE action constant
 export const SET_LANGUAGE = 'SET_LANGUAGE';
 
+// SPINNER action constants
+export const SET_SPINNER_ACTIVE = 'SET_SPINNER_ACTIVE';
+export const SET_SPINNER_INACTIVE = 'SET_SPINNER_INACTIVE';
+
 // =================
 //  ACTION CREATORS
 // =================
@@ -45,3 +49,7 @@ export const setLanguage = createAction(SET_LANGUAGE); // payload u send is lang
 
 // CLEAN REDUX STATE action creators
 export const cleanAppState = createAction(CLEAN_APP_STATE);
+
+// SPINNER action constants
+export const showSpinner = createAction(SET_SPINNER_ACTIVE);
+export const hideSpinner = createAction(SET_SPINNER_INACTIVE);

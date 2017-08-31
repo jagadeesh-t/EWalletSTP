@@ -14,7 +14,8 @@ export const endpoints = {
   VERIFYPHONE: '/verify-device',
   CHANGEPASSWORD: '/passwordReset',
   UPDATEPROFILE: '/profile',
-  UPDATEDEVICETOKEN: '/update-device-push-token'
+  UPDATEDEVICETOKEN: '/update-device-push-token',
+  EVERYPAYPAYMENTPAGE: '/every-pay-payment-page'
 };
 
 export const mockResponses = env.fixtures || {};

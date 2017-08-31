@@ -33,7 +33,8 @@ export const getStatusValidatorInterceptor = (store) => (response) => {
     return response;
   }
   tracker.trackEvent('API_FAILED', `ENDPOINT: ${result(response, 'config.endpoint', 'NOT FOUND')}`, {label: `STATUS_CODE: ${status}`});
-  throw serverStatusHandler(response, store) || serverErrorDataHandler(response, store);
+  const err = serverStatusHandler(response, store) || serverErrorDataHandler(response, store);
+  throw err;
 };
 
 // Interceptor that sets mock response

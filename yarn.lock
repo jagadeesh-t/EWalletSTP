@@ -4112,6 +4112,10 @@ react-native-keyboard-aware-scroll-view@^0.2.9:
   dependencies:
     react-timer-mixin "^0.13.3"
 
+react-native-loading-spinner-overlay@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/react-native-loading-spinner-overlay/-/react-native-loading-spinner-overlay-0.5.2.tgz#b7bcd277476d596615fd7feee601789f9bdc7acc"
+
 react-native-restart@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/react-native-restart/-/react-native-restart-0.0.2.tgz#693353bb1092f96a36c6a2706da22954784cf8b1"

@@ -1,12 +1,10 @@
 import * as Http from './http.util';
 
 export const login = (loginPayload) =>
-Http.post('LOGIN', loginPayload,
-{});
+Http.post('LOGIN', loginPayload, {});
 
 export const signup = (signupPayload) =>
-  Http.post('SIGNUP', signupPayload,
-  {});
+Http.post('SIGNUP', signupPayload, {});
 
 export const logout = () => Http.get('LOGOUT');
 
@@ -35,4 +33,8 @@ Http.post('CHANGEPASSWORD', payload, {});
 export const updateProfile = (payload) =>
 Http.post('UPDATEPROFILE', payload, {});
 
-export const updateDevicePushToken = (payload) => Http.post('UPDATEDEVICETOKEN', payload);
+export const updateDevicePushToken = (payload) =>
+Http.post('UPDATEDEVICETOKEN', payload);
+
+export const everyPayPaymentPage = (payload) =>
+Http.post('EVERYPAYPAYMENTPAGE', payload, {});

@@ -3,7 +3,7 @@ import Portugese from './Portugese';
 import storage from '../../utils/storage.util';
 
 const currentLangState = {
-  langCode: 'pt'
+  langCode: 'en'
 };
 
 const listOfLanguages = {
