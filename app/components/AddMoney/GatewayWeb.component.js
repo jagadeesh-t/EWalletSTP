@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {WebView, View, Text} from 'react-native';
+import {WebView, View, Text, ActivityIndicator} from 'react-native';
 import styles from './GatewayWeb.component.style';
 import RNIcon from '../../assets/fonts/RNIcon';
 import Touchable from '../Touchable/Touchable.component';
-import Spinner from 'react-native-loading-spinner-overlay';
+import isMatch from 'lodash/isMatch';
+import noop from 'lodash/noop';
 
 const htmlStyle = `
 <style>
@@ -27,27 +28,33 @@ body {
 class GatewayWeb extends React.Component {
   static propTypes = {
     webpageHtml: PropTypes.string,
-    quitPayment: PropTypes.func,
+    onAbortPayment: PropTypes.func,
+    onPaymentResult: PropTypes.func,
     toggleSpinner: PropTypes.func
   }
-
+  state = {
+    webViewLoading: false
+  }
   onChange = (navState) => {
-    if (!navState.loading) {
-      this.hideSpinner();
+    const {onPaymentResult = noop} = this.props;
+    this.setState({webViewLoading: navState.loading});
+    if (this.isPaymentComplete(navState)) {
+      onPaymentResult();
     }
-    console.log(navState);
   }
-  hideSpinner = () => {
-    this.props.toggleSpinner(false);
+  isPaymentComplete = (navState) => {
+    const DEST_URL = 'http://www.google.ee/?q=redirect';
+    const reachedEnd = isMatch(navState, {loading: false, navigationType: 'formsubmit', url: DEST_URL});
+    return reachedEnd;
   }
-
   render () {
-    const {webpageHtml, quitPayment} = this.props;
+    const {webpageHtml, onAbortPayment = noop} = this.props;
     return (
       <View style={styles.container}>
         <View style={styles.titleContainer}>
+          {this.state.webViewLoading ? <ActivityIndicator /> : null}
           <Text style={styles.title}>Yo</Text>
-          <Touchable onPress={quitPayment} style={styles.iconContainer}>
+          <Touchable onPress={onAbortPayment} style={styles.iconContainer}>
             <RNIcon {...styles.icon} name='close, remove, times' />
           </Touchable>
         </View>

@@ -6,7 +6,7 @@ import {FormInput, FormButton} from '../FormElements';
 import {Field} from 'redux-form';
 import styles from './AddMoney.component.style';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {language} from '../../config/language';
+// import {language} from '../../config/language';
 import {wrapMethodInFunction} from '../../utils/transformer.util';
 import noop from 'lodash/noop';
 

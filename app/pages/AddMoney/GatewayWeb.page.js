@@ -8,18 +8,22 @@ import PropTypes from 'prop-types';
 
 class GatewayWebPage extends Component {
   static propTypes = {
-    quitPayment: PropTypes.func,
+    onAbortPayment: PropTypes.func,
+    onPaymentResult: PropTypes.func,
     toggleSpinner: PropTypes.func
   }
   render () {
-    const {quitPayment, toggleSpinner} = this.props;
+    const {onAbortPayment, onPaymentResult, toggleSpinner} = this.props;
     const webpageHtml = result(this.props, 'navigation.state.params.webpageHtml', {});
-    return <GatewayWebView toggleSpinner={toggleSpinner} quitPayment={quitPayment} webpageHtml={webpageHtml} />;
+    return <GatewayWebView toggleSpinner={toggleSpinner} onAbortPayment={onAbortPayment} onPaymentResult={onPaymentResult} webpageHtml={webpageHtml} />;
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  quitPayment: () => {
+  onAbortPayment: () => {
+    dispatch(NavigationActions.back());
+  },
+  onPaymentResult: () => {
     dispatch(NavigationActions.back());
   },
   toggleSpinner: (visible) => {
