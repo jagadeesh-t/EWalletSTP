@@ -191,8 +191,8 @@ export const getPaymentPage = () => (dispatch, getState) => {
   then((response) => {
     dispatch(NavigationActions.back());
     dispatch(actions.hideSpinner());
-    const {html, orderRef} = response.data;
-    dispatch(NavigationActions.navigate({routeName: 'GatewayWebModal', params: {html, orderRef}}));
+    const {html, orderRef, redirectUrl} = response.data;
+    dispatch(NavigationActions.navigate({routeName: 'GatewayWebModal', params: {html, orderRef, redirectUrl}}));
   }).
   catch((err) => {
     Toast.show(getErrorMessage(err), err.disableToast);

@@ -18,10 +18,6 @@ import AddMoneyPage from '../pages/AddMoney/AddMoney.page';
 import GatewayWebPage from '../pages/AddMoney/GatewayWeb.page';
 
 export const MainRoutes = {
-  AddMoney: {
-    screenTitle: 'TITLE__LOGIN',
-    screen: AddMoneyPage
-  },
   Login: {
     screenTitle: 'TITLE__LOGIN',
     screen: LoginPage
@@ -65,6 +61,10 @@ export const MainRoutes = {
   TransactionHistory: {
     screenTitle: 'TITLE__TRANSACTION_HISTORY',
     screen: TransactionHistoryPage
+  },
+  AddMoney: {
+    screenTitle: 'TITLE__ADD_MONEY',
+    screen: AddMoneyPage
   }
 };
 const MainRoutesConfig = {

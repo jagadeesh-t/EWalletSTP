@@ -31,7 +31,8 @@ class GatewayWeb extends React.Component {
     onAbortPayment: PropTypes.func,
     onPaymentResult: PropTypes.func,
     toggleSpinner: PropTypes.func,
-    orderRef: PropTypes.string
+    orderRef: PropTypes.string,
+    redirectUrl: PropTypes.string
   }
   state = {
     webViewLoading: false
@@ -44,8 +45,8 @@ class GatewayWeb extends React.Component {
     }
   }
   isPaymentComplete = (navState) => {
-    const DEST_URL = 'http://www.google.ee/?q=redirect';
-    const reachedEnd = isMatch(navState, {loading: false, navigationType: 'formsubmit', url: DEST_URL});
+    const {redirectUrl} = this.props;
+    const reachedEnd = isMatch(navState, {loading: false, navigationType: 'formsubmit', url: redirectUrl});
     return reachedEnd;
   }
   render () {
