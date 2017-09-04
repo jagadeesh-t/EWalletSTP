@@ -30,7 +30,8 @@ class GatewayWeb extends React.Component {
     webpageHtml: PropTypes.string,
     onAbortPayment: PropTypes.func,
     onPaymentResult: PropTypes.func,
-    toggleSpinner: PropTypes.func
+    toggleSpinner: PropTypes.func,
+    orderRef: PropTypes.string
   }
   state = {
     webViewLoading: false
@@ -48,12 +49,12 @@ class GatewayWeb extends React.Component {
     return reachedEnd;
   }
   render () {
-    const {webpageHtml, onAbortPayment = noop} = this.props;
+    const {webpageHtml, orderRef, onAbortPayment = noop} = this.props;
     return (
       <View style={styles.container}>
         <View style={styles.titleContainer}>
           {this.state.webViewLoading ? <ActivityIndicator /> : null}
-          <Text style={styles.title}>Yo</Text>
+          <Text style={styles.title}>OrderNo: {orderRef}</Text>
           <Touchable onPress={onAbortPayment} style={styles.iconContainer}>
             <RNIcon {...styles.icon} name='close, remove, times' />
           </Touchable>

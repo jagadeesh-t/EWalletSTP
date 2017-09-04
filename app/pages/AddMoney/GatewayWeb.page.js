@@ -14,8 +14,9 @@ class GatewayWebPage extends Component {
   }
   render () {
     const {onAbortPayment, onPaymentResult, toggleSpinner} = this.props;
-    const webpageHtml = result(this.props, 'navigation.state.params.webpageHtml', {});
-    return <GatewayWebView toggleSpinner={toggleSpinner} onAbortPayment={onAbortPayment} onPaymentResult={onPaymentResult} webpageHtml={webpageHtml} />;
+    const webpageHtml = result(this.props, 'navigation.state.params.html', {});
+    const orderRef = result(this.props, 'navigation.state.params.orderRef', {});
+    return <GatewayWebView toggleSpinner={toggleSpinner} onAbortPayment={onAbortPayment} onPaymentResult={onPaymentResult} orderRef={orderRef} webpageHtml={webpageHtml} />;
   }
 }
 
