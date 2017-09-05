@@ -108,3 +108,7 @@ export const prepareVerifyDevice = (otp) => ({
 export const prepareUpdateDevicePushToken = (notificationId) => ({
   'notificationId': notificationId
 });
+
+export const prepareGetPaymentPage = (amount) => ({
+  'amount': amount
+});

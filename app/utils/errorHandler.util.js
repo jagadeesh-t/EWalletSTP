@@ -21,17 +21,27 @@ export const jsErrorHandler = (e = {}, isFatal) => {
 
 export const serverStatusHandler = (response = {}, store) => {
   const {status} = response;
+  let data = response.data;
+  if (!response.data) {
+    data = {};
+  }
   switch (status) {
   case 401: {
     store.dispatch(logout());
     return {disableToast: false, ...response.data};
+  }
+  case 404: {
+    return {disableToast: false, message: '404 coudnt find what you were looking for', ...data};
   }
   default: return null; // so that the control goes to serverErrorDataHandler
   }
 };
 
 export const serverErrorDataHandler = (response = {}, store) => {
-  const {data = {}} = response;
+  let data = response.data;
+  if (!response.data) {
+    data = {};
+  }
   switch (data.error) {
   case 'E_VALIDATION': {
     return {disableToast: false, ...parseServerEValidationErrors(data)};

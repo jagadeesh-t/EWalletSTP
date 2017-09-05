@@ -181,3 +181,21 @@ export const verifyDevice = () => (dispatch, getState) => {
     Toast.show(getErrorMessage(err), err.disableToast);
   });
 };
+
+export const getPaymentPage = () => (dispatch, getState) => {
+  const state = getState();
+  const amount = result(state, 'form.addmoney.values.amount', 0);
+  const payload = middleware.prepareGetPaymentPage(amount);
+  dispatch(actions.showSpinner());
+  return api.everyPayPaymentPage(payload).
+  then((response) => {
+    dispatch(NavigationActions.back());
+    dispatch(actions.hideSpinner());
+    const {html, orderRef, redirectUrl} = response.data;
+    dispatch(NavigationActions.navigate({routeName: 'GatewayWebModal', params: {html, orderRef, redirectUrl}}));
+  }).
+  catch((err) => {
+    Toast.show(getErrorMessage(err), err.disableToast);
+    dispatch(actions.hideSpinner());
+  });
+};

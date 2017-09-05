@@ -14,6 +14,8 @@ import CreditRequest from  '../pages/Distributor/CreditRequestPage';
 import SettingsPage from  '../pages/Settings/Settings.page';
 import ProfilePage from  '../pages/Profile/Profile.page';
 import SmsOtpPage from '../pages/SmsOtp/SmsOtp.page';
+import AddMoneyPage from '../pages/AddMoney/AddMoney.page';
+import GatewayWebPage from '../pages/AddMoney/GatewayWeb.page';
 
 export const MainRoutes = {
   Login: {
@@ -59,6 +61,10 @@ export const MainRoutes = {
   TransactionHistory: {
     screenTitle: 'TITLE__TRANSACTION_HISTORY',
     screen: TransactionHistoryPage
+  },
+  AddMoney: {
+    screenTitle: 'TITLE__ADD_MONEY',
+    screen: AddMoneyPage
   }
 };
 const MainRoutesConfig = {
@@ -82,6 +88,13 @@ const Routes = StackNavigator({
   SmsOtpModal: {
     screenTitle: 'SMS_OTP__INDEX_TITLE',
     screen: SmsOtpPage
+  },
+  GatewayWebModal: {
+    screenTitle: 'TITLE__LOGIN',
+    screen: GatewayWebPage,
+    navigationOptions: {
+      gesturesEnabled: false
+    }
   }
 }, {
   headerMode: 'none',
