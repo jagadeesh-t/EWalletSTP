@@ -1,19 +1,21 @@
 import RNToast from 'react-native-simple-toast';
 import {Alert} from 'react-native';
-import RNSnackBar from 'react-native-snackbar-dialog';
+import RNSnackBar from 'react-native-snackbar';
 import {theme} from '../styles/theme.styles';
 import {wrapMethodInFunction} from './transformer.util';
 import {language} from '../config/language';
 
 const SnackBar = {
   show: (title) => {
-    RNSnackBar.show(title, {
+    RNSnackBar.show({
+      title,
       backgroundColor: theme.snackbarBg,
-      textColor: theme.contrast,
-      buttonColor: theme.snackButtonBg,
-      onConfirm: wrapMethodInFunction(RNSnackBar.dismiss),
-      confirmText: language.SNACKBAR__CLOSE,
-      duration: 4000,
+      duration: RNSnackBar.LENGTH_LONG,
+      action: {
+        title: language.SNACKBAR__CLOSE,
+        color: theme.contrast,
+        onPress: wrapMethodInFunction(RNSnackBar.dismiss),
+      },
     });
   }
 };
