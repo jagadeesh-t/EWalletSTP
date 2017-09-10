@@ -5,6 +5,7 @@ import {FormButton} from '../FormElements';
 import styles from './SendConfirmation.component.style';
 import {currencyFormatter} from '../../utils/transformer.util';
 import ImagePayGraphic from '../../assets/images/mobile-pay.png';
+import {language} from '../../config/language';
 
 class SendConfirmationView extends React.Component {
   static propTypes = {
@@ -21,7 +22,7 @@ class SendConfirmationView extends React.Component {
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
-          <Text style={styles.subtext}>{'Please confirm the details'}</Text>
+          <Text style={styles.subtext}>{language.SEND_CONFIRMATION__SUBTITLE}</Text>
         </View>
         <View style={styles.card} >
           <ScrollView>
@@ -47,7 +48,7 @@ class SendConfirmationView extends React.Component {
           </ScrollView>
         </View>
         <View style={styles.buttonContainer} >
-          <FormButton onPress={onConfirm} style={styles.button} text={'Confirm'}/>
+          <FormButton onPress={onConfirm} style={styles.button} text={language.COMMON__CONFIRM}/>
         </View>
       </View>
     );

@@ -6,41 +6,42 @@ import result from 'lodash/result';
 import PropTypes from 'prop-types';
 import noop from 'lodash/noop';
 import RNIcon from '../../assets/fonts/RNIcon';
+import {language} from '../../config/language';
 
 class SendResultView extends React.Component {
   static propTypes = {
     onDone: PropTypes.func.isRequired,
     transactionResult: PropTypes.object
   }
-  assetMap = {
+  getAssetMap = () => ({
     SUCCESS: {
       icon: 'check',
-      text: 'Successful',
+      text: language.SEND_RESULT__TRANSFER_SUCCESS_SHORT,
       color: 'green',
-      longText: 'Transfer was successful'
+      longText: language.SEND_RESULT__TRANSFER_SUCCESS_LONG
     },
     FAILURE: {
       icon: 'close, remove, times',
-      text: 'Failed',
+      text: language.SEND_RESULT__TRANSFER_FAILED_SHORT,
       color: 'red',
-      longText: 'Transfer Failed'
+      longText: language.SEND_RESULT__TRANSFER_FAILED_LONG
     },
     PROGRESS: {
       icon: 'spinner',
-      text: 'Processing',
+      text: language.SEND_RESULT__TRANSFER_PROCESS_SHORT,
       color: 'grey',
-      longText: 'Transfer is in Progress'
+      longText: language.SEND_RESULT__TRANSFER_PROCESS_LONG
     }
-  }
+  })
   render () {
     const {onDone = noop, transactionResult = {}} = this.props;
     const {status = 'PROGRESS', amount, fee,
        totalAmount, transactionId, payeeName, payeePhone} = transactionResult;
-    const statusEntity = result(this.assetMap, `[${status}]`, 'PROGRESS');
+    const statusEntity = result(this.getAssetMap(), `[${status}]`, 'PROGRESS');
     return (
       <View style={styles.pageContainer}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{'Transfer Status'}</Text>
+          <Text style={styles.title}>{language.SEND_RESULT__TITLE}</Text>
           <Text style={styles.subtext}>{statusEntity.longText}</Text>
         </View>
         <View style={styles.card} >
@@ -50,39 +51,39 @@ class SendResultView extends React.Component {
               <Text style={styles.status}>{statusEntity.text}</Text>
             </View>
 
-            <Text style={styles.subtitle}>Transaction details</Text>
+            <Text style={styles.subtitle}>{language.SEND_RESULT__TRANSACTION_DETAILS_TITLE}</Text>
             <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Transfer amount</Text>
+              <Text style={styles.fieldKey}>{language.SEND_RESULT__TRANSFER_AMOUNT}</Text>
               <Text style={styles.fieldValue}>{amount || '--'}</Text>
             </View>
             <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Transfer Fee</Text>
+              <Text style={styles.fieldKey}>{language.SEND_RESULT__FEE}</Text>
               <Text style={styles.fieldValue}>{fee}%</Text>
             </View>
             <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Total</Text>
+              <Text style={styles.fieldKey}>{language.SEND_RESULT__TOTAL}</Text>
               <Text style={styles.fieldValue}>{totalAmount || '--'}</Text>
             </View>
             {
               transactionId && (<View style={styles.fieldRow}>
-                <Text style={styles.fieldKey}>Transaction ID</Text>
+                <Text style={styles.fieldKey}>{language.SEND_RESULT__TRANSACTION_ID}</Text>
                 <Text style={styles.fieldValue}>{transactionId || '--'}</Text>
               </View>)
             }
 
-            <Text style={styles.subtitle}>Payee Details</Text>
+            <Text style={styles.subtitle}>{language.SEND_RESULT__PAYEE_DETAILS}</Text>
             <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Name</Text>
+              <Text style={styles.fieldKey}>{language.SEND_RESULT__PAYEE_NAME}</Text>
               <Text style={styles.fieldValue}>{payeeName || '--'}</Text>
             </View>
             <View style={styles.fieldRow}>
-              <Text style={styles.fieldKey}>Phone</Text>
+              <Text style={styles.fieldKey}>{language.SEND_RESULT__PAYEE_PHONE}</Text>
               <Text style={styles.fieldValue}>{payeePhone || '--'}</Text>
             </View>
           </ScrollView>
         </View>
         <View style={styles.buttonContainer} >
-          <FormButton onPress={onDone} style={styles.button} text={'Close'}/>
+          <FormButton onPress={onDone} style={styles.button} text={language.COMMON__CLOSE}/>
         </View>
       </View>
     );

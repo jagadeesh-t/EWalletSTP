@@ -5,6 +5,7 @@ import demoImage from '../../assets/images/demo-qr-scan.png';
 import PropTypes from 'prop-types';
 import result from 'lodash/result';
 import qrCodeGenerator from 'yaqrcode';
+import {language} from '../../config/language';
 
 class ReceiveView extends React.Component {
   static propTypes = {
@@ -21,11 +22,11 @@ class ReceiveView extends React.Component {
           </View>
         </View>
         <View style={styles.infoContainer}>
-          <View style={styles.infoGroup}><Text style={styles.infoKey}>NAME :</Text><Text style={styles.infoValue}>{result(user, 'userProfile.name', '--')}</Text></View>
-          <View style={styles.infoGroup}><Text style={styles.infoKey}>ACCOUNT :</Text><Text style={styles.infoValue}>{user.phone}</Text></View>
+          <View style={styles.infoGroup}><Text style={styles.infoKey}>{language.RECEIVE__USER_NAME} :</Text><Text style={styles.infoValue}>{result(user, 'userProfile.name', '--')}</Text></View>
+          <View style={styles.infoGroup}><Text style={styles.infoKey}>{language.RECEIVE__ACCOUNT} :</Text><Text style={styles.infoValue}>{user.phone}</Text></View>
         </View>
         <View style={styles.demoContainer}>
-          <Text style={styles.demoText}> Please scan this QR code in payees phone</Text>
+          <Text style={styles.demoText}> {language.RECEIVE__SCAN_DESCRIPTION}</Text>
           <Image resizeMode='contain' style={styles.demo} source={demoImage} />
         </View>
       </View>

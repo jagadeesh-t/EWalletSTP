@@ -6,6 +6,7 @@ import RNIcon from '../../assets/fonts/RNIcon';
 import Touchable from '../Touchable/Touchable.component';
 import isMatch from 'lodash/isMatch';
 import noop from 'lodash/noop';
+import {language} from '../../config/language';
 
 const htmlStyle = `
 <style>
@@ -55,7 +56,7 @@ class GatewayWeb extends React.Component {
       <View style={styles.container}>
         <View style={styles.titleContainer}>
           {this.state.webViewLoading ? <ActivityIndicator /> : null}
-          <Text style={styles.title}>OrderNo: {orderRef}</Text>
+          <Text style={styles.title}>{language.GATEWAY_WEB__TITLE}: {orderRef}</Text>
           <Touchable onPress={onAbortPayment} style={styles.iconContainer}>
             <RNIcon {...styles.icon} name='close, remove, times' />
           </Touchable>
