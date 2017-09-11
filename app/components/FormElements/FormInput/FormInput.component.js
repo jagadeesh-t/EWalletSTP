@@ -34,7 +34,7 @@ class FormInput extends Component {
   }
 
   render () {
-    const {meta, input = {}, containerStyle = {}, inputStyles = {}, value, onFocus = noop, onBlur = noop, onChangeText = noop, onInputChange = noop, disabled = false, ...extraProps} = this.props;
+    const {meta, input = {}, containerStyle = {}, inputStyles = {}, value, onFocus = noop, onBlur = noop, onChangeText = noop, onInputChange = noop, disabled = false, disableErrorText = false, ...extraProps} = this.props;
 
     const err = !disabled && (meta && meta.touched && !meta.active && meta.error);
 
@@ -61,7 +61,7 @@ class FormInput extends Component {
           editable={!disabled}
           placeholderTextColor={styles.placeholderTextColor} />
         </View>
-        {err && <ErrorTextIndicator text={err}/>}
+        {err && !disableErrorText && <ErrorTextIndicator text={err}/>}
       </View>
     );
   }
@@ -78,7 +78,8 @@ FormInput.propTypes = {
   onInputChange: PropTypes.func,
   disabled: PropTypes.bool,
   theme: PropTypes.string,
-  containerStyle: PropTypes.object
+  containerStyle: PropTypes.object,
+  disableErrorText: PropTypes.bool
 };
 
 export default FormInput;

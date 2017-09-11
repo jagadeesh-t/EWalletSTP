@@ -31,7 +31,7 @@ export default class QrCodeScanner extends Component {
     return (
       <View style={styles.container}>
         <Camera torchMode={this.state.flashToggle ? Camera.constants.FlashMode.on : Camera.constants.FlashMode.off}
-          onBarCodeRead={this.props.onBarCodeRead} type={Camera.constants.Type.back}
+          onBarCodeRead={this.props.onBarCodeRead} barCodeTypes={['qr']} type={Camera.constants.Type.back}
         style={styles.camera} captureAudio={false} aspect={Camera.constants.Aspect.fill}>
           <View style={styles.finder}>
             <Image style={styles.viewboxImage} resizeMode='contain' source={ImgViewFinder}/>

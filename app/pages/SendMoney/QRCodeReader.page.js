@@ -4,10 +4,15 @@ import {connect} from 'react-redux';
 import {NavigationActions} from 'react-navigation';
 import PropTypes from 'prop-types';
 import {change} from 'redux-form';
+import result from 'lodash/result';
 
 const mapDispatchToProps = (dispatch) => ({
   onClose: () => dispatch(NavigationActions.back()),
-  onBarCodeRead: (value) => dispatch(change('sendMoney', 'mobileNo', value))
+  onBarCodeRead: (qrData) => {
+    const toPhone = result(qrData, 'data', '');
+    dispatch(change('sendMoney', 'mobileNo', toPhone));
+    dispatch(NavigationActions.back());
+  }
 });
 
 const mapStateToProps = () => ({});

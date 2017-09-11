@@ -7,6 +7,9 @@ export default {
     justifyContent: 'space-around',
     flexGrow: 1
   },
+  inputStyle: {
+    textAlign: 'center'
+  },
   titleContainer: {
     flex: 1
   },

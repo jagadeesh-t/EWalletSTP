@@ -36,7 +36,7 @@ class SmsOtpView extends React.Component {
         </View>
         <View style={styles.formContainer}>
           <View style={styles.formHeader}><RNIcon name='mobile, mobile-phone' size={15} /><Text style={styles.formHeaderText}>{language.SMS_OTP__OTP_ENTER} </Text></View>
-          <Field inputStyles={styles.inputStyle} name='otp' component={FormInput} placeholder='0-0-0-0' keyboardType='numbers-and-punctuation' maxLength={4} />
+          <Field inputStyles={styles.inputStyle} name='otp' component={FormInput} placeholder='XXXX' keyboardType='numbers-and-punctuation' maxLength={4} disableErrorText={true} />
           <Text style={styles.textcontainer}>{language.SMS_OTP__OTP_DETAILS}</Text>
         </View>
         <View style={styles.buttonContainer} >
